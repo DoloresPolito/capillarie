@@ -1,14 +1,14 @@
 .section {
-  height: 100vh;
+  height: 400vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  background-color: white;
 }
 
-.container {
+/* .container {
 
   height: 500px;
   width: 100%;
@@ -25,4 +25,4 @@
 .montserratbold {
     font-family: var(--font-montserrat);
     font-weight: 700; 
-  }
+  } */

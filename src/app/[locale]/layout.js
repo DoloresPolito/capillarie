@@ -1,4 +1,4 @@
-import { Inter, Montserrat } from "next/font/google";
+import { Inter, Montserrat, Plus_Jakarta_Sans } from "next/font/google";
 import Head from "next/head";
 import "./globals.css";
 
@@ -6,6 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 const montserrat = Montserrat({ subsets: ["latin"], weights: ["100", "200", "300", "400", "500", "700"] });
+const plus = Plus_Jakarta_Sans({ subsets: ["latin"], weights: ["100", "200", "300", "400", "500", "700"] });
 
 
 export const metadata = {
@@ -29,7 +30,7 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
 
-      <body className={`${inter.className} ${montserrat.className}`}>
+      <body className={`${inter.className} ${montserrat.className} ${plus.className}`}>
 
         {children}</body>
     </html>

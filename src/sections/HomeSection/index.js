@@ -1,28 +1,26 @@
-"use client"
+"use client";
 import styles from "./style.module.css";
 import { motion } from "framer-motion";
-import Contact from "@/components/ContactForm";
-import SectionParallax from "../../components/SectionsParallax";
+import ContactSection from "@/home/ContactSection";
+import ReviewsSection from "@/home/ReviewsSection";
 
-export default function Index({translations}) {
+export default function Index({ translations }) {
   return (
-
     //   <div className={styles.container}>
     //   <motion.div
     //       className={styles.box}
-    //       animate={{ x: 100 }} 
-    //       transition={{ duration: 1 }} 
+    //       animate={{ x: 100 }}
+    //       transition={{ duration: 1 }}
     //     />
     //     <p className={styles.montserratbold}>{translations.text1}</p>
     //     <Contact/>
     //   </div>
 
     <>
-      <div >
-
-
-    <SectionParallax/>
-    </div>
+      <div className={styles.section}>
+        <ReviewsSection/>
+        <ContactSection />
+      </div>
     </>
   );
 }

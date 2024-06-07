@@ -1,0 +1,85 @@
+.section {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f9f8f7;
+
+  .container {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .top {
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+      height: 20%;
+
+      h6{
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color:#575655;
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-weight: 400;
+        margin-top: 30px;
+      }
+
+      h3{
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 200;
+        font-size: 40px;
+        color:#0A7E91;
+        margin-top: 20px;
+      }
+
+      p{
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 200;
+        font-size: 18px;
+        color:#0A7E91;
+      }
+    }
+
+    .bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      height: 80%;
+
+      .left {
+        display: flex;
+        width: 50%;
+        height: 100%;
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        height: 100%;
+        padding: 100px;
+
+        .p1{
+          font-family: "Plus Jakarta Sans", sans-serif;
+          font-weight: 200;
+          font-size: 18px;
+          color:#493E36;
+          max-width: 350px;
+        }
+        .p2{
+          font-family: "Plus Jakarta Sans", sans-serif;
+          font-weight: 400;
+          font-size: 15px;
+          color:#493E36;
+          max-width: 350px;
+        }
+      }
+    }
+  }
+}
