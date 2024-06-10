@@ -1,7 +1,7 @@
 "use client";
 import styles from "./styles.module.scss";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import Mask from "./nav";
+import Mask from "./Nav";
 import { usePathname } from "next/navigation";
 import { AnimatePresence } from "framer-motion";
 import gsap from "gsap/dist/gsap";

@@ -11,7 +11,8 @@ const CoverSection = ({ covertranslations }) => {
         <div className={styles.container}>
           <h6>{covertranslations.sectiontitle}</h6>
           <h4>{covertranslations.subtitle}</h4>
-          <h2>{covertranslations.title}</h2>
+          {/* <h2>{covertranslations.title}</h2> */}
+          <h2>Experience the transformative power of our specialized and rejuvenating hair treatments.</h2>
 
           <div className={styles.buttonscontainer}>
             <Rounded>{covertranslations.bookbutton}</Rounded>
