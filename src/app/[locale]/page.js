@@ -1,9 +1,8 @@
-
 import styles from "./page.module.css";
-import Header from "../../components/Header";
 import initTranslations from "../i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import HomeSection from "../../sections/HomeSection";
+import AnimatedHeader from "../../components/AnimatedHeader";
 
 const i18nNamespaces = ["home", "common"];
 
@@ -13,12 +12,11 @@ export default async function Home({ params: { locale } }) {
   const translations = {
     title: t("title"),
     subtitle: t("subtitle"),
-    text1: t("text1"),
+    sectiontitle:t("sectiontitle"),
+    financingbutton: t("financingbutton"),
+    bookbutton: t("bookbutton"),
     // Añade otras traducciones necesarias aquí
   };
-
-
- 
 
   return (
     <TranslationsProvider
@@ -27,9 +25,9 @@ export default async function Home({ params: { locale } }) {
       namespaces={i18nNamespaces}
     >
       <div className={styles.main}>
-        <Header locale={locale}  />
-    
-        <HomeSection translations={translations}/>
+        <AnimatedHeader />
+
+        <HomeSection translations={translations} />
       </div>
     </TranslationsProvider>
   );

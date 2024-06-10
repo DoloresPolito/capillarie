@@ -11,6 +11,7 @@
   "dependencies": {
     "@types/nodemailer": "^6.4.15",
     "framer-motion": "^11.2.6",
+    "gsap": "^3.12.5",
     "i18next": "^23.11.4",
     "i18next-resources-to-backend": "^1.2.1",
     "next": "14.2.3",

@@ -1,8 +1,8 @@
 import styles from "./style.module.css";
-import Header from "../../../components/Header";
+import AnimatedHeader from "../../../components/AnimatedHeader"
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
-import FaqsSection from "@/sections/FaqsSection";
+import FaqsSection from "@/home/FaqsSection";
 const i18nNamespaces = ["procedures", "common"];
 
 
@@ -15,13 +15,14 @@ export default async function Procedures({ params: { locale } }) {
       locale={locale}
       namespaces={i18nNamespaces}
     >
+            <AnimatedHeader/>
       <div className={styles.main}>
-        <Header />
-        <h2>{t("title")}</h2>
+
+        {/* <h2>{t("title")}</h2>
 
         <p>
           {locale === "es" ? "TEXTO EN PROCEDIMIENTOS" : "TEXT IN PROCEDURES"}
-        </p>
+        </p> */}
       
 <FaqsSection/>
         <p>locale: {locale}</p>

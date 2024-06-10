@@ -1,0 +1,232 @@
+.header {
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  top: 0;
+  color: #4a4747;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 300;
+  box-sizing: border-box;
+  align-items: center;
+  z-index: 10;
+
+  .headercontainer {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1600px;
+
+    .leftside {
+      display: flex;
+      width: 50%;
+    }
+
+    .rightside {
+      display: flex;
+      width: 50%;
+      justify-content: flex-end;
+      padding: 0px 30px;
+
+      .bookbutton {
+        background-color: #44b9cc;
+        height: 40px;
+        width: auto;
+        margin-right: 30px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        cursor: pointer;
+        p {
+          color: white;
+          font-size: 13px;
+          font-weight: 400;
+          letter-spacing: 0.5px;
+          line-height: 0%;
+          font-family: var(--font-montserrat);
+        }
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    cursor: pointer;
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    z-index: 2000;
+    padding-top: 10px;
+    margin-left: 30px;
+
+    .el {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+      padding: 15px;
+      cursor: pointer;
+    }
+    a {
+      cursor: pointer;
+      font-size: 11px;
+      color: #000000;
+      font-weight: 300;
+      line-height: 0%;
+      font-family: var(--font-montserrat);
+      letter-spacing: 0.5px;
+
+      &:hover {
+        // font-size: 12px;
+        color: #44b9cc;
+      }
+    }
+  }
+}
+.headerButtonContainer {
+  transform: scale(0);
+  position: fixed;
+  top: 0;
+  right: 0px;
+  z-index: 2000;
+
+  .button {
+    position: relative;
+    margin: 20px;
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #44b9cc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttontext {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-family: var(--font-montserrat);
+    font-size: 11px;
+    margin-left: 20px;
+  }
+
+  .burger {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 40%;
+      margin: auto;
+      background-color: white;
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    &::after {
+      top: -5px;
+    }
+
+    &::before {
+      top: 5px;
+    }
+  }
+
+  .burgerActive {
+    &::after {
+      transform: rotate(45deg);
+      top: -1px;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      top: 0px;
+    }
+  }
+}
+
+.headerButtonContainerMobile {
+  position: fixed;
+  top: 5px;
+  right: 0px;
+  z-index: 2000;
+
+  .button {
+    position: relative;
+    margin: 20px;
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #44b9cc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttontext {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-family: var(--font-montserrat);
+    font-size: 11px;
+    margin-left: 20px;
+  }
+
+  .burger {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 40%;
+      margin: auto;
+      background-color: white;
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    &::after {
+      top: -5px;
+    }
+
+    &::before {
+      top: 5px;
+    }
+  }
+
+  .burgerActive {
+    &::after {
+      transform: rotate(45deg);
+      top: -1px;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      top: 0px;
+    }
+  }
+}
+
+.active {
+  background-color: rgb(247, 247, 247);
+  border-radius: 8px;
+}

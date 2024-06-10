@@ -4,6 +4,8 @@ import { useState } from "react";
 import questions1 from "../../jsons/questions1";
 import AccordionItem from "@/components/AccordionItem";
 
+import styles from "./styles.module.scss"
+
 export default function FaqsSection({ translations }) {
   const [active, setActive] = useState("");
 
@@ -13,7 +15,7 @@ export default function FaqsSection({ translations }) {
 
   return (
     <>
-      <div>
+      <div className={styles.faqscontainer}>
         {questions1.map((question, index) => (
           <AccordionItem
             key={index}
