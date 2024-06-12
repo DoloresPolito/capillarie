@@ -1,20 +1,60 @@
 "use client";
 import styles from "./style.module.css";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import ContactSection from "@/home/ContactSection";
 import ReviewsSection from "@/home/ReviewsSection";
 import FaqsSection from "@/home/FaqsSection";
 import CoverSection from "@/home/CoverSection";
+import AboutSection from "@/home/AboutSection";
+import HairSurgerySection from "@/home/HairSurgerySection";
+import TreatmentsSection from "@/home/TreatmentsSection";
 
 export default function Index({ translations }) {
-
   const covertranslations = {
     title: translations.title,
     subtitle: translations.subtitle,
-    sectiontitle:translations.sectiontitle,
-    financingbutton:translations.financingbutton,
-    bookbutton:translations.bookbutton
-  }
+    sectiontitle: translations.sectiontitle,
+    financingbutton: translations.financingbutton,
+    bookbutton: translations.bookbutton,
+  };
+
+  const faqstranslations = {
+    faqstitle: translations.faqstitle,
+    faq1: translations.faq1,
+    ans1: translations.ans1,
+    faq2: translations.faq2,
+    ans2: translations.ans2,
+    faq3: translations.faq3,
+    ans3: translations.ans3,
+    faq4: translations.faq4,
+    ans4: translations.ans4,
+    resultstitle: translations.resultstitle,
+  };
+
+  const abouttranslations = {
+    aboutsectiontitle: translations.aboutsectiontitle,
+    aboutsubtitle: translations.aboutsubtitle,
+    abouttext1: translations.abouttext1,
+    abouttext2: translations.abouttext2,
+    abouttext3: translations.abouttext3,
+    aboutbutton: translations.aboutbutton,
+  };
+
+  const hairtranslations = {
+    hairsectiontitle: translations.hairsectiontitle,
+    hairsubtitle: translations.hairsubtitle,
+    hairitem1: translations.hairitem1,
+    hairitem2: translations.hairitem2,
+    hairitem3: translations.hairitem3,
+    hairitem4: translations.hairitem4,
+    hairbutton: translations.hairbutton,
+  };
+
+  const treatmentstranslations = {
+    treatmentssectiontitle: translations.treatmentssectiontitle,
+    treatmentssubtitle: translations.treatmentssubtitle,
+    treatmentsbutton: translations.treatmentsbutton,
+  };
 
   return (
     //   <div className={styles.container}>
@@ -27,15 +67,14 @@ export default function Index({ translations }) {
     //     <Contact/>
     //   </div>
 
-
-
-
-
     <>
       <div className={styles.section}>
-        <CoverSection covertranslations={covertranslations}/>
-        <FaqsSection/>
-        <ReviewsSection/>
+        <CoverSection covertranslations={covertranslations} />
+        <AboutSection abouttranslations={abouttranslations} />
+        <HairSurgerySection hairtranslations={hairtranslations} />
+        <TreatmentsSection treatmentstranslations={treatmentstranslations}/>
+        <FaqsSection faqstranslations={faqstranslations} />
+        <ReviewsSection />
         <ContactSection />
       </div>
     </>

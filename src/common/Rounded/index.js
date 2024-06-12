@@ -6,7 +6,6 @@ import Magnetic from "../Magnetic";
 
 export default function Index({
   children,
-  backgroundColor = "#44B9CC",
   ...attributes
 }) {
   const circle = useRef(null);
@@ -54,7 +53,6 @@ export default function Index({
         {children}
         <div
           ref={circle}
-          style={{ backgroundColor }}
           className={styles.circle}
         ></div>
       </div>

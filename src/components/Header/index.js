@@ -14,7 +14,7 @@ export default function Index() {
 
   const locale = i18n.language;
 
-  console.log("locale", locale)
+
 
   return (
     <div className={styles.section}>

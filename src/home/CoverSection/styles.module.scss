@@ -5,7 +5,6 @@
   width: 100%;
   height: auto;
   margin-top: 80px;
-
   background-image: url('/assets/backgrounds/backcover.png');
   background-size: cover; /* Ensures the image covers the entire section */
   background-position: center; /* Centers the image */
@@ -19,6 +18,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 1600px;
 
     h6 {
       font-family: "Plus Jakarta Sans", sans-serif;
@@ -26,7 +26,7 @@
       letter-spacing: 1px;
       font-size: 15px;
       font-weight: 400;
-      margin-top: 30px;
+      margin-top: 50px;
     }
 
     h4 {
@@ -46,6 +46,11 @@
       font-weight: 300;
       margin-top: 30px;
       text-align: center;
+
+      span{
+        color: #44b9cc;
+        font-weight: 400;
+      }
     }
     .buttonscontainer {
       display: flex;

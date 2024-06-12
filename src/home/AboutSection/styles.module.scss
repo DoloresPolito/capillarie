@@ -1,0 +1,75 @@
+.section {
+  display: flex;
+  flex-direction: column;
+
+  height: auto;
+  width: 100%;
+  align-items: center;
+
+  .container {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    max-width: 1600px;
+  }
+
+  .left {
+    display: flex;
+    width: 55%;
+    height: 100%;
+    flex-direction: column;
+    padding: 20px 20px;
+  }
+
+  .right {
+    display: flex;
+    width: 45%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 80px;
+  }
+
+  h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #493e36;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  h3 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #44b9cc;
+    letter-spacing: 1px;
+    font-size: 38px;
+    font-weight: 300;
+    max-width: 600px;
+  }
+
+  p {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #493e36;
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .p1 {
+    color: #44b9cc;
+    font-weight: 400;
+  }
+  .p3 {
+    text-decoration: underline;
+  }
+
+  .buttoncontainer {
+    margin-top: 30px;
+    width: 180px;
+  }
+}

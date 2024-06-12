@@ -1,3 +1,39 @@
-.faqscontainer{
+.faqssection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .faqscontainer {
     width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #493e36;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 130px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .buttoncontainer{
+    margin-top: 50px;
+    width: 150px;
+  }
+
+  // button {
+  //   background-color: transparent;
+  //   border: none;
+  //   margin-top: 70px;
+  //   cursor: pointer;
+  //   font-family: "Plus Jakarta Sans", sans-serif;
+  //   color: #493e36;
+  // }
 }

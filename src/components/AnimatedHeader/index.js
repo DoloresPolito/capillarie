@@ -102,10 +102,10 @@ export default function Navbar3() {
                   </div>
                   <div
                     className={`${styles.el} ${
-                      activeNavItem === "/" ? styles.active : ""
+                      activeNavItem === "/implant" ? styles.active : ""
                     }`}
                   >
-                    <StyledLink link="/">
+                    <StyledLink link="/implant">
                       <p className={styles.text}>TRANSPLANTE</p>
                     </StyledLink>
                   </div>
@@ -130,15 +130,13 @@ export default function Navbar3() {
                 </div>
               </div>
               <div className={styles.rightside}>
-        
-                <div className={styles.bookbutton}>
-                  <p>book an appoiment</p>
-                </div>
+            
                 <LanguageChanger />
               </div>
             </div>
           </div>
           <div ref={button} className={styles.headerButtonContainer}>
+        
             <Rounded
               onClick={() => {
                 setIsActive(!isActive);
@@ -152,6 +150,7 @@ export default function Navbar3() {
                 }`}
               ></div>
             </Rounded>
+            <div className={styles.bookbutton}><p>Book an appoiment</p></div>
           </div>
           <AnimatePresence mode="wait">{isActive && <Mask />}</AnimatePresence>
         </>
@@ -166,13 +165,14 @@ export default function Navbar3() {
               </div>
 
               <div className={styles.headerButtonContainerMobile}>
+                <div className={styles.bookbutton}>hola</div>
                 <Rounded
                   onClick={() => {
                     setIsActive(!isActive);
                   }}
                   className={`${styles.button}`}
                 >
-                      <p className={styles.buttontext}>MENU</p>
+                  <p className={styles.buttontext}>MENU</p>
                   <div
                     className={`${styles.burger} ${
                       isActive ? styles.burgerActive : ""

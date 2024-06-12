@@ -31,27 +31,11 @@
       justify-content: flex-end;
       padding: 0px 30px;
 
-      .bookbutton {
-        background-color: #44b9cc;
-        height: 40px;
-        width: auto;
-        margin-right: 30px;
-        border-radius: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 20px;
-        cursor: pointer;
-        p {
-          color: white;
-          font-size: 13px;
-          font-weight: 400;
-          letter-spacing: 0.5px;
-          line-height: 0%;
-          font-family: var(--font-montserrat);
-        }
-      }
+     
     }
+
+
+   
   }
 
   .logo {
@@ -93,18 +77,26 @@
     }
   }
 }
+
+
+
 .headerButtonContainer {
   transform: scale(0);
   position: fixed;
   top: 0;
   right: 0px;
   z-index: 2000;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
 
   .button {
     position: relative;
     margin: 20px;
     width: 120px;
-    height: 40px;
+    height: 50px;
     border-radius: 30px;
     background-color: #44b9cc;
     cursor: pointer;
@@ -156,6 +148,29 @@
     &::before {
       transform: rotate(-45deg);
       top: 0px;
+    }
+  }
+
+  .bookbutton {
+    background-color: #44b9cc;
+    height: 50px;
+    width: auto;
+    margin-right: 30px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    cursor: pointer;
+
+
+    p {
+      color: white;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      line-height: 0%;
+      font-family: "Plus Jakarta Sans", sans-serif;
     }
   }
 }
@@ -223,6 +238,13 @@
       transform: rotate(-45deg);
       top: 0px;
     }
+  }
+
+  .bookbutton{
+    background-color: red;
+    padding: 15px 15px 15px 15px;
+
+
   }
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
-import up from "../../../public/assets/reviews/arrow-left.png";
-import down from "../../../public/assets/reviews/arrow-right.png";
+import up from "../../../public/assets/up.svg";
+import down from "../../../public/assets/down.svg";
 import styles from "./styles.module.scss"
 import Image from "next/image";
 import { motion } from "framer-motion";

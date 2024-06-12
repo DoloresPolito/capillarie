@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
@@ -12,18 +12,14 @@ export default function LanguageChanger() {
   const currentLocale = i18n.language;
   const router = useRouter();
   const currentPathname = usePathname();
-  const [isOpen, setIsOpen] = useState(false);
-  const selectorRef = useRef(null);
 
   const handleChange = (newLocale) => {
-    // set cookie for next-i18n-router
     const days = 30;
     const date = new Date();
     date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
     const expires = date.toUTCString();
     document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
 
-    // redirect to the new locale path
     if (
       currentLocale === i18nConfig.defaultLocale &&
       !i18nConfig.prefixDefault
@@ -36,48 +32,23 @@ export default function LanguageChanger() {
     }
 
     router.refresh();
-    setIsOpen(false);
   };
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleClickOutside = (event) => {
-    if (selectorRef.current && !selectorRef.current.contains(event.target)) {
-      setIsOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
 
   return (
-    <div className={styles.selectorcontainer} ref={selectorRef}>
-      <div
-        className={styles.customselector}
-        onClick={toggleDropdown}
+    <div className={styles.languageSwitcher}>
+      <span
+        className={`${styles.languageOption} ${currentLocale === 'en' ? styles.selected : ''}`}
+        onClick={() => handleChange('en')}
       >
-        {currentLocale.toUpperCase()}
-      </div>
-      <div className={`${styles.customoptions} ${isOpen ? styles.show : ''}`}>
-        <div
-          className={styles.customoption}
-          onClick={() => handleChange('en')}
-        >
-          EN
-        </div>
-        <div
-          className={styles.customoption}
-          onClick={() => handleChange('es')}
-        >
-          ES
-        </div>
-      </div>
+        EN
+      </span>
+      <span className={styles.separator}>|</span>
+      <span
+        className={`${styles.languageOption} ${currentLocale === 'es' ? styles.selected : ''}`}
+        onClick={() => handleChange('es')}
+      >
+        ES
+      </span>
     </div>
   );
 }

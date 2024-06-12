@@ -8,7 +8,6 @@ const Contact = () => {
   const { register, handleSubmit } = useForm();
 
   function onSubmit(data) {
-    console.log(data);
     sendEmail(data);
   }
 
