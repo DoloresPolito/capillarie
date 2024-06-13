@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 import initTranslations from "../i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
-import HomeSection from "../../sections/HomeSection";
+import HomeSection from "../../sections/Home";
 import AnimatedHeader from "../../components/AnimatedHeader";
 
 const i18nNamespaces = ["home", "common"];

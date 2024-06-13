@@ -100,15 +100,11 @@ export default function Navbar3() {
                       </p>
                     </StyledLink>
                   </div>
-                  <div
-                    className={`${styles.el} ${
-                      activeNavItem === "/implant" ? styles.active : ""
-                    }`}
-                  >
-                    <StyledLink link="/implant">
+          
+                    <StyledLink link="/hairimplant">
                       <p className={styles.text}>TRANSPLANTE</p>
                     </StyledLink>
-                  </div>
+             
                   <div
                     className={`${styles.el} ${
                       activeNavItem === "/procedures" ? styles.active : ""

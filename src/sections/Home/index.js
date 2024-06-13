@@ -1,13 +1,14 @@
 "use client";
 import styles from "./style.module.css";
 // import { motion } from "framer-motion";
-import ContactSection from "@/home/ContactSection";
 import ReviewsSection from "@/home/ReviewsSection";
 import FaqsSection from "@/home/FaqsSection";
 import CoverSection from "@/home/CoverSection";
 import AboutSection from "@/home/AboutSection";
 import HairSurgerySection from "@/home/HairSurgerySection";
 import TreatmentsSection from "@/home/TreatmentsSection";
+
+import Footer from "@/components/Footer1";
 
 export default function Index({ translations }) {
   const covertranslations = {
@@ -70,12 +71,13 @@ export default function Index({ translations }) {
     <>
       <div className={styles.section}>
         <CoverSection covertranslations={covertranslations} />
-        <AboutSection abouttranslations={abouttranslations} />
+        {/* <AboutSection abouttranslations={abouttranslations} /> */}
         <HairSurgerySection hairtranslations={hairtranslations} />
         <TreatmentsSection treatmentstranslations={treatmentstranslations}/>
         <FaqsSection faqstranslations={faqstranslations} />
-        <ReviewsSection />
-        <ContactSection />
+        {/* <ReviewsSection /> */}
+
+        <Footer/>
       </div>
     </>
   );

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Rounded from "../../common/Rounded";
 import { useTranslation } from "react-i18next";
 import tic from "../../../public/assets/tic.svg"
+import Link from "next/link";
 
 const HairSurgerySection = ({ hairtranslations }) => {
   const { t, i18n } = useTranslation("");
@@ -35,7 +36,9 @@ const HairSurgerySection = ({ hairtranslations }) => {
               </div>
             </div>
             <div className={styles.buttoncontainer}>
+            <Link href="/hairimplant" style={{textDecoration:"none", color:"#493e36"}}>
               <Rounded> {hairtranslations.hairbutton}</Rounded>
+              </Link>
             </div>
           </div>
           <div className={styles.right}>
