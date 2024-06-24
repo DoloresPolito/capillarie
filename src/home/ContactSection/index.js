@@ -25,9 +25,10 @@ const ContactSection = () => {
                 need.
               </p>
 
-              {/* <p className={styles.p2}>
-          
-                </p> */}
+              <p className={styles.p2}>
+          31-32 Wellington Quay  1st florr, 
+D02KP11, Dublin
+                </p>
 
               <div className={styles.buttonscontainer}>
                 <div className={styles.buttoncontainer}>
@@ -49,7 +50,7 @@ const ContactSection = () => {
             </div>
           </div>
         </div>{" "}
-        <p className={styles.rightstext}>All right reserved | Capillarie Clinic Dublin</p>
+        <p className={styles.rightstext}> © All right reserved | Capillarie Clinic Dublin</p>
       </div>
     </>
   );

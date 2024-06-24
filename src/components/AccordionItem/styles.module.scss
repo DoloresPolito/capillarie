@@ -1,12 +1,14 @@
 .card {
   background: white;
-
-  // margin-bottom: 32px;
   padding: 10px 30px;
   overflow: hidden;
   border: none;
   border-bottom: 0.5px solid #a5a5a5;
-  // border-top: 0.5px solid #a5a5a5 ;
+
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+    padding: 10px 0px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -19,7 +21,7 @@
   .header {
     img {
       height: 16px;
-      width:16px;
+      width: 16px;
     }
 
     display: flex;
@@ -37,35 +39,21 @@
     font-weight: 300;
     line-height: 25px;
 
-    @media only screen and (max-width: 800px) {
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 29px;
-      padding: 2px;
-    }
-
-    @media only screen and (max-width: 665px) {
-      font-size: 15px;
-      font-weight: 500;
+    @media only screen and (max-width: 1000px) {
       line-height: 23px;
     }
 
-    @media only screen and (max-width: 540px) {
+    @media only screen and (max-width: 600px) {
+      width: 90%;
+      font-size: 14px;
     }
   }
-
-
 
   .motionContent {
     overflow: hidden;
   }
 
   .content {
-    // padding: 15px 0;
-    // font-family: "Roboto", sans-serif;
-    // font-weight: 300;
-    // line-height: 22px;
-
     font-family: var(--font-montserrat) !important;
     color: #676565;
     letter-spacing: 0.5px;

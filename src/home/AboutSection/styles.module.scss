@@ -16,6 +16,15 @@
     justify-content: center;
     height: 100%;
     max-width: 1600px;
+
+    @media only screen and (max-width: 1000px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 95%;
+    }
   }
 
   .left {
@@ -24,6 +33,10 @@
     height: 100%;
     flex-direction: column;
     padding: 20px 20px;
+    @media only screen and (max-width: 1000px) {
+      width: 100%;
+      padding: 20px 0px;
+    }
   }
 
   .right {
@@ -33,6 +46,10 @@
     flex-direction: column;
     justify-content: center;
     padding: 50px 80px;
+    @media only screen and (max-width: 1000px) {
+      width: 100%;
+      padding: 0px 0px;
+    }
   }
 
   h6 {
