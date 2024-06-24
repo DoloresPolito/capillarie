@@ -4,26 +4,49 @@
   cursor: pointer;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: center !important;
   justify-content: center;
+
   padding: 15px 15px;
   overflow: hidden;
-  background-color: transparent; 
+  background-color: transparent;
   transition: border-color 0.4s linear, color 0.4s linear;
+  height: 50px; /* Fixed height for the button */
+  width: 100% !important;
 
-  p {
-    position: relative;
-    z-index: 2; /* Ensure the text is above the circle */
+  @media only screen and (max-width: 600px) {
+    padding: 10px 10px;
+
+  }
+
+
+  .buttontext {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
     transition: color 0.4s linear;
     color: #493e36;
-    font-size: 10px !important;
+
+    font-size: 15px !important;
+    letter-spacing: 0px !important;
     font-weight: 300;
+    font-family: "Plus Jakarta Sans", sans-serif;
+
+    @media only screen and (max-width: 1000px) {
+      font-size: 14px !important;
+    }
+    @media only screen and (max-width: 600px) {
+      font-size: 13px !important;
+    }
   }
 
   &:hover {
-    border-color: #44B9CC; 
+    border-color: #44b9cc;
     // color: white;
-
   }
 }
 
@@ -34,11 +57,11 @@
   border-radius: 50%;
   top: 100%;
   z-index: -1;
-  background-color: #44B9CC;
-  transition: top 0.4s ease, width 0.4s ease; 
+  background-color: #44b9cc;
+  transition: top 0.4s ease, width 0.4s ease;
 }
 
 .roundedButton:hover .circle {
   top: -25%;
-  width: 150%; 
+  width: 150%;
 }

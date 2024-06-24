@@ -50,7 +50,10 @@ export default function Index({
         }}
         {...attributes}
       >
+        <p className={styles.buttontext}>
         {children}
+        </p>
+
         <div
           ref={circle}
           className={styles.circle}

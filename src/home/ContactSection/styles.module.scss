@@ -1,14 +1,15 @@
 .section {
-  height: 90vh;
+  height: 85vh;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
-  // background-color: #44B9CC;
   background-color: rgba(68, 185, 204, 0.85);
-  border-radius: 30px;
-  margin-top: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  max-height: 800px;
 
   .container {
     height: 90%;
@@ -17,8 +18,8 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid white;
     max-width: 1600px;
+    max-height: 800px;
 
     .top {
       display: flex;
@@ -122,8 +123,8 @@
     color:white;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 200;
-    font-size: 16px;
+    font-size: 14px;
     color: #ffffff;
-    margin-top: 15px;
+    margin-top: 20px;
   }
 }

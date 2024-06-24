@@ -85,20 +85,30 @@
     color: #493e36;
     font-size: 15px;
     font-weight: 300;
-    margin-top: 30px;
-    margin-bottom: 20px;
+ 
   }
 
   .p1 {
     color: #44b9cc;
     font-weight: 400;
+        margin-top: 30px;
+    margin-bottom: 20px;
   }
   .p3 {
     text-decoration: underline;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
 
   .buttoncontainer {
     margin-top: 30px;
-    width: 180px;
+    width: 160px;
+
+    @media only screen and (max-width: 1000px) {
+      width: 150px;
+    }
+    @media only screen and (max-width: 600px) {
+      width: 130px;
+    }
   }
 }

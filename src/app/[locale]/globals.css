@@ -38,6 +38,37 @@ body {
 }
 
 
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(214, 214, 214);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #44B9CC;
+  border-radius: 20px;
+  border: 2px solid #44B9CC;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: black;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #44B9CC;
+  border-radius: 20px;
+  border: 2px solid #44B9CC;
+}
+
+
+
 /* 8EDFEC
 44B9CC
 000000

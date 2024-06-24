@@ -42,6 +42,17 @@
       }
     
     
+      .buttoncontainer {
+        margin-top: 30px;
+        width: 160px;
+
+        @media only screen and (max-width: 1000px) {
+          width: 150px;
+        }
+        @media only screen and (max-width: 600px) {
+          width: 120px;
+        }
+      }
     
     }
 

@@ -48,6 +48,19 @@ export default async function Home({ params: { locale } }) {
     treatmentssectiontitle:t("treatmentssectiontitle"),
     treatmentssubtitle:t("treatmentssubtitle"),
     treatmentsbutton:t("treatmentsbutton"),
+
+
+    contactsectiontitle:t("contactsectiontitle"),
+    contacttext1:t("contacttext1"),
+    contacttext2:t("contacttext2"),
+    contactaddress:t("contactaddress"),
+    contactbutton:t("contactbutton"),
+    form1:t("form1"),
+    form2:t("form2"),
+    form3:t("form3"),
+    form4:t("form4"),
+    formbutton:t("formbutton"),
+  
  
   };
 

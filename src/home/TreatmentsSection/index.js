@@ -17,9 +17,12 @@ const TreatmentsSection = ({ treatmentstranslations }) => {
           <h6>{treatmentstranslations.treatmentssectiontitle}</h6>
           <Paragraph paragraph={treatmentstranslations.treatmentssubtitle}  className="subtreatments"/>
           {/* <h3>{treatmentstranslations.treatmentssubtitle}</h3> */}
+
+          <div className={styles.buttoncontainer}>
           <Link href="/procedures" style={{textDecoration:"none", color:"#493e36"}}>
           <Rounded>{treatmentstranslations.treatmentsbutton}</Rounded>
           </Link>
+          </div>
         </div>
       </div>
     </>

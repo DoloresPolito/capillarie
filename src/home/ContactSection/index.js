@@ -4,30 +4,27 @@ import Contact from "@/components/ContactForm";
 import Rounded from "../../common/Rounded";
 import Link from "next/link";
 
-const ContactSection = () => {
+const ContactSection = ({contacttranslations}) => {
   return (
     <>
       <div className={styles.section}>
         <div className={styles.container}>
           <div className={styles.top}>
-            <h6>CONTACT</h6>
+            <h6>{contacttranslations.contactsectiontitle}</h6>
           </div>
           <div className={styles.bottom}>
             <div className={styles.right}>
               <h3>Get in touch!</h3>
               {/* <p>you can reach us anytime</p> */}
               <p className={styles.p1}>
-                Schedule your appointment today and start your journey towards a
-                healthier, happier you.
+              {contacttranslations.contacttext1}
                 <br />
                 <br />
-                Our dedicated team is here to provide the care and support you
-                need.
+                {contacttranslations.contacttext2}
               </p>
 
               <p className={styles.p2}>
-          31-32 Wellington Quay  1st florr, 
-D02KP11, Dublin
+              {contacttranslations.contactaddress}
                 </p>
 
               <div className={styles.buttonscontainer}>
@@ -46,7 +43,7 @@ D02KP11, Dublin
               </div>
             </div>
             <div className={styles.left}>
-              <Contact />
+              <Contact contacttranslations={contacttranslations}/>
             </div>
           </div>
         </div>{" "}

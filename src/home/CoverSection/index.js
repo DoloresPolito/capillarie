@@ -5,6 +5,7 @@ import Rounded from "../../common/Rounded";
 import image from "../../../public/assets/images/cover.png";
 import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
 const CoverSection = ({ covertranslations }) => {
   const { t, i18n } = useTranslation("");
@@ -32,7 +33,15 @@ const CoverSection = ({ covertranslations }) => {
 
 
           <div className={styles.buttonscontainer}>
-            <Rounded>{covertranslations.bookbutton}</Rounded>
+          <div className={styles.buttoncontainer}>
+              <Link
+                href="/about"
+                style={{ textDecoration: "none", color: "#493e36" }}
+              >
+                <Rounded>{covertranslations.bookbutton}</Rounded>
+              </Link>
+            </div>
+  
             <button className={styles.financingbutton}>
               {covertranslations.financingbutton}
             </button>

@@ -71,7 +71,27 @@ export default function Index({ translations }) {
     treatmentssectiontitle: translations.treatmentssectiontitle,
     treatmentssubtitle: translations.treatmentssubtitle,
     treatmentsbutton: translations.treatmentsbutton,
+
+
+
   };
+
+  const contacttranslations = {
+
+    contactsectiontitle:translations.contactsectiontitle,
+    contacttext1:translations.contacttext1,
+    contacttext2:translations.contacttext2,
+    contactaddress:translations.contactaddress,
+    contactbutton:translations.contactbutton,
+    form1:translations.form1,
+    form2:translations.form2,
+    form3:translations.form3,
+    form4:translations.form4,
+    formbutton:translations.formbutton,
+
+  }
+
+
 
   return (
     //   <div className={styles.container}>
@@ -94,9 +114,10 @@ export default function Index({ translations }) {
         <FaqsSection faqstranslations={faqstranslations} />
         {/* <ReviewsSection /> */}
    
-        <Footer />
+ 
         {/* <BlurryCursor/> */}
       </div>
+      <Footer contacttranslations={contacttranslations}/>
     </>
   );
 }
