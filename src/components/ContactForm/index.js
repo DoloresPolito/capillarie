@@ -15,7 +15,6 @@ const Contact = () => {
     <div className={styles.formcontainer}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.inputcontainer}>
-    
           <input
             type="text"
             placeholder="Full Name"
@@ -24,7 +23,6 @@ const Contact = () => {
           />
         </div>
         <div className={styles.inputcontainer}>
-     
           <input
             type="email"
             placeholder="E-mail"
@@ -33,16 +31,22 @@ const Contact = () => {
           />
         </div>
         <div className={styles.inputcontainer}>
-     
-          <textarea
-            rows={4}
-            placeholder="Message"
+          <input
+            type="tel"
+            placeholder="Phone number"
             className={styles.input}
+            {...register("phone", { required: true })}
+          />
+        </div>
+        <div className={styles.inputcontainertextarea}>
+          <textarea
+            placeholder="Message"
+            className={`${styles.input} ${styles.textarea}`}
             {...register("message", { required: true })}
           ></textarea>
         </div>
         <div className={styles.buttoncontainer}>
-          <Button text="send" color="#AAA9A9"/>
+          {/* <Button text="Send" color="#AAA9A9"/> */}
           <button className={styles.button}>Submit</button>
         </div>
       </form>

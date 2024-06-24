@@ -1,7 +1,7 @@
 .footerContainer {
     position: relative;
-    height: 550px !important;
-    background-color: blue;
+    height: 650px !important;
+
     // z-index: -1;
     // clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
     // clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
@@ -11,7 +11,7 @@
   .innerContainer {
     position: fixed;
     bottom: 0;
-    height: 550px;
+    height: 650px;
     width: 100%;
     left: 0;
     // z-index: -1;

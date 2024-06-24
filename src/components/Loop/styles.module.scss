@@ -1,0 +1,48 @@
+.loopSection {
+    .blocks {
+      left: 0px;
+      height: auto;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+  
+    .contents {
+      width: 100%;
+      margin: 0 auto;
+      font-size: 30px;
+      white-space: nowrap;
+    }
+  
+    .firstBlock {
+      display: inline-block;
+      animation: animation1 45s linear infinite;
+    }
+  
+    .secondBlock {
+      display: inline-block;
+      animation: animation2 45s linear infinite;
+    }
+  
+    @keyframes animation1 {
+      0% {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+      }
+    }
+    
+    @keyframes animation2 {
+      0% {
+        transform: translateX(100%);
+        -webkit-transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+      }
+    }
+  }

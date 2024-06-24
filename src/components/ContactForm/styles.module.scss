@@ -1,43 +1,65 @@
-.formcontainer{
+.formcontainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 800px;
+    align-items: flex-end;
+    width: 100%;
     height: auto;
-    margin: 80px 20px;
-}
-
-.inputcontainer{
+  }
+  
+  .inputcontainer {
     display: flex;
     width: 600px;
-    margin: 30px 0px;
-}
-
-.label{
+    margin: 30px 0;
+  }
+  
+  .inputcontainertextarea {
+    display: flex;
+    width: 600px;
+    margin: 30px 0;
+  }
+  
+  .label {
     height: 30px;
     width: 100px;
-}
-
-.input{
+  }
+  
+  .input {
     height: 40px;
     width: 80%;
     border: none;
     border-radius: 30px;
     padding-left: 20px;
-    border: 0.5px solid #AAA9A9
-}
-
-.buttoncontainer{
+    border: 0.5px solid #AAA9A9;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .textarea {
+    height: 120px; /* Make textarea taller */
+    padding-left: 20px;
+    padding-top: 10px; /* Optional: add padding on top for text area */
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 30px;
+  
+    &::placeholder {
+      font-family: "Plus Jakarta Sans", sans-serif;
+    }
+  }
+  
+  .buttoncontainer {
     width: 80px;
-}
-
-.button{
+  }
+  
+  .button {
     height: 40px;
     width: 120px;
-    background-color: #DADBDB ;
+    background-color: #ffffff;
     outline: none;
-    border:none;
-    border-radius: 15px;
-    color: #000000;
+    border: none;
+    border-radius: 30px;
+    color: #5b5858;
     cursor: pointer;
-}
+  }

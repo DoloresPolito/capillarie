@@ -13,19 +13,16 @@ export default function FaqsSection({ faqstranslations }) {
     setActive((prevActive) => (prevActive === id ? null : id));
   };
 
-
   const faqsA = [
     { id: 1, faq: faqstranslations.faq1, ans: faqstranslations.ans1 },
     { id: 2, faq: faqstranslations.faq2, ans: faqstranslations.ans2 },
     { id: 3, faq: faqstranslations.faq3, ans: faqstranslations.ans3 },
     { id: 4, faq: faqstranslations.faq4, ans: faqstranslations.ans4 },
-
   ];
-
 
   return (
     <>
-          <SlidingImages />
+      {/* <SlidingImages /> */}
       <div className={styles.faqssection}>
         <h6>{faqstranslations.faqstitle}</h6>
         <div className={styles.faqscontainer}>
@@ -41,16 +38,17 @@ export default function FaqsSection({ faqstranslations }) {
           ))}
 
           <div className={styles.buttoncontainer}>
-            <Link href="/faqs" style={{textDecoration:"none", color:"#493e36"}}>
-      
-            <Rounded>See all</Rounded>
+            <Link
+              href="/faqs"
+              style={{ textDecoration: "none", color: "#493e36" }}
+            >
+              <Rounded>See all</Rounded>
             </Link>
           </div>
         </div>
 
-        <h6>{faqstranslations.resultstitle}</h6>
+        {/* <h6>{faqstranslations.resultstitle}</h6> */}
       </div>
-
     </>
   );
 }

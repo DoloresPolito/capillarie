@@ -10,11 +10,11 @@ import AboutSection from "@/home/AboutSection";
 import HairSurgerySection from "@/home/HairSurgerySection";
 import TreatmentsSection from "@/home/TreatmentsSection";
 import BlurryCursor from "@/components/Cursor";
+import ResultsSection from "@/home/ResultsSection";
 
 import Footer from "@/components/Footer1";
 
 export default function Index({ translations }) {
-
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -89,14 +89,14 @@ export default function Index({ translations }) {
         <CoverSection covertranslations={covertranslations} />
         <AboutSection abouttranslations={abouttranslations} />
         <HairSurgerySection hairtranslations={hairtranslations} />
-        <TreatmentsSection treatmentstranslations={treatmentstranslations}/>
+        <TreatmentsSection treatmentstranslations={treatmentstranslations} />
+        <ResultsSection faqstranslations={faqstranslations}  />
         <FaqsSection faqstranslations={faqstranslations} />
         {/* <ReviewsSection /> */}
-
-        <Footer/>
+   
+        <Footer />
         {/* <BlurryCursor/> */}
       </div>
- 
     </>
   );
 }
