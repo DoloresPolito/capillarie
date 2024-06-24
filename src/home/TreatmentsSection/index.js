@@ -4,6 +4,7 @@ import styles from "./styles.module.scss";
 import Rounded from "../../common/Rounded";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
+import Paragraph from "@/components/Paragraph";
 
 const TreatmentsSection = ({ treatmentstranslations }) => {
   const { t, i18n } = useTranslation("");
@@ -14,7 +15,8 @@ const TreatmentsSection = ({ treatmentstranslations }) => {
       <div className={styles.section}>
         <div className={styles.container}>
           <h6>{treatmentstranslations.treatmentssectiontitle}</h6>
-          <h3>{treatmentstranslations.treatmentssubtitle}</h3>
+          <Paragraph paragraph={treatmentstranslations.treatmentssubtitle}  className="subtreatments"/>
+          {/* <h3>{treatmentstranslations.treatmentssubtitle}</h3> */}
           <Link href="/procedures" style={{textDecoration:"none", color:"#493e36"}}>
           <Rounded>{treatmentstranslations.treatmentsbutton}</Rounded>
           </Link>

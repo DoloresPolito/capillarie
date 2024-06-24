@@ -7,11 +7,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #BCE4F2;
+    background-color: #d2f4f4;
     border-radius: 50%;
     mix-blend-mode: difference;
     pointer-events: none;
     transition: height 0.3s ease-out, width 0.3s ease-out, filter 0.3s ease-out;
+    z-index: 1000;
   
     &.active {
       width: 400px;
@@ -23,8 +24,8 @@
     }
   
     &:not(.active) {
-      width: 30px;
-      height: 30px;
+      width: 20px;
+      height: 20px;
       filter: blur(0px);
     }
   }

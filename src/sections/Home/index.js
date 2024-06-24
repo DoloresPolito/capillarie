@@ -1,16 +1,32 @@
 "use client";
-import styles from "./style.module.css";
+import styles from "./styles.module.scss";
+import { useEffect } from "react";
+import Lenis from "lenis";
 // import { motion } from "framer-motion";
-import ReviewsSection from "@/home/ReviewsSection";
+// import ReviewsSection from "@/home/ReviewsSection";
 import FaqsSection from "@/home/FaqsSection";
 import CoverSection from "@/home/CoverSection";
 import AboutSection from "@/home/AboutSection";
 import HairSurgerySection from "@/home/HairSurgerySection";
 import TreatmentsSection from "@/home/TreatmentsSection";
+import BlurryCursor from "@/components/Cursor";
 
 import Footer from "@/components/Footer1";
 
 export default function Index({ translations }) {
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
   const covertranslations = {
     title: translations.title,
     subtitle: translations.subtitle,
@@ -71,14 +87,16 @@ export default function Index({ translations }) {
     <>
       <div className={styles.section}>
         <CoverSection covertranslations={covertranslations} />
-        {/* <AboutSection abouttranslations={abouttranslations} /> */}
+        <AboutSection abouttranslations={abouttranslations} />
         <HairSurgerySection hairtranslations={hairtranslations} />
         <TreatmentsSection treatmentstranslations={treatmentstranslations}/>
         <FaqsSection faqstranslations={faqstranslations} />
         {/* <ReviewsSection /> */}
 
         <Footer/>
+        {/* <BlurryCursor/> */}
       </div>
+ 
     </>
   );
 }

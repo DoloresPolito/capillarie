@@ -3,13 +3,12 @@ import styles from "./styles.module.scss";
 import Image from "next/image";
 import Rounded from "../../common/Rounded";
 import image from "../../../public/assets/images/cover.png";
+import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import { useTranslation } from "react-i18next";
 
 const CoverSection = ({ covertranslations }) => {
   const { t, i18n } = useTranslation("");
   const locale = i18n.language;
-
-
 
   return (
     <>
@@ -17,7 +16,7 @@ const CoverSection = ({ covertranslations }) => {
         <div className={styles.container}>
           <h6>{covertranslations.sectiontitle}</h6>
           <h4>{covertranslations.subtitle}</h4>
-    
+
           {locale === "en" ? (
             <h2>
               Experience the <span>transformative power</span> of our
@@ -30,6 +29,7 @@ const CoverSection = ({ covertranslations }) => {
               rejuvenecedores.
             </h2>
           )}
+
 
           <div className={styles.buttonscontainer}>
             <Rounded>{covertranslations.bookbutton}</Rounded>

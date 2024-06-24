@@ -77,7 +77,7 @@ export default function Navbar3() {
 
   return (
     <>
-      {width > medium ? (
+  
         <>
           <div ref={header} className={styles.header}>
             <div className={styles.headercontainer}>
@@ -133,7 +133,7 @@ export default function Navbar3() {
           </div>
           <div ref={button} className={styles.headerButtonContainer}>
         
-            <Rounded
+            {/* <Rounded
               onClick={() => {
                 setIsActive(!isActive);
               }}
@@ -145,44 +145,55 @@ export default function Navbar3() {
                   isActive ? styles.burgerActive : ""
                 }`}
               ></div>
-            </Rounded>
+            </Rounded> */}
+
+
             <div className={styles.bookbutton}><p>Book an appoiment</p></div>
           </div>
           <AnimatePresence mode="wait">{isActive && <Mask />}</AnimatePresence>
         </>
-      ) : (
-        <>
-          <div ref={header} className={styles.header}>
-            <div className={styles.headercontainer}>
-              <div className={styles.logo}>
-                <Link href="/">
-                  <Image src={logo} alt="image" className={styles.logo} />
-                </Link>
-              </div>
 
-              <div className={styles.headerButtonContainerMobile}>
-                <div className={styles.bookbutton}>hola</div>
-                <Rounded
-                  onClick={() => {
-                    setIsActive(!isActive);
-                  }}
-                  className={`${styles.button}`}
-                >
-                  <p className={styles.buttontext}>MENU</p>
-                  <div
-                    className={`${styles.burger} ${
-                      isActive ? styles.burgerActive : ""
-                    }`}
-                  ></div>
-                </Rounded>
-              </div>
-              <AnimatePresence mode="wait">
-                {isActive && <Mask />}
-              </AnimatePresence>
-            </div>
-          </div>
-        </>
-      )}
+
+
     </>
   );
 }
+
+
+
+// {width > medium ? (
+
+
+//   ) : (
+//     <>
+//       <div ref={header} className={styles.header}>
+//         <div className={styles.headercontainer}>
+//           <div className={styles.logo}>
+//             <Link href="/">
+//               <Image src={logo} alt="image" className={styles.logo} />
+//             </Link>
+//           </div>
+
+//           <div className={styles.headerButtonContainerMobile}>
+//             <div className={styles.bookbutton}>hola</div>
+//             <Rounded
+//               onClick={() => {
+//                 setIsActive(!isActive);
+//               }}
+//               className={`${styles.button}`}
+//             >
+//               <p className={styles.buttontext}>MENU</p>
+//               <div
+//                 className={`${styles.burger} ${
+//                   isActive ? styles.burgerActive : ""
+//                 }`}
+//               ></div>
+//             </Rounded>
+//           </div>
+//           <AnimatePresence mode="wait">
+//             {isActive && <Mask />}
+//           </AnimatePresence>
+//         </div>
+//       </div>
+//     </>
+//   )}
