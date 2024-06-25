@@ -96,8 +96,9 @@ export default function Navbar3() {
               <>
                 <div className={styles.rightside}>
                   <div className={styles.nav}>
-                    {links.map((link) => (
+                    {links.map((link, index) => (
                       <div
+                      key={index}
                         className={`${styles.el} ${
                           activeNavItem === link.active ? styles.active : ""
                         }`}
