@@ -104,7 +104,7 @@ export default function Navbar3() {
                         }`}
                       >
                         <Magnetic>
-                          <div key={index} className={styles.el}>
+                          <div key={`${link.active}-${index}`} className={styles.el}>
                             <StyledLink link={link.link}>
                               <p className={styles.text}>
                                 {locale === "es" ? link.spanish : link.english}
