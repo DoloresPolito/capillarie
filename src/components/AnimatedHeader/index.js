@@ -96,15 +96,15 @@ export default function Navbar3() {
               <>
                 <div className={styles.rightside}>
                   <div className={styles.nav}>
-                    {links.map((link, index) => (
+                    {links.map((link) => (
                       <div
-                        key={index}
+                      key={link.active} 
                         className={`${styles.el} ${
                           activeNavItem === link.active ? styles.active : ""
                         }`}
                       >
                         <Magnetic>
-                          <div key={`${link.active}-${index}`} className={styles.el}>
+                          <div key={link.link} className={styles.el}>
                             <StyledLink link={link.link}>
                               <p className={styles.text}>
                                 {locale === "es" ? link.spanish : link.english}
