@@ -1,10 +1,13 @@
 .loopSection {
+
     .blocks {
       left: 0px;
       height: auto;
       position: relative;
       width: 100%;
       overflow: hidden;
+      // max-width: 1600px;
+
     }
   
     .contents {
@@ -16,12 +19,12 @@
   
     .firstBlock {
       display: inline-block;
-      animation: animation1 45s linear infinite;
+      animation: animation1 70s linear infinite;
     }
   
     .secondBlock {
       display: inline-block;
-      animation: animation2 45s linear infinite;
+      animation: animation2 70s linear infinite;
     }
   
     @keyframes animation1 {
