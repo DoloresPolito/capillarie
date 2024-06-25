@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import Paragraph from "@/components/Paragraph";
+import AnimatedHeading from "@/components/HorizontalTitles";
 
 const AboutSection = ({ abouttranslations }) => {
   const { t, i18n } = useTranslation("");
@@ -16,7 +17,10 @@ const AboutSection = ({ abouttranslations }) => {
       <div className={styles.section}>
         <div className={styles.container}>
           <div className={styles.left}>
-            <h6>{abouttranslations.aboutsectiontitle}</h6>
+            <AnimatedHeading className="miClasePersonalizada">
+              {abouttranslations.aboutsectiontitle}
+        
+            </AnimatedHeading>
 
             <Paragraph
               paragraph={abouttranslations.aboutsubtitle}
@@ -26,11 +30,7 @@ const AboutSection = ({ abouttranslations }) => {
             {/* <h3>{abouttranslations.aboutsubtitle}</h3> */}
           </div>
           <div className={styles.right}>
-            <AnimatedText
-              text={abouttranslations.abouttext1}
-              className="p1"
-        
-            />
+            <AnimatedText text={abouttranslations.abouttext1} className="p1" />
             {/* <p className={styles.p1}>{abouttranslations.abouttext1}</p> */}
             <p className={styles.p2}>{abouttranslations.abouttext2}</p>
             <p className={styles.p3}>{abouttranslations.abouttext3}</p>

@@ -1,0 +1,23 @@
+.container {
+  width: 100vw;
+  height: 50vh; /* Altura deseada para la sección */
+  display: flex;
+  justify-content: space-between;
+  max-width: 1600px;
+
+}
+
+.scrollContainer {
+  display: flex;
+  flex-direction: row;
+
+  width: 1500px; /* Ancho suficiente para 5 cuadrados */
+}
+
+.square {
+  width: 32%;
+  height: 50vh; /* Mitad de la altura de la sección */
+  flex-shrink: 0; /* Evitar que los cuadrados se ajusten */
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+}

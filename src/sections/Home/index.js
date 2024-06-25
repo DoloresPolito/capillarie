@@ -11,6 +11,7 @@ import HairSurgerySection from "@/home/HairSurgerySection";
 import TreatmentsSection from "@/home/TreatmentsSection";
 import BlurryCursor from "@/components/Cursor";
 import ResultsSection from "@/home/ResultsSection";
+import HorizontalScroll from "@/components/HorizontalScroll"
 
 import Footer from "@/components/Footer1";
 
@@ -108,10 +109,12 @@ export default function Index({ translations }) {
       <div className={styles.section}>
         <CoverSection covertranslations={covertranslations} />
         <AboutSection abouttranslations={abouttranslations} />
-        <HairSurgerySection hairtranslations={hairtranslations} />
         <TreatmentsSection treatmentstranslations={treatmentstranslations} />
-        <ResultsSection faqstranslations={faqstranslations}  />
+        <HairSurgerySection hairtranslations={hairtranslations} />
+      
+     
         <FaqsSection faqstranslations={faqstranslations} />
+        <ResultsSection faqstranslations={faqstranslations}  />
         {/* <ReviewsSection /> */}
    
  
