@@ -98,13 +98,13 @@ export default function Navbar3() {
                   <div className={styles.nav}>
                     {links.map((link, index) => (
                       <div
-                      key={index}
+                        key={index}
                         className={`${styles.el} ${
                           activeNavItem === link.active ? styles.active : ""
                         }`}
                       >
                         <Magnetic>
-                          <div className={styles.el}>
+                          <div key={index} className={styles.el}>
                             <StyledLink link={link.link}>
                               <p className={styles.text}>
                                 {locale === "es" ? link.spanish : link.english}
@@ -139,7 +139,7 @@ export default function Navbar3() {
                   </div>
                 </div>
                 <AnimatePresence mode="wait">
-                  {isActive && <Mask links={links}/>}
+                  {isActive && <Mask links={links} />}
                 </AnimatePresence>
               </>
             )}
