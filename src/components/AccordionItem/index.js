@@ -14,9 +14,9 @@ export const AccordionItem = ({
   const isActive = active === id;
 
   return (
-    <div className={styles.card} >
+    <div className={styles.card}   >
       <div 
-      onClick={() => handleToggle(id)} 
+    onClick={() => handleToggle(id)} 
       className={styles.header}>
         {header}
 

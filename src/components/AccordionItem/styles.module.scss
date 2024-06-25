@@ -1,13 +1,15 @@
 .card {
   background: white;
-  padding: 10px 30px;
+  // padding: 10px 30px;
   overflow: hidden;
   border: none;
   border-bottom: 0.5px solid #a5a5a5;
+  z-index: 10000;
+
 
   @media only screen and (max-width: 1000px) {
     width: 100%;
-    padding: 10px 0px;
+    // padding: 10px 0px;
   }
 
   &:last-child {
@@ -19,6 +21,7 @@
   }
 
   .header {
+
     img {
       height: 16px;
       width: 16px;
@@ -37,14 +40,15 @@
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
-    line-height: 25px;
+    // line-height: 25px;
+    z-index: 1000;
 
-    @media only screen and (max-width: 1000px) {
-      line-height: 23px;
-    }
+    // @media only screen and (max-width: 1000px) {
+    //   line-height: 23px;
+    // }
 
     @media only screen and (max-width: 600px) {
-      width: 90%;
+      width: 100%;
       font-size: 14px;
     }
   }

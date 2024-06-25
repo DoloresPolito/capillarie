@@ -117,7 +117,7 @@ export default function Index({ translations }) {
  
         {/* <BlurryCursor/> */}
       </div>
-      <Footer contacttranslations={contacttranslations}/>
+      {/* <Footer contacttranslations={contacttranslations}/> */}
     </>
   );
 }

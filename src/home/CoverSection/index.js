@@ -31,17 +31,17 @@ const CoverSection = ({ covertranslations }) => {
             </h2>
           )}
 
-
           <div className={styles.buttonscontainer}>
-          <div className={styles.buttoncontainer}>
+            <div className={styles.buttoncontainer}>
               <Link
-                href="/about"
+                href="https://wa.me/3446584076"
+                target="_blank"
                 style={{ textDecoration: "none", color: "#493e36" }}
               >
                 <Rounded>{covertranslations.bookbutton}</Rounded>
               </Link>
             </div>
-  
+
             <button className={styles.financingbutton}>
               {covertranslations.financingbutton}
             </button>

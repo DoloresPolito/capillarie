@@ -50,9 +50,9 @@ export default function Index({
         }}
         {...attributes}
       >
-        <p className={styles.buttontext}>
+        {/* <p className={styles.buttontext}> */}
         {children}
-        </p>
+        {/* </p> */}
 
         <div
           ref={circle}

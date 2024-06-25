@@ -11,6 +11,12 @@
   border-top-right-radius: 30px;
   max-height: 800px;
 
+  @media only screen and (max-width: 1000px) {
+    height:auto;
+ padding-bottom: 50px;
+    
+  }
+
   .container {
     height: 90%;
     width: 90%;
@@ -20,6 +26,13 @@
     align-items: center;
     max-width: 1600px;
     max-height: 800px;
+
+    @media only screen and (max-width: 1000px) {
+      flex-direction: column;
+      align-items: center;
+   
+      
+    }
 
     .top {
       display: flex;
@@ -53,6 +66,11 @@
         width: 50%;
         height: 100%;
         padding-top: -30px;
+        @media only screen and (max-width: 1000px) {
+          width: 100%;
+          padding-top: 0px;
+        }
+    
     
       }
       .right {
@@ -62,6 +80,9 @@
         width: 50%;
         height: 95%;
         padding: 20px 0px;
+        @media only screen and (max-width: 1000px) {
+          display: none;
+        }
 
         .p1 {
           font-family: "Plus Jakarta Sans", sans-serif;

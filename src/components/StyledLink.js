@@ -7,7 +7,7 @@ export default function StyledLink({children, link}) {
   
   return (
    
-          <Link href={link} style={{textDecoration:"none"}}>
+          <Link href={link} style={{textDecoration:"none", color:"black"}}>
          {children}
           </Link>
        
