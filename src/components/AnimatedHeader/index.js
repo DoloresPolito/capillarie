@@ -36,10 +36,10 @@ export default function Navbar3() {
     const handleResize = () => {
       setWidth(window.innerWidth);
     };
-  
+
     handleResize();
     window.addEventListener("resize", handleResize);
-  
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -96,18 +96,18 @@ export default function Navbar3() {
               <>
                 <div className={styles.rightside}>
                   <div className={styles.nav}>
-                    {links.map((link) => (
-                      <div
-                      key={link.active} 
+
+                  <div
+                       
                         className={`${styles.el} ${
-                          activeNavItem === link.active ? styles.active : ""
+                          activeNavItem === "about" ? styles.active : ""
                         }`}
                       >
                         <Magnetic>
-                          <div key={link.link} className={styles.el}>
-                            <StyledLink link={link.link}>
+                          <div className={styles.el}>
+                            <StyledLink link="/about">
                               <p className={styles.text}>
-                                {locale === "es" ? link.spanish : link.english}
+                                {locale === "es" ? "Nosotros" : "About"}
                               </p>
                             </StyledLink>
                             <div
@@ -117,7 +117,75 @@ export default function Navbar3() {
                           </div>
                         </Magnetic>
                       </div>
-                    ))}
+
+
+                      <div
+                       
+                       className={`${styles.el} ${
+                         activeNavItem === "procedures" ? styles.active : ""
+                       }`}
+                     >
+                       <Magnetic>
+                         <div className={styles.el}>
+                           <StyledLink link="/procedures">
+                             <p className={styles.text}>
+                               {locale === "es" ? "Tratamientos" : "Procedures"}
+                             </p>
+                           </StyledLink>
+                           <div
+                             className={styles.indicator}
+                             ref={handleRef}
+                           ></div>
+                         </div>
+                       </Magnetic>
+                     </div>
+
+                     <div
+                       
+                       className={`${styles.el} ${
+                         activeNavItem === "hairimplant" ? styles.active : ""
+                       }`}
+                     >
+                       <Magnetic>
+                         <div className={styles.el}>
+                           <StyledLink link="/hairimplant">
+                             <p className={styles.text}>
+                               {locale === "es" ? "Implante capilar" : "Hair implant"}
+                             </p>
+                           </StyledLink>
+                           <div
+                             className={styles.indicator}
+                             ref={handleRef}
+                           ></div>
+                         </div>
+                       </Magnetic>
+                     </div>
+
+
+                     <div
+                       
+                       className={`${styles.el} ${
+                         activeNavItem === "contact" ? styles.active : ""
+                       }`}
+                     >
+                       <Magnetic>
+                         <div className={styles.el}>
+                           <StyledLink link="/contact">
+                             <p className={styles.text}>
+                               {locale === "es" ? "Contacto" : "Contact"}
+                             </p>
+                           </StyledLink>
+                           <div
+                             className={styles.indicator}
+                             ref={handleRef}
+                           ></div>
+                         </div>
+                       </Magnetic>
+                     </div>
+
+
+                     
+
                   </div>
                   <LanguageChanger />
                 </div>
@@ -149,3 +217,27 @@ export default function Navbar3() {
     </>
   );
 }
+
+
+                    {/* {links.map((link) => (
+                      <div
+                        key={link.active}
+                        className={`${styles.el} ${
+                          activeNavItem === link.active ? styles.active : ""
+                        }`}
+                      >
+                        <Magnetic>
+                          <div key={link.link} className={styles.el}>
+                            <StyledLink link={link.link}>
+                              <p className={styles.text}>
+                                {locale === "es" ? link.spanish : link.english}
+                              </p>
+                            </StyledLink>
+                            <div
+                              className={styles.indicator}
+                              ref={handleRef}
+                            ></div>
+                          </div>
+                        </Magnetic>
+                      </div>
+                    ))} */}

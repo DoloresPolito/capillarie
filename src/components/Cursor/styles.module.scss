@@ -7,25 +7,24 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #d2f4f4;
+    background-color: #44B9CC;
     border-radius: 50%;
-    mix-blend-mode: difference;
+    // mix-blend-mode: difference;
     pointer-events: none;
     transition: height 0.3s ease-out, width 0.3s ease-out, filter 0.3s ease-out;
     z-index: 1000;
   
     &.active {
-      width: 400px;
-      height: 400px;
-    //   filter: blur(30px);
-      background-color: #bce4f272;
-      border:1px solid black;
+      width: 200px;
+      height: 200px;
+      filter: blur(30px);
+      background-color: #87e3f1 !important;
 
     }
   
     &:not(.active) {
-      width: 20px;
-      height: 20px;
+      width: 10px;
+      height: 10px;
       filter: blur(0px);
     }
   }

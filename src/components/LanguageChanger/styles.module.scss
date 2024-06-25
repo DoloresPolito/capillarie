@@ -3,7 +3,8 @@
     align-items: center;
     font-size: 12px; /* Adjust the font size as needed */
     cursor: pointer;
-    background-color: #44B9CC;
+    /* background-color: #44B9CC; */
+    border: 0.5px solid black;
     border-radius: 30px;
     width: 100px;
     justify-content: center;
@@ -12,7 +13,7 @@
   
   .languageOption {
     padding: 5px 10px; /* Adjust the padding as needed */
-    color: white;
+    color: black;
     transition: color 0.3s ease;
     position: relative;
     z-index: 2000;
@@ -24,7 +25,7 @@
   
   .separator {
     padding: 0 2px;
-    color: white;
+    color: black;
   }
   
   .selected::after {
@@ -32,7 +33,7 @@
     display: block;
     width: 100%; /* Shorter underline */
     height: 2px;
-    background-color: white;
+    background-color:  #44B9CC;
     margin: 0 auto;
     margin-top: 2px; /* Adjust the spacing from the text */
   }
