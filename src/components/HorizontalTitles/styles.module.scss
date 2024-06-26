@@ -1,17 +1,14 @@
 .heading {
-    align-self: flex-end;
-
-    /* Otros estilos comunes para el h6 */
-    color:black !important;
- 
-
-    font-family: "Plus Jakarta Sans", sans-serif;
-    color: #493e36;
-    letter-spacing: 1px;
-    font-size: 15px;
-    font-weight: 400;
-    margin-top: 30px;
-    margin-bottom: 40px;
-
-  }
-  
+  align-self: center;
+  color: black !important;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #493e36;
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  background-color: red; /* Añadido para verificar la visibilidad */
+  border: 1px solid blue; /* Borde para ver los límites del elemento */
+  position: relative;
+}

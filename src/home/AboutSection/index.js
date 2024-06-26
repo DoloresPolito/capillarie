@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import styles from "./styles.module.scss";
 // import Image from "next/image";
 import Rounded from "../../common/Rounded";
@@ -7,20 +8,41 @@ import Link from "next/link";
 import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import Paragraph from "@/components/Paragraph";
 import AnimatedHeading from "@/components/HorizontalTitles";
+import { motion, useAnimation } from "framer-motion";
+
+import { useInView } from "react-intersection-observer";
 
 const AboutSection = ({ abouttranslations }) => {
   const { t, i18n } = useTranslation("");
   const locale = i18n.language;
 
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        x: 0,
+        opacity: 1,
+        transition: { duration: 0.8, ease: "easeOut" },
+      });
+    }
+  }, [controls, inView]);
   return (
     <>
-      <div className={styles.section}>
+      <div className={styles.section} ref={ref}>
         <div className={styles.container}>
           <div className={styles.left}>
-            <AnimatedHeading className="miClasePersonalizada">
-              {abouttranslations.aboutsectiontitle}
-        
-            </AnimatedHeading>
+
+          <motion.h6
+          initial={{ x: "-10vw", opacity: 0 }}
+          animate={controls}
+          className={`${styles.heading} `}
+        >
+         {abouttranslations.aboutsectiontitle}
+        </motion.h6>
+   
+     
 
             <Paragraph
               paragraph={abouttranslations.aboutsubtitle}

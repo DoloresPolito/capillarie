@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import { useEffect } from "react";
 import Lenis from "lenis";
 // import { motion } from "framer-motion";
-// import ReviewsSection from "@/home/ReviewsSection";
+import ReviewsSection from "@/home/ReviewsSection";
 import FaqsSection from "@/home/FaqsSection";
 import CoverSection from "@/home/CoverSection";
 import AboutSection from "@/home/AboutSection";
@@ -115,7 +115,7 @@ export default function Index({ translations }) {
      
         <FaqsSection faqstranslations={faqstranslations} />
         <ResultsSection faqstranslations={faqstranslations}  />
-        {/* <ReviewsSection /> */}
+        <ReviewsSection />
    
  
         {/* <BlurryCursor/> */}

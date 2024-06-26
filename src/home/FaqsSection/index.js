@@ -1,10 +1,13 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AccordionItem from "@/components/AccordionItem";
 import styles from "./styles.module.scss";
 import Rounded from "../../common/Rounded";
 import SlidingImages from "../../components/SlidingImages";
 import Link from "next/link";
+import { motion, useAnimation } from "framer-motion";
+
+import { useInView } from "react-intersection-observer";
 
 export default function FaqsSection({ faqstranslations }) {
   const [active, setActive] = useState("");
@@ -20,11 +23,32 @@ export default function FaqsSection({ faqstranslations }) {
     { id: 4, faq: faqstranslations.faq4, ans: faqstranslations.ans4 },
   ];
 
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        x: 0,
+        opacity: 1,
+        transition: { duration: 0.8, ease: "easeOut" },
+      });
+    }
+  }, [controls, inView]);
+
   return (
     <>
       {/* <SlidingImages /> */}
-      <div className={styles.faqssection}>
-        <h6>{faqstranslations.faqstitle}</h6>
+      <div className={styles.faqssection} ref={ref}>
+
+      <motion.h6
+          initial={{ x: "-10vw", opacity: 0 }}
+          animate={controls}
+          className={`${styles.heading} `}
+        >
+       {faqstranslations.faqstitle}
+        </motion.h6>
+     
         <div className={styles.faqscontainer}>
           {faqsA.map((question) => (
             <AccordionItem
