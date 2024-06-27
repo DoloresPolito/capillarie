@@ -72,8 +72,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 80px;
-    margin-top: 50px;
+
+    margin-top: 70px;
+
 
     img{
       height: 450px;
@@ -83,6 +84,14 @@
   
     @media only screen and (max-width: 1000px) {
       width: 100%;
+      background-color: red;
+      align-items: flex-start;
+
+      img{
+        height: 400px;
+        width: 700px;
+        border-radius: 30px;
+      }
     }
   }
 

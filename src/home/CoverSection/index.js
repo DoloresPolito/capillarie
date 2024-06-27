@@ -2,7 +2,7 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import Rounded from "../../common/Rounded";
-import image from "../../../public/assets/images/cover.png";
+import image from "../../../public/assets/images/cover2.png";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import AnimatedDiv from "@/components/AnimatedDiv";
