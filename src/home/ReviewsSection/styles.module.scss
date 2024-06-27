@@ -1,16 +1,28 @@
 .section {
-  height: 100vh;
+  height: auto;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: #ffffff;
   z-index: 10;
+  padding-top: 50px;
+  background-image: url("/assets/backgrounds/backcover.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 30px;
 
-  .container {
-    height: 100%;
-    width: 90%;
+  .titles {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    z-index: 4000;
+
+
 
     h6 {
       font-family: "Plus Jakarta Sans", sans-serif;
@@ -18,76 +30,126 @@
       letter-spacing: 1px;
       font-size: 15px;
       font-weight: 400;
+      margin-bottom: 10px;
+ 
+
+    }
+    .reviewstitle {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: #44b9cc;
+      letter-spacing: 1px;
+      font-size: 30px;
+      font-weight: 300;
+      max-width: 800px;
+      text-align: center;
+      margin-bottom: 10px;
       margin-top: 30px;
+ 
+
     }
 
-    h3 {
+    .reviewstext {
       font-family: "Plus Jakarta Sans", sans-serif;
-      font-weight: 200;
-      font-size: 40px;
-      color: #0a7e91;
-      margin-top: 20px;
-    }
-
-    p {
-      font-family: "Plus Jakarta Sans", sans-serif;
-      font-weight: 200;
-      font-size: 17px;
-      color: #0a7e91;
-      margin-top: 15px;
+      color: #493e36;
+      letter-spacing: 1px;
+      font-size: 15px;
+      font-weight: 300;
+      text-align: center;   
     }
   }
 }
 
+.container {
+  height: 100%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+margin: 0 auto;
+margin-top: -40px;
+margin-bottom: 50px;
+
+  
+}
+
 .cardcontainer {
-  height: 300px;
-  width: 300px;
+  height: 220px;
+  width: 90%;
   border-radius: 30px;
-  background-color: rgba(140, 228, 242, 0.2);
-  padding: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #a5a5a5;
+  margin: 5px;
+
+  .cardtop{
+    height: 70%;
+    display: flex;
+    align-items: center;
+  }
+
+  .cardbottom{
+    height: 30%;
+  }
+}
+
+.cardname {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #6a6a6a !important;
+  font-weight: 400 !important;
+  font-size: 13px !important;
+  margin-top: 30px;
+}
+
+.cardtext {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #666565 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.2px;
+  line-height: 130%;
+  font-weight: 300 !important;
+}
+
+.carouselcontainer {
+  height: 50vh;
+  width: 100%;
+  max-width: 1600px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  .cardname {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    color: #545454 !important;
-    text-align: center;
-    font-weight: 400 !important;
-    margin-bottom: 50px !important;
-  }
-
-  .cardtext {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    color: #545454 !important;
-    text-align: center;
-    font-size: 13px !important;
-    letter-spacing: 0.5px;
-    line-height: 130%;
-  }
 }
 
-.carouselcontainer {
-  height: 90vh;
-  width: 98%;
-  max-width: 1600px;
+.carouselcontent {
   position: relative;
+  height: auto;
+  width: 100%;
+  max-width: 1600px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between !important;
+}
+
+.arrowscontainer {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  align-self: flex-end;
+  width: 120px;
+  margin-bottom: 20px;
 }
 
 .swiper {
   width: 100%;
   height: 100%;
-  background: #000;
 }
 
 .swiperslide {
   display: flex;
-  width: 80%;
-  margin: 0 auto;
   justify-content: space-between;
 }
 
@@ -122,25 +184,37 @@
   display: none !important;
 }
 
-
-  
-.custom-next,
-.custom-prev {
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 40px; // Ajusta según el tamaño de tus flechas
-  height: 40px; // Ajusta según el tamaño de tus flechas
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  cursor: pointer;
-}
-
-.custom-next {
+.customnext {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   right: 10px;
+  border: 1px solid #44b9cc;
+  cursor: pointer;
+  &:hover {
+    background-color: #c2edf4; /* Color de fondo al hacer hover */
+  }
+  img {
+    transform: rotate(270deg);
+  }
 }
 
-.custom-prev {
+.customprev {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   left: 10px;
+  border: 1px solid #44b9cc;
+  &:hover {
+    background-color: #c2edf4; /* Color de fondo al hacer hover */
+  }
+  img {
+    transform: rotate(270deg);
+  }
 }

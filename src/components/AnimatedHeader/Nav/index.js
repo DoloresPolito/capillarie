@@ -4,6 +4,7 @@ import LinkItem from "./LinkItem";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { menuSlide } from "../animation";
+import LanguageChanger from "@/components/LanguageChanger";
 
 export default function Mask({ links }) {
   const pathname = usePathname();
@@ -38,6 +39,17 @@ export default function Mask({ links }) {
                 />
               );
             })}
+
+            <div className={styles.headercontact}>
+              <p>CONTACT</p>
+            </div>
+            <p className={styles.contacttext}>Telefono</p>
+            <p className={styles.contacttext}>Mail</p>
+            <p className={styles.contacttext}>Ubicación</p>
+            <div className={styles.headerlang}>
+              <p>LANGUAGE</p>
+            </div>
+            <LanguageChanger />
           </div>
         </div>
       </motion.div>

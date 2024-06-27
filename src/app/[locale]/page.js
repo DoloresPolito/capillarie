@@ -61,6 +61,20 @@ export default async function Home({ params: { locale } }) {
     form4:t("form4"),
     formbutton:t("formbutton"),
   
+    reviewssectiontitle:t("reviewssectiontitle"),
+    reviewstitle:t("reviewstitle"),
+    reviewstext:t("reviewstext"),
+   
+    review1:t("review1"),
+    review2:t("review2"),
+    review3:t("review3"),
+    review4:t("review4"),
+    review5:t("review5"),
+    review6:t("review6"),
+    review7:t("review7"),
+    review8:t("review8"),
+    review9:t("review9"),
+    review10:t("review10"),
  
   };
 

@@ -13,7 +13,7 @@ import BlurryCursor from "@/components/Cursor";
 import ResultsSection from "@/home/ResultsSection";
 import HorizontalScroll from "@/components/HorizontalScroll"
 
-import Footer from "@/components/Footer1";
+import Footer from "@/components/Footer2";
 
 export default function Index({ translations }) {
   useEffect(() => {
@@ -92,6 +92,24 @@ export default function Index({ translations }) {
 
   }
 
+  const reviewstranslations = {
+
+    reviewssectiontitle:translations.reviewssectiontitle,
+    reviewstitle:translations.reviewstitle,
+    reviewstext:translations.reviewstext,
+   
+    review1:translations.review1,
+    review2:translations.review2,
+    review3:translations.review3,
+    review4:translations.review4,
+    review5:translations.review5,
+    review6:translations.review6,
+    review7:translations.review7,
+    review8:translations.review8,
+    review9:translations.review9,
+    review10:translations.review10,
+  }
+
 
 
   return (
@@ -109,18 +127,18 @@ export default function Index({ translations }) {
       <div className={styles.section}>
         <CoverSection covertranslations={covertranslations} />
         <AboutSection abouttranslations={abouttranslations} />
-        <TreatmentsSection treatmentstranslations={treatmentstranslations} />
-        <HairSurgerySection hairtranslations={hairtranslations} />
       
+        <HairSurgerySection hairtranslations={hairtranslations} />
+        <TreatmentsSection treatmentstranslations={treatmentstranslations} />
      
         <FaqsSection faqstranslations={faqstranslations} />
         <ResultsSection faqstranslations={faqstranslations}  />
-        <ReviewsSection />
+        <ReviewsSection reviewstranslations={reviewstranslations}/>
    
  
         {/* <BlurryCursor/> */}
       </div>
-      {/* <Footer contacttranslations={contacttranslations}/> */}
+      <Footer contacttranslations={contacttranslations}/>
     </>
   );
 }

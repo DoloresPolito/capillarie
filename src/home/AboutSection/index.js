@@ -9,6 +9,7 @@ import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import Paragraph from "@/components/Paragraph";
 import AnimatedHeading from "@/components/HorizontalTitles";
 import { motion, useAnimation } from "framer-motion";
+import AnimatedDiv from "@/components/AnimatedDiv";
 
 import { useInView } from "react-intersection-observer";
 
@@ -33,16 +34,13 @@ const AboutSection = ({ abouttranslations }) => {
       <div className={styles.section} ref={ref}>
         <div className={styles.container}>
           <div className={styles.left}>
-
-          <motion.h6
-          initial={{ x: "-10vw", opacity: 0 }}
-          animate={controls}
-          className={`${styles.heading} `}
-        >
-         {abouttranslations.aboutsectiontitle}
-        </motion.h6>
-   
-     
+            <motion.h6
+              initial={{ x: "-10vw", opacity: 0 }}
+              animate={controls}
+              className={`${styles.heading} `}
+            >
+              {abouttranslations.aboutsectiontitle}
+            </motion.h6>
 
             <Paragraph
               paragraph={abouttranslations.aboutsubtitle}
@@ -52,10 +50,12 @@ const AboutSection = ({ abouttranslations }) => {
             {/* <h3>{abouttranslations.aboutsubtitle}</h3> */}
           </div>
           <div className={styles.right}>
-            <AnimatedText text={abouttranslations.abouttext1} className="p1" />
-            {/* <p className={styles.p1}>{abouttranslations.abouttext1}</p> */}
-            <p className={styles.p2}>{abouttranslations.abouttext2}</p>
-            <p className={styles.p3}>{abouttranslations.abouttext3}</p>
+            <AnimatedDiv>
+              <p className={styles.p1}>{abouttranslations.abouttext1}</p>
+              <p className={styles.p2}>{abouttranslations.abouttext2}</p>
+              <p className={styles.p3}>{abouttranslations.abouttext3}</p>
+            </AnimatedDiv>
+
             <div className={styles.buttoncontainer}>
               <Link
                 href="/about"

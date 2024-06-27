@@ -6,6 +6,7 @@ import image from "../../../public/assets/images/cover.png";
 import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
+import AnimatedDiv from "@/components/AnimatedDiv";
 
 const CoverSection = ({ covertranslations }) => {
   const { t, i18n } = useTranslation("");
@@ -19,10 +20,14 @@ const CoverSection = ({ covertranslations }) => {
           <h4>{covertranslations.subtitle}</h4>
 
           {locale === "en" ? (
+            <AnimatedDiv>
+
+
             <h2>
               Experience the <span>transformative power</span> of our
               specialized and rejuvenating <span>hair treatments. </span>
             </h2>
+            </AnimatedDiv>
           ) : (
             <h2>
               Experimenta el <span>poder transformador</span> de nuestros{" "}
