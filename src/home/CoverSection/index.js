@@ -3,14 +3,18 @@ import styles from "./styles.module.scss";
 import Image from "next/image";
 import Rounded from "../../common/Rounded";
 import image from "../../../public/assets/images/cover.png";
-import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import AnimatedDiv from "@/components/AnimatedDiv";
+import { motion, useTransform, useViewportScroll } from 'framer-motion';
 
 const CoverSection = ({ covertranslations }) => {
   const { t, i18n } = useTranslation("");
   const locale = i18n.language;
+
+  const { scrollYProgress } = useViewportScroll();
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.2]);
+
 
   return (
     <>
@@ -52,9 +56,13 @@ const CoverSection = ({ covertranslations }) => {
             </button>
           </div>
 
-          <div className={styles.imagecontainer}>
+     {/* Utilizamos motion.div para aplicar el efecto de zoom a la imagen */}
+     <motion.div className={styles.imagecontainer} style={{ scale }}>
+          <Image src={image} alt="coverimage" />
+        </motion.div>
+          {/* <div className={styles.imagecontainer}>
             <Image src={image} alt="coverimage" />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

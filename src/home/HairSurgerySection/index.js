@@ -11,7 +11,7 @@ import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 import { useInView } from "react-intersection-observer";
-import { slide, menuSlide } from "@/components/AnimatedHeader/animation";
+import { slide, hairSlide } from "@/components/AnimatedHeader/animation";
 
 const HairSurgerySection = ({ hairtranslations }) => {
   const { t, i18n } = useTranslation("");
@@ -50,7 +50,7 @@ const HairSurgerySection = ({ hairtranslations }) => {
             {/* <h3>{hairtranslations.hairsubtitle}</h3> */}
             <motion.div
               className={styles.benefitscontainer}
-              variants={menuSlide}
+              variants={hairSlide}
               initial="initial"
               animate={inView ? "enter" : "exit"}
             >
@@ -82,12 +82,29 @@ const HairSurgerySection = ({ hairtranslations }) => {
               </Link>
             </div>
           </div>
-          <div className={styles.right}>
-            {/* <p className={styles.p1}>{abouttranslations.abouttext1}</p>
-            <p className={styles.p2}>{abouttranslations.abouttext2}</p>
-            <p className={styles.p3}>{abouttranslations.abouttext3}</p>
-            */}
+
+
+           {/* Aquí empieza la parte derecha */}
+           <div className={styles.right}>
+           <motion.div
+              className={styles.imageContainer}
+              style={{ originY: 0 }} // Establecer el punto de transformación en la parte superior
+              initial={{ scaleY: 0, opacity: 0 }}
+              animate={inView ? { scaleY: 1, opacity: 1 } : { scaleY: 0, opacity: 0 }}
+              transition={{ duration: 1.2, ease: "easeInOut" }} // Ajustar la duración y la curva para una animación más suave
+            >
+              <Image
+                src="/assets/images/hair2.png" // Aquí reemplaza con la ruta correcta de tu imagen
+                alt="Descripción de la imagen"
+                objectFit="cover"
+                quality={100}
+                height={400}
+                width={600}
+                
+              />
+            </motion.div>
           </div>
+          {/* Fin de la parte derecha */}
         </div>
       </div>
     </>

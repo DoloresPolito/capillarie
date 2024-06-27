@@ -67,8 +67,8 @@
   justify-content: flex-start;
   align-items: center;
 margin: 0 auto;
-margin-top: -40px;
 margin-bottom: 50px;
+margin-top: 20px;
 
   
 }
@@ -113,7 +113,7 @@ margin-bottom: 50px;
 }
 
 .carouselcontainer {
-  height: 50vh;
+  height:auto;
   width: 100%;
   max-width: 1600px;
   position: relative;
@@ -138,8 +138,9 @@ margin-bottom: 50px;
   align-items: center;
   justify-content: space-between;
   height: 50px;
-  align-self: flex-end;
+  align-self: center;
   width: 120px;
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 

@@ -27,3 +27,18 @@ export const menuSlide = {
       }),
     };
 
+
+
+    export const hairSlide = {
+      initial: {
+        x: "10%",
+      },
+      enter: {
+        x: "0%",
+        transition:{duration:0.8, ease:[0.76, 0, 0.24, 1]}
+      },
+      exit: {
+        x: "calc(100% + 100px)",
+        transition:{duration:0.8, ease:[0.76, 0, 0.24, 1]}
+      },
+    };
