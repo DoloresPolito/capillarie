@@ -1,35 +1,80 @@
 .resultssection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background-color: #f9f8f7;
+  width: 100%;
+
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  .resultscontainer {
+    width: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 10 ;
-    background-color: #F9F8F7;
-    width: 100%;
+  }
 
-
-    .resultscontainer {
-        width: 800px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-      
+  h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #493e36;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  button {
+    color: #3a4749;
+    text-align: center;
+    width: auto;
+    padding: 15px 35px;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    border-radius: 3em;
+    border: 0.5px solid #3a4749;
+  
+    font-size: 17px !important;
+    letter-spacing: 0px !important;
+    font-weight: 300;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  
+    &:after {
+      content: "»";
+      position: absolute;
+      opacity: 0;
+      right: -20px;
+      transition: right 0.5s, opacity 0.1s;
+      font-size: 40px;
+      align-self: center;
+      top: 0px;
+    }
+  
+    &:hover {
+      padding-right: 54px;
+      padding-left: 28px;
+      background-color: #44b9cc;
+      border: 0.5px solid #44b9cc;
+      color: white;
+  
+      &:after {
+        opacity: 1;
+        right: 10px;
+        color: white;
       }
-    
-      h6 {
-        font-family: "Plus Jakarta Sans", sans-serif;
-        color: #493e36;
-        letter-spacing: 1px;
-        font-size: 15px;
-        font-weight: 400;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        text-align: center;
-      }
-
-
+    }
+  
+    &:not(:hover):after {
+      opacity: 0;
+      right: -20px;
+    }
+  }
 }
 
 .customersSection {

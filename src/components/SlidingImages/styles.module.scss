@@ -12,7 +12,8 @@
     align-items: center;
     z-index: 10 ;
     background-color: #F9F8F7;
-    border-radius: 30px;
+    border-bottom-left-radius: 30px; 
+    border-bottom-right-radius: 30px; 
   }
   
   .customersContainer {

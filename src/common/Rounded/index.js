@@ -38,7 +38,7 @@ export default function Index({
   };
 
   return (
-    <Magnetic>
+    // <Magnetic>
       <div
         className={styles.roundedButton}
         style={{ overflow: "hidden" }}
@@ -59,6 +59,6 @@ export default function Index({
           className={styles.circle}
         ></div>
       </div>
-    </Magnetic>
+    // </Magnetic>
   );
 }

@@ -32,7 +32,7 @@ export default function ResultsSection({faqstranslations}) {
         >
        {faqstranslations.resultstitle}</motion.h6>
         </div>
-       
+       {/* <button>ver mas</button> */}
       </div>
       <SlidingImages />
     </>

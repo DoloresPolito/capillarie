@@ -10,6 +10,15 @@ export default function Mask({ links }) {
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
+
+  const contactlinks = [{  
+  spanish: "Teléfono",
+  english: "Phone number",}, {  
+    spanish: "E-mail",
+    english: "E-mail",},{  
+      spanish: "Ubicación",
+      english: "Location",}]
+
   return (
     <>
       <motion.div
