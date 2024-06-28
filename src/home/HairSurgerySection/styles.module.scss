@@ -38,6 +38,14 @@
     @media only screen and (max-width: 1000px) {
       width: 100%;
       padding: 20px 10px;
+ 
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+      padding: 20px 10px;
+      align-items: center;
+      text-align: center;
     }
 
     .benefitscontainer {
@@ -50,13 +58,16 @@
 
     .benefit {
       width: 100%;
-      height: 60px;
+      height: auto;
       border-bottom: 1px solid #aaa9a9;
       display: flex;
       align-items: center;
 
       p {
         margin-left: 30px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        text-align: start;
       }
 
       img {
@@ -86,6 +97,7 @@
       align-items: flex-start;
       margin-top: 0px;
       height: auto;
+
       img {
         height: 400px;
         width: 500px;

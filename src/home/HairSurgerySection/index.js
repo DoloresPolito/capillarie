@@ -84,10 +84,9 @@ const HairSurgerySection = ({ hairtranslations }) => {
             </div>
           </div>
 
-
-           {/* Aquí empieza la parte derecha */}
-           <div className={styles.right}>
-           {/* <motion.div
+          {/* Aquí empieza la parte derecha */}
+          <div className={styles.right}>
+            {/* <motion.div
               className={styles.imageContainer}
               style={{ originY: 0 }}
               initial={{ scaleY: 0, opacity: 0 }}
@@ -96,20 +95,17 @@ const HairSurgerySection = ({ hairtranslations }) => {
             > */}
 
             <AnimatedDiv>
-
-   
-              <div   className={styles.imageContainer}>
-              <Image
-                src="/assets/images/hair2.png" // Aquí reemplaza con la ruta correcta de tu imagen
-                alt="Descripción de la imagen"
-                objectFit="cover"
-                quality={100}
-                height={400}
-                width={600}
-                
-              />
+              <div className={styles.imageContainer}>
+                <Image
+                  src="/assets/images/hair2.png" // Aquí reemplaza con la ruta correcta de tu imagen
+                  alt="Descripción de la imagen"
+                  objectFit="cover"
+                  quality={100}
+                  height={400}
+                  width={600}
+                />
               </div>
-              </AnimatedDiv>
+            </AnimatedDiv>
             {/* </motion.div> */}
           </div>
           {/* Fin de la parte derecha */}
