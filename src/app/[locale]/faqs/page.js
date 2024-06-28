@@ -2,7 +2,8 @@ import styles from "./styles.module.scss";
 import AnimatedHeader from "../../../components/AnimatedHeader";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
-import TotalFaqs from "@/faqs/TotalFaqs";
+
+import Faqss from "@/sections/Faqs";
 
 const i18nNamespaces = ["faqs", "common"];
 
@@ -54,11 +55,11 @@ export default async function Faqs({ params: { locale } }) {
       namespaces={i18nNamespaces}
     >
       <AnimatedHeader />
-      <div className={styles.main}>
-        <p>locale: {locale}</p>
+  
+      <Faqss translations={translations}/>
+   
 
-        <TotalFaqs translations={translations} />
-      </div>
+
     </TranslationsProvider>
   );
 }

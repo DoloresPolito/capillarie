@@ -1,0 +1,126 @@
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    background-image: url("/assets/backgrounds/backcover.png");
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100%; /* Ensure the section takes up the full width */
+    //   height: 100vh; /* Adjust the height as needed */
+    z-index: 10;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    @media only screen and (max-width: 600px) {
+      margin-bottom: 0px;
+    }
+  
+    .container {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 1600px;
+  
+      h6 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color: #44b9cc;
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-weight: 400;
+        margin-top: 20px;
+  
+        @media only screen and (max-width: 600px) {
+          font-size: 13px;
+        }
+      }
+  
+      h4 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color: #493e36;
+        letter-spacing: 1px;
+        font-size: 25px;
+        font-weight: 300;
+        margin-top: 30px;
+        text-align: center;
+  
+        @media only screen and (max-width: 1000px) {
+          font-size: 20px;
+        }
+        @media only screen and (max-width: 600px) {
+          font-size: 16px;
+        }
+      }
+  
+      h2 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color: #493e36;
+        letter-spacing: 1px;
+        font-size: 70px;
+        font-weight: 300;
+        margin-top: 30px;
+        text-align: center;
+  
+        @media only screen and (max-width: 1000px) {
+          font-size: 60px;
+        }
+  
+        @media only screen and (max-width: 600px) {
+          font-size: 40px;
+        }
+  
+        span {
+          color: #44b9cc;
+          font-weight: 400;
+  
+          @media only screen and (max-width: 1000px) {
+            font-size: 60px;
+          }
+  
+          @media only screen and (max-width: 600px) {
+            font-size: 40px;
+          }
+        }
+      }
+
+
+
+      .numberscontainer{
+        display: flex;
+        width: 90%;
+        height: 200px;
+        background-color: #D3E7ED;
+        border-radius: 30px;
+        margin-top: 30px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+        margin-bottom: 50px;
+
+        .item{
+            // background-color: red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between !important;
+            margin-top: -20px;
+
+            h4{
+margin-bottom: 20px;
+            }
+
+            p{
+                font-size: 55px;
+                font-weight: 300;
+            }
+
+        }
+  
+      }
+    }
+  }
+  

@@ -1,11 +1,10 @@
 .card {
-  background-color: #F9F8F7;
+  background-color: transparent;
   // padding: 10px 30px;
   overflow: hidden;
   border: none;
   border-bottom: 0.5px solid #a5a5a5;
   z-index: 10000;
-
 
   @media only screen and (max-width: 1000px) {
     width: 100%;
@@ -21,7 +20,6 @@
   }
 
   .header {
-
     img {
       height: 16px;
       width: 16px;

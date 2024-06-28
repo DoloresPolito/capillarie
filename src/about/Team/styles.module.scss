@@ -1,0 +1,64 @@
+.section {
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f8f7;
+  border-radius: 30px;
+  align-items: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 90%;
+
+    h6 {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: #493e36;
+      letter-spacing: 1px;
+      font-size: 15px;
+      font-weight: 400;
+      margin-top: 30px;
+      margin-bottom: 40px;
+      @media only screen and (max-width: 1000px) {
+        font-size: 13px;
+      }
+    }
+
+    .teamcontainer {
+      display: flex;
+      flex-direction: row;
+      height: 500px;
+      width: 100%;
+      align-self: center;
+      justify-content: space-between;
+
+      .membercontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 500px;
+        width: 30%;
+
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+
+        .imagecontainer {
+          height: 100%;
+          width: 100%;
+ 
+  
+        }
+
+        .textcontainer {
+        //   height: 20%;
+          width: 100%;
+        margin-left: 20px;
+        margin-top: 20px;
+   
+        }
+      }
+    }
+  }
+}
