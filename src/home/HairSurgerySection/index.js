@@ -12,6 +12,7 @@ import { motion, useAnimation } from "framer-motion";
 
 import { useInView } from "react-intersection-observer";
 import { slide, hairSlide } from "@/components/AnimatedHeader/animation";
+import AnimatedDiv from "@/components/AnimatedDiv";
 
 const HairSurgerySection = ({ hairtranslations }) => {
   const { t, i18n } = useTranslation("");
@@ -86,13 +87,18 @@ const HairSurgerySection = ({ hairtranslations }) => {
 
            {/* Aquí empieza la parte derecha */}
            <div className={styles.right}>
-           <motion.div
+           {/* <motion.div
               className={styles.imageContainer}
-              style={{ originY: 0 }} // Establecer el punto de transformación en la parte superior
+              style={{ originY: 0 }}
               initial={{ scaleY: 0, opacity: 0 }}
               animate={inView ? { scaleY: 1, opacity: 1 } : { scaleY: 0, opacity: 0 }}
-              transition={{ duration: 1.2, ease: "easeInOut" }} // Ajustar la duración y la curva para una animación más suave
-            >
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+            > */}
+
+            <AnimatedDiv>
+
+   
+              <div   className={styles.imageContainer}>
               <Image
                 src="/assets/images/hair2.png" // Aquí reemplaza con la ruta correcta de tu imagen
                 alt="Descripción de la imagen"
@@ -102,7 +108,9 @@ const HairSurgerySection = ({ hairtranslations }) => {
                 width={600}
                 
               />
-            </motion.div>
+              </div>
+              </AnimatedDiv>
+            {/* </motion.div> */}
           </div>
           {/* Fin de la parte derecha */}
         </div>

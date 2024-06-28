@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { slide } from "../../animation";
 import { useTranslation } from "react-i18next";
 
-export default function LinkItem({ link, isActive, setSelectedIndicator }) {
+export default function LinkItem({ link, isActive, setSelectedIndicator, target }) {
   const { t, i18n } = useTranslation("common");
   const locale = i18n.language;
 
@@ -24,7 +24,7 @@ export default function LinkItem({ link, isActive, setSelectedIndicator }) {
       >
         <Magnetic>
           <div className={styles.el}>
-            <StyledLink link={link.link}>
+            <StyledLink link={link.link} target={target ? "_blank" : "_self"}>
               <p className={styles.text}>
                 {locale === "es" ? link.spanish : link.english}
               </p>
@@ -41,8 +41,3 @@ export default function LinkItem({ link, isActive, setSelectedIndicator }) {
   );
 }
 
-
-       {/* <Link href={link.link}>
-          {" "}
-          {locale === "es" ? link.spanish : link.english}
-        </Link> */}

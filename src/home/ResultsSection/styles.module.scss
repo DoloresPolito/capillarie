@@ -26,6 +26,9 @@
     margin-top: 30px;
     margin-bottom: 30px;
     text-align: center;
+    @media only screen and (max-width: 1000px) {
+      font-size: 13px;
+    }
   }
   button {
     color: #3a4749;

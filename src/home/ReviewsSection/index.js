@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Parallax, Pagination, Navigation } from "swiper/modules";
@@ -29,6 +29,24 @@ const ReviewsSection = ({ reviewstranslations }) => {
       });
     }
   }, [controls, inView]);
+
+  const [width, setWidth] = useState(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [setWidth]);
+
+  const medium = 1200;
+
 
   const cards = [
     { name: "Nicolas Romero", text: reviewstranslations.review1 },
@@ -74,7 +92,7 @@ const ReviewsSection = ({ reviewstranslations }) => {
                   prevEl: `.${styles.customprev}`,
                 }}
                 modules={[Parallax, Pagination, Navigation]}
-                slidesPerView={2.7}
+                slidesPerView={width > medium ? 2.7 : (width > 1000 ? 2 : 1)}
                 slidesPerGroup={1}
                 spaceBetween={10}
               >
