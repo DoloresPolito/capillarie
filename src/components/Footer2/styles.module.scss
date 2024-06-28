@@ -48,6 +48,7 @@
           @media only screen and (max-width: 1000px) {
             align-items: center;
             margin-bottom: 40px;
+         
           }
           .buttoncontainer {
             height: auto;
@@ -78,7 +79,17 @@
         margin-top: 20px;
      
         @media only screen and (max-width: 1000px) {
-        text-align: center;
+        text-align: center ;
+        justify-content: center;
+     
+        width: 80%;
+        }
+
+        @media only screen and (max-width: 500px) {
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 0px;
         }
 
         h6 {
@@ -118,6 +129,10 @@
 
           width: 150px;
           margin-left: 50px;
+          @media only screen and (max-width: 500px) {
+            margin-left: 0px;
+            margin-top: 30px;
+          }
         }
       }
     }
@@ -130,7 +145,10 @@
       @media only screen and (max-width: 1000px) {
 justify-content: center;
 margin-top: 40px;
+text-align: center;
       }
+
+
 
       .bottom {
         margin-top: 15px;
