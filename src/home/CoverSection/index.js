@@ -3,6 +3,9 @@ import styles from "./styles.module.scss";
 import Image from "next/image";
 import Rounded from "../../common/Rounded";
 import image from "../../../public/assets/images/cover2.png";
+import {useState, useEffect} from "react";
+
+import imagemobile from "../../../public/assets/images/covermobile.png";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import AnimatedDiv from "@/components/AnimatedDiv";
@@ -14,6 +17,21 @@ const CoverSection = ({ covertranslations }) => {
 
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.2]);
+  const [width, setWidth] = useState(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [setWidth]);
+
 
 
   return (
@@ -58,7 +76,7 @@ const CoverSection = ({ covertranslations }) => {
 
      {/* Utilizamos motion.div para aplicar el efecto de zoom a la imagen */}
      <motion.div className={styles.imagecontainer} style={{ scale }}>
-          <Image src={image} alt="coverimage" />
+     <Image src={width > 600 ? image : imagemobile} alt="coverimage" />
         </motion.div>
           {/* <div className={styles.imagecontainer}>
             <Image src={image} alt="coverimage" />
