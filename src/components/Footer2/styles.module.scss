@@ -7,47 +7,136 @@
   background-color: #44b9cc;
   border-radius: 30px;
   color: white;
+  @media only screen and (max-width: 1000px) {
+    height: auto;
+  }
 
   .footercontainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     height: 95%;
     width: 95%;
     max-width: 1600px;
 
-
-    .left {
+    .infocontainer {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 50%;
-      height: 100%;
+      @media only screen and (max-width: 1000px) {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+      }
 
-
-      .top {
-   
-        margin-top: 20px;
-        .buttoncontainer {
-          height: auto;
-          width: 200px;
-          margin-top: 30px;
+      .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        height: 100%;
+        @media only screen and (max-width: 1000px) {
+          width: 80%;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
         }
 
-        h3 {
-          font-family: "Plus Jakarta Sans", sans-serif;
+        .top {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
 
-          letter-spacing: 1px;
-          font-size: 38px;
-          font-weight: 300;
-          max-width: 600px;
-   
+          @media only screen and (max-width: 1000px) {
+            align-items: center;
+            margin-bottom: 40px;
+          }
+          .buttoncontainer {
+            height: auto;
+            width: 200px;
+            margin-top: 30px;
+          }
+
+          h3 {
+            font-family: "Plus Jakarta Sans", sans-serif;
+
+            letter-spacing: 1px;
+            font-size: 38px;
+            font-weight: 300;
+            max-width: 600px;
+            @media only screen and (max-width: 1000px) {
+              font-size: 30px;
+            }
+          }
         }
       }
 
+      .right {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 50%;
+        height: 100%;
+        margin-top: 20px;
+     
+        @media only screen and (max-width: 1000px) {
+        text-align: center;
+        }
+
+        h6 {
+          font-family: "Plus Jakarta Sans", sans-serif;
+
+          letter-spacing: 1px;
+          font-size: 15px;
+          font-weight: 400;
+
+          margin-bottom: 20px;
+          @media only screen and (max-width: 1000px) {
+            font-size: 13px;
+          }
+        }
+
+        p {
+          font-family: "Plus Jakarta Sans", sans-serif;
+
+          font-size: 15px;
+          font-weight: 300;
+          margin-bottom: 10px;
+          @media only screen and (max-width: 1000px) {
+            font-size: 13px;
+          }
+        }
+
+        .col1 {
+          display: flex;
+          flex-direction: column;
+
+          width: 200px;
+        }
+
+        .col2 {
+          display: flex;
+          flex-direction: column;
+
+          width: 150px;
+          margin-left: 50px;
+        }
+      }
+    }
+
+    .rightscontainer {
+      width: 100%;
+      display: flex;
+      border-top:1px solid white;
+      
+      @media only screen and (max-width: 1000px) {
+justify-content: center;
+margin-top: 40px;
+      }
+
       .bottom {
-        margin-top: 40px;
-   
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+
         p {
           font-family: "Plus Jakarta Sans", sans-serif;
 
@@ -55,48 +144,10 @@
           font-weight: 300;
           margin-bottom: 5px;
 
+          @media only screen and (max-width: 1000px) {
+            font-size: 13px;
+          }
         }
-      }
-    }
-
-    .right {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      width: 50%;
-      height: 100%;
-      margin-top: 20px;
-
-      h6 {
-        font-family: "Plus Jakarta Sans", sans-serif;
-
-        letter-spacing: 1px;
-        font-size: 15px;
-        font-weight: 400;
-
-        margin-bottom: 20px;
-      }
-
-      p {
-        font-family: "Plus Jakarta Sans", sans-serif;
-
-        font-size: 15px;
-        font-weight: 300;
-        margin-bottom: 3px;
-      }
-
-      .col1 {
-        display: flex;
-        flex-direction: column;
-
-        width: 200px;
-      }
-
-      .col2 {
-        display: flex;
-        flex-direction: column;
-
-        width: 150px;
       }
     }
   }

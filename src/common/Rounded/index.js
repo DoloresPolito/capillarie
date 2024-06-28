@@ -2,10 +2,11 @@ import React from "react";
 import { useEffect, useRef } from "react";
 import styles from "./styles.module.scss";
 import gsap from "gsap";
-import Magnetic from "../Magnetic";
+
 
 export default function Index({
   children,
+  border,
   ...attributes
 }) {
   const circle = useRef(null);
@@ -38,10 +39,10 @@ export default function Index({
   };
 
   return (
-    // <Magnetic>
+   
       <div
         className={styles.roundedButton}
-        style={{ overflow: "hidden" }}
+        style={{ overflow: "hidden", border: border ? "1px solid white" : "0.5px solid #3a4749" }}
         onMouseEnter={() => {
           manageMouseEnter();
         }}
@@ -59,6 +60,6 @@ export default function Index({
           className={styles.circle}
         ></div>
       </div>
-    // </Magnetic>
+
   );
 }

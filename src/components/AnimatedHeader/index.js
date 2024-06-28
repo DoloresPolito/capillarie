@@ -73,6 +73,12 @@ export default function Navbar3() {
       english: "Hair implant",
     },
     {
+      active: "faqs",
+      link: "/faqs",
+      spanish: "FAQs",
+      english: "FAQs",
+    },
+    {
       active: "contact",
       link: "/contact",
       spanish: "Contacto",
@@ -151,6 +157,28 @@ export default function Navbar3() {
                            <StyledLink link="/hairimplant">
                              <p className={styles.text}>
                                {locale === "es" ? "Implante capilar" : "Hair implant"}
+                             </p>
+                           </StyledLink>
+                           <div
+                             className={styles.indicator}
+                             ref={handleRef}
+                           ></div>
+                         </div>
+                       </Magnetic>
+                     </div>
+
+
+                     <div
+                       
+                       className={`${styles.el} ${
+                         activeNavItem === "faqs" ? styles.active : ""
+                       }`}
+                     >
+                       <Magnetic>
+                         <div className={styles.el}>
+                           <StyledLink link="/faqs">
+                             <p className={styles.text}>
+                              FAQs
                              </p>
                            </StyledLink>
                            <div

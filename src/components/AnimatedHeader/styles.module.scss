@@ -12,7 +12,7 @@
   align-items: center;
   z-index: 1000;
   // background-color: white;
-  padding-top: 10px;
+  padding-top: 5px;
   border-radius: 70px;
 
 
@@ -24,14 +24,13 @@
     max-width: 1600px;
 
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   
     border-radius: 30px;
     height: 70px;
     background-color: rgba(255, 255, 255, 0.6); /* Color blanco con 80% de opacidad */
     backdrop-filter: blur(10px); /* Aplica un desenfoque de fondo */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
- 
 
     .leftside {
       display: flex;
@@ -61,7 +60,7 @@
     display: flex;
     align-items: center;
     margin-right: 50px;
-    width: 40%;
+    width: 60%;
     justify-content: space-between;
 
     .text {
@@ -148,78 +147,7 @@
   }
 }
 
-// .headerButtonContainer {
-//   transform: scale(0);
-//   position: fixed;
-//   bottom: 0;
-//   right: 0px;
-//   margin-bottom: 50px;
-//   z-index: 2000;
-//   height: 50vh;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-end;
 
-//   .button {
-//     position: relative;
-//     margin: 20px;
-//     width: 120px;
-//     height: 50px;
-//     border-radius: 30px;
-//     background-color: #44b9cc;
-//     cursor: pointer;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//   }
-
-//   .buttontext {
-//     position: relative;
-//     z-index: 1;
-//     color: white;
-//     font-family: var(--font-montserrat);
-//     font-size: 11px;
-//     margin-left: 20px;
-//   }
-
-//   .burger {
-//     width: 100%;
-//     position: relative;
-//     z-index: 1;
-//     &::after,
-//     &::before {
-//       content: "";
-//       display: block;
-//       height: 1px;
-//       width: 40%;
-//       margin: auto;
-//       background-color: white;
-//       position: relative;
-//       transition: transform 0.3s;
-//     }
-
-//     &::after {
-//       top: -5px;
-//     }
-
-//     &::before {
-//       top: 5px;
-//     }
-//   }
-
-//   .burgerActive {
-//     &::after {
-//       transform: rotate(45deg);
-//       top: -1px;
-//     }
-
-//     &::before {
-//       transform: rotate(-45deg);
-//       top: 0px;
-//     }
-//   }
-
-// }
 
 .headerButtonContainerMobile {
   // transform: scale(0);
@@ -227,14 +155,17 @@
   top: 0;
   right: 0px;
   z-index: 2000;
-
+  height: 70px;
+  display: flex;
+justify-content: center;
+align-items: center;
   .button {
     position: relative;
     margin: 20px;
     width: 50px;
     height: 50px;
     // border-radius: 50%;
-    background-color: white;
+    background-color: transparent;
     cursor: pointer;
     display: flex;
     align-items: center;

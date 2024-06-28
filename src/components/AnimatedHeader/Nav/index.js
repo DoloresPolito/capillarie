@@ -10,14 +10,23 @@ export default function Mask({ links }) {
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
-
-  const contactlinks = [{  
-  spanish: "Teléfono",
-  english: "Phone number",}, {  
-    spanish: "E-mail",
-    english: "E-mail",},{  
-      spanish: "Ubicación",
-      english: "Location",}]
+  const contactlinks = [
+    {
+      spanish: "+54 11 57392254",
+      english: "+54 11 57392254",
+      link: "/",
+    },
+    {
+      spanish: "capillariedublin@gmail.com",
+      english: "capillariedublin@gmail.com",
+      link: "/",
+    },
+    {
+      spanish: "31-32 Wellington Quay, D02KP11",
+      english: "31-32 Wellington Quay, D02KP11",
+      link: "/",
+    },
+  ];
 
   return (
     <>
@@ -52,13 +61,20 @@ export default function Mask({ links }) {
             <div className={styles.headercontact}>
               <p>CONTACT</p>
             </div>
-            <p className={styles.contacttext}>Telefono</p>
-            <p className={styles.contacttext}>Mail</p>
-            <p className={styles.contacttext}>Ubicación</p>
-            <div className={styles.headerlang}>
-              <p>LANGUAGE</p>
-            </div>
+
+            {contactlinks.map((link, index) => (
+              <LinkItem
+                key={index}
+                link={{ ...link, index }}
+                isActive={selectedIndicator === link.link}
+                setSelectedIndicator={setSelectedIndicator}
+              />
+            ))}
+
+            <div className={styles.langcontainer}>
             <LanguageChanger />
+            </div>
+    
           </div>
         </div>
       </motion.div>
