@@ -1,4 +1,3 @@
-
 import styles from "./style.module.css";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
@@ -8,8 +7,15 @@ const i18nNamespaces = ["about", "common"];
 
 export default async function Index({ params: { locale } }) {
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
+  const translations = {
+    title: t("title"),
+    subtitle: t("subtitle"),
+    subtitle2: t("subtitle2"),
+    text1: t("text1"),
+    text2: t("text2"),
+    text3: t("text3"),
+  };
 
-  
   return (
     <TranslationsProvider
       resources={resources}
@@ -18,7 +24,7 @@ export default async function Index({ params: { locale } }) {
     >
       <div className={styles.main}>
         <AnimatedHeader />
-       <About/>
+        <About translations={translations} />
       </div>
     </TranslationsProvider>
   );

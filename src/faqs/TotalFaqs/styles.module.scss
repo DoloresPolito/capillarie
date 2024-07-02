@@ -1,5 +1,8 @@
 .faqscontainer{
     height: auto;
     width: 70%;
+    @media only screen and (max-width: 1000px) {
+        width: 100%;  
+    }
     
 }

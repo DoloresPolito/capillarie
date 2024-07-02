@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/utils/send-email";
 import styles from "./styles.module.scss";
@@ -10,6 +11,12 @@ const Contact = ({contacttranslations}) => {
   function onSubmit(data) {
     sendEmail(data);
   }
+
+
+  const [messageSent, setMessageSent] = useState(false);
+  const [messageError, setMessageError] = useState(false);
+  const [sending, setSending] = useState(false);
+
 
   return (
     <div className={styles.formcontainer}>

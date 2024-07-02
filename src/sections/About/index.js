@@ -5,8 +5,9 @@ import styles from "./styles.module.scss";
 import Footer from "@/components/Footer2";
 import Team from "@/about/Team";
 import Cover from "@/about/Cover"
+import Text from "@/about/Text"
 
-export default function Index() {
+export default function Index({translations}) {
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -19,11 +20,29 @@ export default function Index() {
     requestAnimationFrame(raf);
   }, []);
 
+  console.log("TRANSLATIONS EN SEGUNDO ABOUT", translations)
+
+  const covertranslations = {
+    title: translations.title,
+    subtitle: translations.subtitle,
+    subtitle2: translations.subtitle2,
+
+  }
+
+const texttranslations = {
+  text1:translations.text1,
+  text2: translations.text2,
+  text3: translations.text3,
+}
+
+
+
   return (
     <>
       <div className={styles.section}>
-        <Cover/>
+        <Cover covertranslations={covertranslations}/>
         <Team/>
+        <Text texttranslations={texttranslations}/>
         <Footer />
       </div>
     </>

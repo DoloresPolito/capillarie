@@ -1,15 +1,10 @@
 "use client";
 import styles from "./styles.module.scss";
-import Image from "next/image";
-import Rounded from "../../common/Rounded";
-import image from "../../../public/assets/images/cover2.png";
 import { useState, useEffect } from "react";
-
-import imagemobile from "../../../public/assets/images/covermobile.png";
 import { useTranslation } from "react-i18next";
-import Link from "next/link";
 import AnimatedDiv from "@/components/AnimatedDiv";
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import {useTransform, useViewportScroll } from "framer-motion";
+import Preloader from "@/components/Preloader";
 
 const CoverSection = ({ covertranslations }) => {
   const { t, i18n } = useTranslation("");
@@ -32,46 +27,76 @@ const CoverSection = ({ covertranslations }) => {
     };
   }, [setWidth]);
 
-  return (
-    <>
-      <div className={styles.section}>
-        <div className={styles.container}>
-          <h6>ABOUT US</h6>
+  const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+      }, 2000);
+    })();
+  }, []);
+
+  const item1 = ["10+", "20+", "30+", "50+", "70+", "90+", "100+",];
+  const item2 = ["5+", "20+", "60+", "110+", "250+", "365+", "500+"];
+  const item3 = ["500", "1000+", "1500+", "2000+", "3000+", "3500+", "4000+"];
+
+  return (
+    <div className={styles.section}>
+      <div className={styles.container}>
+        <h6>{covertranslations.title}</h6>
+
+        <AnimatedDiv>
           {locale === "en" ? (
             <AnimatedDiv>
               <h2>
-                At <span>Capillarie Clinic</span> we specialize in{" "}
+                At Capillarie Clinic we specialize in{" "}
                 <span>hair medicine and aesthetics.</span>
               </h2>
             </AnimatedDiv>
           ) : (
             <h2>
-              Experimenta el <span>poder transformador</span> de nuestros{" "}
-              <span>tratamientos capilares</span> especializados y
-              rejuvenecedores.
+              En Clínica Capillarie somos especialistas en{" "}
+              <span>medicina y estética capilar.</span>
             </h2>
           )}
+        </AnimatedDiv>
+        <div className={styles.numberscontainer}>
+          <div className={styles.item}>
+            <h4>{locale === "en" ? "Hair implants" : "Implantes capilares" }</h4>
+            {isLoading ? (
+              <Preloader item={item1} />
+            ) : (
+              <p>{item1[item1.length - 1]}</p>
+            )}
+          </div>
 
-          <div className={styles.numberscontainer}>
-            <div className={styles.item}>
-              <h4>Hair implants</h4>
-              <p>100 +</p>
-            </div>
-
-            <div className={styles.item}>
-              <h4>Procedures/month</h4>
-              <p>45.5</p>
-            </div>
-            <div className={styles.item}>
-              <h4>Happy pacients</h4>
-              <p>4000 +</p>
-            </div>
-           
+          <div className={styles.item}>
+            <h4> {locale === "en" ? "Procedures/month" : "Procedimientos/mes" }</h4>
+            {isLoading ? (
+              <Preloader item={item2} />
+            ) : (
+              <p>{item2[item2.length - 1]}</p>
+            )}
+          </div>
+          <div className={styles.item}>
+            <h4> {locale === "en" ? "Happy pacients" : "Pacientes felices" }</h4>
+            {isLoading ? (
+              <Preloader item={item3} />
+            ) : (
+              <p>{item3[item3.length - 1]}</p>
+            )}
           </div>
         </div>
+
+        <h3>{covertranslations.subtitle2}</h3>
       </div>
-    </>
+    </div>
   );
 };
 

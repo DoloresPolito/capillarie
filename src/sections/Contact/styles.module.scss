@@ -1,0 +1,66 @@
+.section {
+  width: 100%;
+  border-radius: 30px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/assets/backgrounds/backcover.png");
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  width: 100%; /* Ensure the section takes up the full width */
+  margin-top: 70px;
+  padding-top: 50px;
+}
+
+.container {
+  height: auto;
+  width: 95%;
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+max-width: 1600px;
+
+  .right {
+    display: flex;
+    width: 50%;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-between;
+
+    h6 {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: #493e36;
+      letter-spacing: 1px;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    h3 {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: #44B9CC;
+      letter-spacing: 1px;
+      font-size: 38px;
+      font-weight: 300;
+      max-width: 600px;
+    }
+
+    p {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: #493e36;
+      font-size: 15px;
+      font-weight: 300;
+   
+    }
+
+    .buttoncontainer{
+      width: 200px;
+    }
+  }
+}
