@@ -14,7 +14,7 @@ import { useInView } from "react-intersection-observer";
 import { slide, hairSlide } from "@/components/AnimatedHeader/animation";
 import AnimatedDiv from "@/components/AnimatedDiv";
 
-const HairSurgerySection = ({ hairtranslations }) => {
+const HairSurgerySection = () => {
   const { t, i18n } = useTranslation("");
   const locale = i18n.language;
 
