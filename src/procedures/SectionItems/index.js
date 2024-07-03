@@ -45,7 +45,7 @@ const HairSurgerySection = ({ hairtranslations }) => {
               className="subhair"
             /> */}
             
-            <motion.div
+            {/* <motion.div
               className={styles.benefitscontainer}
               variants={hairSlide}
               initial="initial"
@@ -61,7 +61,7 @@ const HairSurgerySection = ({ hairtranslations }) => {
                   key={index}
                   className={styles.benefit}
                   variants={slide}
-                  custom={index} // Custom prop to control the delay
+                  custom={index} 
                   initial="initial"
                   animate={inView ? "enter" : "exit"}
                 >
@@ -69,7 +69,7 @@ const HairSurgerySection = ({ hairtranslations }) => {
                   <p>{item}</p>
                 </motion.div>
               ))}
-            </motion.div>
+            </motion.div> */}
            
           </div>
 
