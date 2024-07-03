@@ -39,13 +39,13 @@ export default function Index({ translations }) {
       id: 1,
       faq: translations.faq1,
       ans: translations.ans1,
-      category: "Dublin Clinic",
+      category: "Hair Implant",
     },
     {
       id: 2,
       faq: translations.faq2,
       ans: translations.ans2,
-      category: "Dublin Clinic",
+      category: "Hair Implant",
     },
     {
       id: 3,
@@ -69,25 +69,25 @@ export default function Index({ translations }) {
       id: 6,
       faq: translations.faq6,
       ans: translations.ans6,
-      category: "Other Procedures",
+      category: "General",
     },
     {
       id: 7,
       faq: translations.faq7,
       ans: translations.ans7,
-      category: "Technical",
+      category: "Dublin Clinic",
     },
     {
       id: 8,
       faq: translations.faq8,
       ans: translations.ans8,
-      category: "Technical",
+      category: "General",
     },
     {
       id: 9,
       faq: translations.faq9,
       ans: translations.ans9,
-      category: "Dublin Clinic",
+      category: "Hair Implant",
     },
     {
       id: 10,
@@ -99,37 +99,37 @@ export default function Index({ translations }) {
       id: 11,
       faq: translations.faq11,
       ans: translations.ans11,
-      category: "Other Procedures",
+      category: "General",
     },
     {
       id: 12,
       faq: translations.faq12,
       ans: translations.ans12,
-      category: "Technical",
+      category: "Other Procedures",
     },
     {
       id: 13,
       faq: translations.faq13,
       ans: translations.ans13,
-      category: "Dublin Clinic",
+      category: "General",
     },
     {
       id: 14,
       faq: translations.faq14,
       ans: translations.ans14,
-      category: "Hair Implant",
+      category: "General",
     },
     {
       id: 15,
       faq: translations.faq15,
       ans: translations.ans15,
-      category: "Other Procedures",
+      category: "General",
     },
     {
       id: 16,
       faq: translations.faq16,
       ans: translations.ans16,
-      category: "Technical",
+      category: "General",
     },
   ];
 
@@ -137,7 +137,7 @@ export default function Index({ translations }) {
     "Dublin Clinic",
     "Hair Implant",
     "Other Procedures",
-    "Technical",
+    "Financing",
   ];
 
   return (
