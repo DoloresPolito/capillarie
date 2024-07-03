@@ -20,7 +20,7 @@ export default function Index({translations}) {
     requestAnimationFrame(raf);
   }, []);
 
-  console.log("TRANSLATIONS EN SEGUNDO ABOUT", translations)
+
 
   const covertranslations = {
     title: translations.title,

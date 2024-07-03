@@ -1,10 +1,15 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Lenis from "lenis";
 import styles from "./styles.module.scss";
 import Footer from "@/components/Footer2";
 import ContactForm from "@/components/ContactForm";
-import Rounded from "@/common/Rounded";
+import Image from "next/image";
+import arrow from "../../../public/assets/arrow45.svg"
+import arrowwhite from "../../../public/assets/arrow45white.svg"
+import Link from "next/link";
+
+
 export default function Index({ translations }) {
   useEffect(() => {
     const lenis = new Lenis();
@@ -18,6 +23,9 @@ export default function Index({ translations }) {
     requestAnimationFrame(raf);
   }, []);
 
+
+
+
   const contacttranslations = {
     contacttext1: translations.contacttext1,
     contacttext2: translations.contacttext2,
@@ -29,6 +37,14 @@ export default function Index({ translations }) {
     formbutton: translations.formbutton,
   };
 
+  const contactlinks = [
+    { name: "Whatsapp: +54 3446 584076", url: "/" },
+    { name: "Instagram: @capillarieclinicdublin", url: "/" },
+    { name: "Linkedin: /capillarieclinic", url: "/" },
+    { name: "E-mail: capillarieclinic@gmail.com", url: "/" },
+    { name: "Location: 31-32 Wellington Quay", url: "/" },
+  ];
+
   return (
     <>
       <div className={styles.section}>
@@ -36,16 +52,13 @@ export default function Index({ translations }) {
           <div className={styles.left}>
             <h6>CONTACT US</h6>
             <h3>
-              Schedule your appointment today and start your journey towards a
-              healthier, happier you.
+            Our dedicated team is here to provide the care and support you need.
             </h3>
-            <p>
-              Our dedicated team is here to provide the care and support you
-              need.
-            </p>
-            <div className={styles.buttoncontainer}>
-              <Rounded >Book an appoiment</Rounded>
-            </div>
+            {contactlinks.map((contactlink) => {
+              return (
+                <ContactLink key={contactlink.name} contactlink={contactlink} />
+              );
+            })}
           </div>
           <div className={styles.right}>
             <ContactForm contacttranslations={contacttranslations} />
@@ -56,3 +69,28 @@ export default function Index({ translations }) {
     </>
   );
 }
+
+const ContactLink = ({ contactlink }) => {
+
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+  return (
+    <Link href={contactlink.url} style={{ textDecoration: "none", width:"300px" }}>
+      <div
+        className={styles.contactlinkcontainer}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <p>{contactlink.name}</p>
+        <Image src={isHovered ? arrowwhite : arrow} alt="arrow" />
+      </div>
+    </Link>
+  );
+};

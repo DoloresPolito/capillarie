@@ -77,7 +77,7 @@ const TreatmentsSection = ({ treatmentstranslations }) => {
             href="/procedures"
             style={{ textDecoration: "none", color: "#493e36" }}
           >
-            <Rounded>{treatmentstranslations.treatmentsbutton}</Rounded>
+            <Rounded background="#44b9cc">{treatmentstranslations.treatmentsbutton}</Rounded>
           </Link>
         </div>
       </div>

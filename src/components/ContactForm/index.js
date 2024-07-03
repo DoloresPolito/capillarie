@@ -5,21 +5,30 @@ import { sendEmail } from "@/utils/send-email";
 import styles from "./styles.module.scss";
 // import Button from "../Button";
 
-const Contact = ({contacttranslations}) => {
+const Contact = ({ contacttranslations }) => {
   const { register, handleSubmit } = useForm();
+  const [messageSent, setMessageSent] = useState(false);
 
   function onSubmit(data) {
     sendEmail(data);
+    setMessageSent(true)
   }
-
-
-  const [messageSent, setMessageSent] = useState(false);
-  const [messageError, setMessageError] = useState(false);
-  const [sending, setSending] = useState(false);
 
 
   return (
     <div className={styles.formcontainer}>
+  
+
+      {messageSent ? (<>
+      <div className={styles.messagesent}>
+
+        <h3>
+        Thank you very much for your message, we will contact you shortly.
+        </h3>
+
+      </div>
+      </>) : <>
+      <h3>Leave us a message</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.inputcontainer}>
           <input
@@ -47,16 +56,23 @@ const Contact = ({contacttranslations}) => {
         </div>
         <div className={styles.inputcontainertextarea}>
           <textarea
-              placeholder={contacttranslations.form4}
+            placeholder={contacttranslations.form4}
             className={`${styles.input} ${styles.textarea}`}
             {...register("message", { required: true })}
           ></textarea>
         </div>
         <div className={styles.buttoncontainer}>
           {/* <Button text="Send" color="#AAA9A9"/> */}
-          <button className={styles.button}>     {contacttranslations.formbutton}</button>
+          <button className={styles.button}>
+            {" "}
+            {contacttranslations.formbutton}
+          </button>
         </div>
       </form>
+      
+      </>}
+
+     
     </div>
   );
 };

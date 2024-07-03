@@ -1,12 +1,11 @@
 "use client";
-import {useEffect } from "react";
+import { useEffect } from "react";
 import styles from "./styles.module.scss";
 import SlidingImages from "../../components/SlidingImages";
-
 import { motion, useAnimation } from "framer-motion";
-
 import { useInView } from "react-intersection-observer";
-export default function ResultsSection({faqstranslations}) {
+
+export default function ResultsSection({ faqstranslations }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
@@ -22,17 +21,16 @@ export default function ResultsSection({faqstranslations}) {
 
   return (
     <>
-
       <div className={styles.resultssection} ref={ref}>
         <div className={styles.resultscontainer}>
-        <motion.h6
-          initial={{ x: "-10vw", opacity: 0 }}
-          animate={controls}
-          className={`${styles.heading} `}
-        >
-       {faqstranslations.resultstitle}</motion.h6>
+          <motion.h6
+            initial={{ x: "-10vw", opacity: 0 }}
+            animate={controls}
+            className={`${styles.heading} `}
+          >
+            {faqstranslations.resultstitle}
+          </motion.h6>
         </div>
-       {/* <button>ver mas</button> */}
       </div>
       <SlidingImages />
     </>

@@ -1,12 +1,10 @@
 "use client";
 import { useEffect } from "react";
 import Lenis from "lenis";
-import Intro from "../../procedures/Intro";
-import Description from "../../procedures/Description";
-import Section from "@/procedures/Section";
 import styles from "./styles.module.scss";
 import Footer from "@/components/Footer2";
-import CoverSection from "@/home/CoverSection";
+import Cover from "@/procedures/Cover";
+import SectionItems from "@/procedures/SectionItems"
 
 export default function Index() {
   useEffect(() => {
@@ -24,16 +22,8 @@ export default function Index() {
   return (
     <>
       <div className={styles.section}>
-        <Intro />
-
-        <Description />
-        <Section />
-
-        <Intro />
-
-        <Description />
-        <Section />
-
+        <Cover />
+        <SectionItems/>
         <Footer />
       </div>
     </>

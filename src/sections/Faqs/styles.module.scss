@@ -21,6 +21,7 @@
       width: 90%;
       align-items: center;
       margin-bottom: 150px;
+      max-width: 1600px;
 
   
       .titlecontainer {
@@ -45,6 +46,16 @@
         width: 100%;
         height: 150px;
         margin-top: 30px;
+        
+
+        .filtercontainer button {
+          // estilos para los botones
+        }
+        
+        .filtercontainer .active {
+          background-color: #44b9cc; /* o el color que prefieras */
+          color: white; /* o el color que prefieras */
+        }
   
         button {
           display: flex;
@@ -59,7 +70,12 @@
           margin-right: 20px;
           cursor: pointer;
           transition: background-color 0.5s, color 0.3s, border-color 0.5s; /* Añade transiciones suaves */
-
+          font-family: "Plus Jakarta Sans", sans-serif;
+          color: #493e36;
+          letter-spacing: 0.2px;
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 130%;
 
           &:hover{
             background-color: rgb(220, 220, 220);
@@ -73,5 +89,21 @@
           }
         }
       }
+
+      .faqscontainer{
+        height: auto;
+        width: 70%;
+
+        margin: 0 auto;
+        @media only screen and (max-width: 1000px) {
+            width: 100%;  
+        }
+        .categoryHeader {
+            font-size: 24px;
+            margin: 20px 0 10px;
+            color: #333;
+            // otros estilos que quieras agregar
+          }
+    }
     }
   }

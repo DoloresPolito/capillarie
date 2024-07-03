@@ -38,7 +38,7 @@ export default function FaqsSection({ faqstranslations }) {
 
   return (
     <>
-      {/* <SlidingImages /> */}
+
       <div className={styles.faqssection} ref={ref}>
 
       <motion.h6
@@ -66,12 +66,12 @@ export default function FaqsSection({ faqstranslations }) {
               href="/faqs"
               style={{ textDecoration: "none", color: "#493e36" }}
             >
-              <Rounded>See all</Rounded>
+              <Rounded background="#44b9cc">See all</Rounded>
             </Link>
           </div>
         </div>
 
-        {/* <h6>{faqstranslations.resultstitle}</h6> */}
+      
       </div>
     </>
   );

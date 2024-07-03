@@ -53,7 +53,7 @@ const AboutSection = ({ abouttranslations }) => {
             <AnimatedDiv>
               <p className={styles.p1}>{abouttranslations.abouttext1}</p>
               <p className={styles.p2}>{abouttranslations.abouttext2}</p>
-              <p className={styles.p3}>{abouttranslations.abouttext3}</p>
+              {/* <p className={styles.p3}>{abouttranslations.abouttext3}</p> */}
             </AnimatedDiv>
 
             <div className={styles.buttoncontainer}>
@@ -61,7 +61,7 @@ const AboutSection = ({ abouttranslations }) => {
                 href="/about"
                 style={{ textDecoration: "none", color: "#493e36" }}
               >
-                <Rounded> {abouttranslations.aboutbutton}</Rounded>
+                <Rounded background="#44b9cc"> {abouttranslations.aboutbutton}</Rounded>
               </Link>
             </div>
           </div>

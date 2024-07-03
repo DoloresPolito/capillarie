@@ -9,10 +9,7 @@ import CoverSection from "@/home/CoverSection";
 import AboutSection from "@/home/AboutSection";
 import HairSurgerySection from "@/home/HairSurgerySection";
 import TreatmentsSection from "@/home/TreatmentsSection";
-import BlurryCursor from "@/components/Cursor";
 import ResultsSection from "@/home/ResultsSection";
-import HorizontalScroll from "@/components/HorizontalScroll"
-
 import Footer from "@/components/Footer2";
 
 export default function Index({ translations }) {
@@ -72,43 +69,36 @@ export default function Index({ translations }) {
     treatmentssectiontitle: translations.treatmentssectiontitle,
     treatmentssubtitle: translations.treatmentssubtitle,
     treatmentsbutton: translations.treatmentsbutton,
-
-
-
   };
 
   const contacttranslations = {
-
-    contactsectiontitle:translations.contactsectiontitle,
-    contacttext1:translations.contacttext1,
-    contacttext2:translations.contacttext2,
-    contactaddress:translations.contactaddress,
-    contactbutton:translations.contactbutton,
-    form1:translations.form1,
-    form2:translations.form2,
-    form3:translations.form3,
-    form4:translations.form4,
-    formbutton:translations.formbutton,
-
-  }
+    contactsectiontitle: translations.contactsectiontitle,
+    contacttext1: translations.contacttext1,
+    contacttext2: translations.contacttext2,
+    contactaddress: translations.contactaddress,
+    contactbutton: translations.contactbutton,
+    form1: translations.form1,
+    form2: translations.form2,
+    form3: translations.form3,
+    form4: translations.form4,
+    formbutton: translations.formbutton,
+  };
 
   const reviewstranslations = {
-
-    reviewssectiontitle:translations.reviewssectiontitle,
-    reviewstitle:translations.reviewstitle,
-    reviewstext:translations.reviewstext,
-   
-    review1:translations.review1,
-    review2:translations.review2,
-    review3:translations.review3,
-    review4:translations.review4,
-    review5:translations.review5,
-    review6:translations.review6,
-    review7:translations.review7,
-    review8:translations.review8,
-    review9:translations.review9,
-    review10:translations.review10,
-  }
+    reviewssectiontitle: translations.reviewssectiontitle,
+    reviewstitle: translations.reviewstitle,
+    reviewstext: translations.reviewstext,
+    review1: translations.review1,
+    review2: translations.review2,
+    review3: translations.review3,
+    review4: translations.review4,
+    review5: translations.review5,
+    review6: translations.review6,
+    review7: translations.review7,
+    review8: translations.review8,
+    review9: translations.review9,
+    review10: translations.review10,
+  };
 
 
 
@@ -127,18 +117,18 @@ export default function Index({ translations }) {
       <div className={styles.section}>
         <CoverSection covertranslations={covertranslations} />
         <AboutSection abouttranslations={abouttranslations} />
-      
+
         <HairSurgerySection hairtranslations={hairtranslations} />
         <TreatmentsSection treatmentstranslations={treatmentstranslations} />
-     
+        {/* <Projects/> */}
+
         <FaqsSection faqstranslations={faqstranslations} />
-        <ResultsSection faqstranslations={faqstranslations}  />
-        <ReviewsSection reviewstranslations={reviewstranslations}/>
-   
- 
+        <ResultsSection faqstranslations={faqstranslations} />
+        <ReviewsSection reviewstranslations={reviewstranslations} />
+
         {/* <BlurryCursor/> */}
       </div>
-      <Footer contacttranslations={contacttranslations}/>
+      <Footer />
     </>
   );
 }

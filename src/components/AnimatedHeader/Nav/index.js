@@ -29,7 +29,7 @@ export default function Mask({ links }) {
     {
       spanish: "@capillariedublin",
       english: "@capillariedublin",
-      link: "https://www.instagram.com/inesmiguensphoto/",
+      link: "https://www.instagram.com/dolorespolito/",
     },
 
 
@@ -67,7 +67,7 @@ export default function Mask({ links }) {
               );
             })}
 
-            <div className={styles.headercontact}>
+            {/* <div className={styles.headercontact}>
               <p>CONTACT</p>
             </div>
 
@@ -78,7 +78,7 @@ export default function Mask({ links }) {
                 isActive={selectedIndicator === link.link}
                 setSelectedIndicator={setSelectedIndicator}
                 target={true}              />
-            ))}
+            ))} */}
 
             <div className={styles.langcontainer}>
             <LanguageChanger />

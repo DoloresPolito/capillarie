@@ -8,9 +8,9 @@ export function sendEmail(data) {
     })
       .then((res) => res.json())
       .then((response) => {
-        alert(response.message);
+        // alert(response.message);
       })
       .catch((err) => {
-        alert(err);
+        // alert(err);
       });
 }

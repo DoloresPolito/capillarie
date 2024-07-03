@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
       >
         {children}
 
-        <button className="buttoncontact">Contact Us</button>
+        {/* <button className="buttoncontact">Contact Us</button> */}
       </body>
     </html>
   );

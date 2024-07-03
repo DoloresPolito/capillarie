@@ -2,16 +2,15 @@ import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Parallax, Pagination, Navigation } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-
 import arrowDown from "../../../public/assets/down.svg";
 import arrowUp from "../../../public/assets/up.svg";
+import arrowDownWhite from "../../../public/assets/downwhite.svg";
+import arrowUpWhite from "../../../public/assets/upwhite.svg";
 import Image from "next/image";
-
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import AnimatedDiv from "@/components/AnimatedDiv";
@@ -31,6 +30,8 @@ const ReviewsSection = ({ reviewstranslations }) => {
   }, [controls, inView]);
 
   const [width, setWidth] = useState(null);
+  const [prevArrow, setPrevArrow] = useState(arrowUp);
+  const [nextArrow, setNextArrow] = useState(arrowDown);
 
   useEffect(() => {
     const handleResize = () => {
@@ -46,7 +47,6 @@ const ReviewsSection = ({ reviewstranslations }) => {
   }, [setWidth]);
 
   const medium = 1200;
-
 
   const cards = [
     { name: "Nicolas Romero", text: reviewstranslations.review1 },
@@ -82,7 +82,6 @@ const ReviewsSection = ({ reviewstranslations }) => {
       <AnimatedDiv>
         <div className={styles.container}>
           <div className={styles.carouselcontainer}>
-           
             <div className={styles.carouselcontent}>
               <Swiper
                 speed={600}
@@ -92,7 +91,9 @@ const ReviewsSection = ({ reviewstranslations }) => {
                   prevEl: `.${styles.customprev}`,
                 }}
                 modules={[Parallax, Pagination, Navigation]}
-                slidesPerView={width > medium ? 2.7 : (width > 1000 ? 2 : 1)}
+                slidesPerView={
+                  width > medium ? 2.7 : width > 1000 ? 2 : 1
+                }
                 slidesPerGroup={1}
                 spaceBetween={10}
               >
@@ -104,11 +105,19 @@ const ReviewsSection = ({ reviewstranslations }) => {
               </Swiper>
             </div>
             <div className={styles.arrowscontainer}>
-              <div className={styles.customprev}>
-                <Image src={arrowUp} alt="Prev arrow" />
+              <div
+                className={styles.customprev}
+                onMouseEnter={() => setPrevArrow(arrowUpWhite)}
+                onMouseLeave={() => setPrevArrow(arrowUp)}
+              >
+                <Image src={prevArrow} alt="Prev arrow" />
               </div>
-              <div className={styles.customnext}>
-                <Image src={arrowDown} alt="Next arrow" />
+              <div
+                className={styles.customnext}
+                onMouseEnter={() => setNextArrow(arrowDownWhite)}
+                onMouseLeave={() => setNextArrow(arrowDown)}
+              >
+                <Image src={nextArrow} alt="Next arrow" />
               </div>
             </div>
           </div>

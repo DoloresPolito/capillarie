@@ -7,6 +7,9 @@
   background-color: #44b9cc;
   border-radius: 30px;
   color: white;
+  margin-top: -40px;
+  z-index: 700;
+
   @media only screen and (max-width: 1000px) {
     height: auto;
   }
@@ -80,7 +83,6 @@
         @media only screen and (max-width: 1000px) {
           text-align: center;
           justify-content: center;
-
           width: 80%;
         }
 
@@ -99,20 +101,21 @@
           font-weight: 400;
 
           margin-bottom: 20px;
+          text-decoration: underline;
+          padding-bottom: 3px;
+
           @media only screen and (max-width: 1000px) {
             font-size: 13px;
+            text-align: start;
           }
         }
 
         p {
           font-family: "Plus Jakarta Sans", sans-serif;
-
           font-size: 15px;
           font-weight: 300;
           margin-bottom: 10px;
-          @media only screen and (max-width: 1000px) {
-            font-size: 13px;
-          }
+          text-align: start;
         }
 
         .col1 {
@@ -128,9 +131,9 @@
 
           width: 150px;
           margin-left: 50px;
-          @media only screen and (max-width: 500px) {
-            margin-left: 0px;
-            margin-top: 30px;
+
+          @media only screen and (max-width: 1000px) {
+            display: none;
           }
         }
       }
@@ -162,6 +165,28 @@
           //   font-size: 13px;
           // }
         }
+      }
+    }
+
+    .contactlinkcontainer {
+      width: auto;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        scale: 1.05;
+      }
+
+      img {
+        margin-left: 10px;
+        margin-top: -10px;
+        height: 10px;
+      }
+
+      p {
       }
     }
   }

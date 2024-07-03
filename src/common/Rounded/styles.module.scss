@@ -41,10 +41,7 @@
     
   }
 
-  &:hover {
-    border-color: #44b9cc;
-    // color: white;
-  }
+
 }
 
 .circle {
@@ -54,7 +51,8 @@
   border-radius: 50%;
   top: 100%;
   z-index: -1;
-  background-color: #44b9cc;
+  // background-color: #44b9cc;
+  // background-color: violet;
   transition: top 0.4s ease, width 0.4s ease;
 }
 

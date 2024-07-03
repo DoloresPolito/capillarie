@@ -35,20 +35,16 @@ const HairSurgerySection = ({ hairtranslations }) => {
     <>
       <div className={styles.section} ref={ref}>
         <div className={styles.container}>
+        <h3>Platelet-Rich Plasma (PRP) therapy utilizes patient's own blood to silumlate hair growth and improve hair density.</h3>
           <div className={styles.left}>
-            <motion.h6
-              initial={{ x: "-10vw", opacity: 0 }}
-              animate={controls}
-              className={`${styles.heading} `}
-            >
-              {hairtranslations.hairsectiontitle}
-            </motion.h6>
 
-            <Paragraph
-              paragraph={hairtranslations.hairsubtitle}
+
+            {/* <Paragraph
+       
+            paragraph="Platelet-Rich Plasma (PRP) therapy utilizes patient's own blood to silumlate hair growth and improve hair density."
               className="subhair"
-            />
-            {/* <h3>{hairtranslations.hairsubtitle}</h3> */}
+            /> */}
+            
             <motion.div
               className={styles.benefitscontainer}
               variants={hairSlide}
@@ -56,10 +52,10 @@ const HairSurgerySection = ({ hairtranslations }) => {
               animate={inView ? "enter" : "exit"}
             >
               {[
-                hairtranslations.hairitem1,
-                hairtranslations.hairitem2,
-                hairtranslations.hairitem3,
-                hairtranslations.hairitem4,
+                "Derived from the patient's own blood, reducing the risk of rejections.",
+                "Only requires a dermatological evaluation before treatment.",
+                "Effective in stimulating new hair growth and increasing the thickness of existing hair.",
+                "Finance it easily, from €60/month. ",
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -74,41 +70,21 @@ const HairSurgerySection = ({ hairtranslations }) => {
                 </motion.div>
               ))}
             </motion.div>
-            <div className={styles.buttoncontainer}>
-              <Link
-                href="/hairimplant"
-                style={{ textDecoration: "none", color: "#493e36" }}
-              >
-                <Rounded background="#44b9cc"> {hairtranslations.hairbutton}</Rounded>
-              </Link>
-            </div>
+           
           </div>
 
           {/* Aquí empieza la parte derecha */}
           <div className={styles.right}>
-            {/* <motion.div
-              className={styles.imageContainer}
-              style={{ originY: 0 }}
-              initial={{ scaleY: 0, opacity: 0 }}
-              animate={inView ? { scaleY: 1, opacity: 1 } : { scaleY: 0, opacity: 0 }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
-            > */}
+
 
             <AnimatedDiv>
               <div className={styles.imageContainer}>
-                <Image
-                  src="/assets/images/hair2.png" // Aquí reemplaza con la ruta correcta de tu imagen
-                  alt="Descripción de la imagen"
-                  objectFit="cover"
-                  quality={100}
-                  height={400}
-                  width={600}
-                />
+               
               </div>
             </AnimatedDiv>
-            {/* </motion.div> */}
+
           </div>
-          {/* Fin de la parte derecha */}
+
         </div>
       </div>
     </>

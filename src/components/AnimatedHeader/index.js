@@ -62,13 +62,13 @@ export default function Navbar3() {
     },
     {
       active: "procedures",
-      link: "/procedures",
+      link: "/",
       spanish: "Tratamientos",
       english: "Procedures",
     },
     {
       active: "hairimplant",
-      link: "/hairimplant",
+      link: "/",
       spanish: "Implante capilar",
       english: "Hair implant",
     },
@@ -154,7 +154,7 @@ export default function Navbar3() {
                      >
                        <Magnetic>
                          <div className={styles.el}>
-                           <StyledLink link="/hairimplant">
+                           <StyledLink link="/">
                              <p className={styles.text}>
                                {locale === "es" ? "Implante capilar" : "Hair implant"}
                              </p>

@@ -1,8 +1,15 @@
 import React from "react";
 import styles from "./styles.module.scss";
 import Rounded from "@/common/Rounded";
+import { useTranslation } from "react-i18next";
+import Image from "next/image";
+import arrow from "../../../public/assets/arrowwhite.svg";
+import Link from "next/link";
 
-export default function Footer({ contacttranslations }) {
+
+export default function Footer() {
+  const { t, i18n } = useTranslation("");
+  const locale = i18n.language;
   return (
     <div className={styles.footersection}>
       <div className={styles.footercontainer}>
@@ -10,31 +17,99 @@ export default function Footer({ contacttranslations }) {
           <div className={styles.left}>
             <div className={styles.top}>
               <h3>
-                Schedule your free consultation with Capillarie today and begin
-                your path to exceptional hair re storation!
+                {locale === "en"
+                  ? "Schedule your free consultation with Capillarie today and begin your path to exceptional hair re storation!"
+                  : "¡Programe su consulta gratuita con Capillarie hoy y comience su camino hacia una restauración capilar excepcional!"}
               </h3>
               <div className={styles.buttoncontainer}>
-                <Rounded border="1px solid white" >Book an appoiment</Rounded>
+                <Rounded border="1px solid white" background="white"  hoverColor = "#493E36" footer={true}>  {locale === "en" ? "Book an appoiment " : "Reserva tu cita"}</Rounded>
+              </div>
+              <div className={styles.buttoncontainer}>
+
               </div>
             </div>
           </div>
 
-
           <div className={styles.right}>
             <div className={styles.col1}>
-              <h6>Contacto</h6>
-              <p>31-32 Wellington Quay  1st floor, D02KP11</p>
-              <p>+54 11 57392254</p>
-              <p>capillariedublin@gmail.com</p>
-              <p>@capillariedublin</p>
+              <h6>     {locale === "en" ? "Contact" : " Contacto"}</h6>
+
+           
+              <Link
+                href="mailto:dolores.polito@gmail.com"
+                target="_blank"
+                style={{ textDecoration: "none" }}
+              >
+                <div className={styles.contactlinkcontainer}>
+                  <p>capillariedublin@gmail.com</p>
+                  <Image src={arrow} alt="arrow" />
+                </div>
+              </Link>
+
+              <Link
+                href="https://api.whatsapp.com/send/?phone=543446584076"
+                target="_blank"
+                style={{ textDecoration: "none" }}
+              >
+                <div className={styles.contactlinkcontainer}>
+                  <p>+54 11 57392254</p>
+                  <Image src={arrow} alt="arrow" />
+                </div>
+              </Link>
+
+              <Link
+                href="https://www.instagram.com/dolorespolito/"
+                target="_blank"
+                style={{ textDecoration: "none" }}
+              >
+                <div className={styles.contactlinkcontainer}>
+                  <p>@capillariedublin</p>
+                  <Image src={arrow} alt="arrow" />
+                </div>
+              </Link>
+
+              <Link href="/" style={{ textDecoration: "none" }}>
+                <div className={styles.contactlinkcontainer}>
+                  <p>/capillarieclinic</p>
+                  <Image src={arrow} alt="arrow" />
+                </div>
+              </Link>
+
+              <Link
+                href="https://www.google.com/maps/place/31%2F32+Wellington+Quay,+Temple+Bar,+Dublin+2,+D02+RX80,+Irlanda/@53.3457871,-6.266768,17z/data=!3m1!4b1!4m6!3m5!1s0x48670e832e53244f:0x182fb7c8a115ab7a!8m2!3d53.3457871!4d-6.2641931!16s%2Fg%2F11pkjs6j_2?entry=ttu"
+                target="_blank"
+                style={{ textDecoration: "none" }}
+              >
+                <div className={styles.contactlinkcontainer}>
+                  <p>31-32 Wellington Quay 1st floor, D02KP11</p>
+                  <Image src={arrow} alt="arrow" />
+                </div>
+              </Link>
             </div>
             <div className={styles.col2}>
               <h6>Nav</h6>
-              <p>Hair implant</p>
-              <p>Procedures</p>
-              <p>About</p>
-              <p>FAQs</p>
-              <p>Contact</p>
+              <Link
+                href="/about"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                <p>{locale === "en" ? "About" : "Nosotros"}</p>
+              </Link>
+              <p>{locale === "en" ? "Hair implant" : "Implante capilar"}</p>
+              <p>{locale === "en" ? "Procedures" : "Tratamientos"}</p>
+
+      
+              <Link
+                href="/faqs"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                <p>FAQs</p>
+              </Link>
+              <Link
+                href="/contact"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                <p>{locale === "en" ? "Contact" : "Contacto"}</p>
+              </Link>
             </div>
           </div>
         </div>
@@ -42,8 +117,8 @@ export default function Footer({ contacttranslations }) {
         <div className={styles.rightscontainer}>
           <div className={styles.bottom}>
             <p>
-              ©2024 Capillarie Clinic Dublin | All rights reserved. Sitio por
-              Vinte
+  
+              {locale === "en" ? "©2024 Capillarie Clinic Dublin | All rights reserved." : "©2024 Clínica Capillarie Dublin | Todos los derechos reservados."}
             </p>
           </div>
         </div>

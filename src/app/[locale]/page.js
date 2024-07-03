@@ -15,7 +15,7 @@ export default async function Home({ params: { locale } }) {
     sectiontitle:t("sectiontitle"),
     financingbutton: t("financingbutton"),
     bookbutton: t("bookbutton"),
-    // Añade otras traducciones necesarias aquí
+   
 
     faq1:t("faq1"),
     ans1:t("ans1"),
@@ -75,6 +75,9 @@ export default async function Home({ params: { locale } }) {
     review8:t("review8"),
     review9:t("review9"),
     review10:t("review10"),
+
+
+
  
   };
 

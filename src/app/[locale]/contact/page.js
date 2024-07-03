@@ -25,8 +25,9 @@ export default async function Procedures({ params: { locale } }) {
       locale={locale}
       namespaces={i18nNamespaces}
     >
-      <AnimatedHeader />
+    
       <div className={styles.main}>
+      <AnimatedHeader />
         <Contact translations={translations} />
 
         {/* <p>locale: {locale}</p> */}
