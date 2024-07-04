@@ -26,7 +26,7 @@ const CoverSection = () => {
     <div className={styles.section}>
       <div className={styles.container}>
         <div className={styles.left}>
-          {/* <h6>PROCEDURES WITHOUT SURGERY</h6>
+          <h6>PROCEDURES WITHOUT SURGERY</h6>
 
           <h4>
             Take advantage of the clinics financing options available for the
@@ -53,7 +53,7 @@ const CoverSection = () => {
           </div>
           <div className={styles.containeritem}>
             <h3>Dutasteride Microinjections</h3>
-          </div>*/}
+          </div>
         </div> 
       </div>
     </div>

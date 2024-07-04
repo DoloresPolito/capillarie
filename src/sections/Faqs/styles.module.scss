@@ -1,109 +1,114 @@
 .section {
-    width: 100%;
-    margin-top: 70px;
-    background-color: rgb(239, 239, 239);
-    border-radius: 30px;
-    height: auto;
+  width: 100%;
+  margin-top: 70px;
+  background-color: rgb(239, 239, 239);
+  border-radius: 30px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/assets/backgrounds/backcover.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+
+  .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    width: 90%;
     align-items: center;
-    background-image: url("/assets/backgrounds/backcover.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
+    margin-bottom: 150px;
+    max-width: 1600px;
 
-  
-    .container {
+    .titlecontainer {
       display: flex;
-      flex-direction: column;
-      width: 90%;
-      align-items: center;
-      margin-bottom: 150px;
-      max-width: 1600px;
+      width: 100%;
+      height: 150px;
+      border-bottom: 1px solid grey;
 
-  
-      .titlecontainer {
-        display: flex;
-        width: 100%;
-        height: 150px;
-        border-bottom: 1px solid grey;
-  
-        h2 {
-          font-family: "Plus Jakarta Sans", sans-serif;
-          color: #493e36;
-          letter-spacing: 1px;
-          font-size: 75px;
-          font-weight: 300;
-          margin-top: 30px;
-          margin-bottom: 40px;
-        }
-      }
-  
-      .filtercontainer {
-        display: flex;
-        width: 100%;
-        height: 150px;
+      h2 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color: #493e36;
+        letter-spacing: 1px;
+        font-size: 75px;
+        font-weight: 300;
         margin-top: 30px;
-        
+        margin-bottom: 40px;
+      }
+    }
 
-        .filtercontainer button {
-          // estilos para los botones
-        }
-        
-        .filtercontainer .active {
-          background-color: #44b9cc; /* o el color que prefieras */
-          color: white; /* o el color que prefieras */
-        }
-  
-        button {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: auto;
-          height: 40px;
-          background-color: transparent;
-          border: 0.5px solid grey;
-          padding: 15px 15px;
-          border-radius: 30px;
-          margin-right: 20px;
-          cursor: pointer;
-          transition: background-color 0.5s, color 0.3s, border-color 0.5s; /* Añade transiciones suaves */
-          font-family: "Plus Jakarta Sans", sans-serif;
-          color: #493e36;
-          letter-spacing: 0.2px;
-          font-size: 15px;
-          font-weight: 300;
-          line-height: 130%;
+    .filtercontainer {
+      display: flex;
+      width: 100%;
+      height: 150px;
+      margin-top: 10px;
+      flex-wrap: wrap;
 
-          &:hover{
-            background-color: rgb(220, 220, 220);
-          
-          }
-  
-          &.active {
-            border: 0.5px solid #44B9CC;
-            background-color: #44B9CC;
-            color: white; /* Esto es opcional, para mejorar la visibilidad del texto */
-          }
-        }
+      @media only screen and (max-width: 750px) {
+        height: auto;
       }
 
-      .faqscontainer{
-        height: auto;
-        width: 70%;
+      .filtercontainer button {
+        // estilos para los botones
+      }
 
-        margin: 0 auto;
-        @media only screen and (max-width: 1000px) {
-            width: 100%;  
+      .filtercontainer .active {
+        background-color: #44b9cc; /* o el color que prefieras */
+        color: white; /* o el color que prefieras */
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: 40px;
+        background-color: transparent;
+        border: 0.5px solid grey;
+        padding: 15px 15px;
+        border-radius: 30px;
+        margin-right: 20px;
+        cursor: pointer;
+        transition: background-color 0.5s, color 0.3s, border-color 0.5s; /* Añade transiciones suaves */
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color: #493e36;
+        letter-spacing: 0.2px;
+        font-size: 15px;
+        font-weight: 300;
+        // line-height: 130%;
+        @media only screen and (max-width: 750px) {
+          margin-bottom: 10px;
+          padding: 5px 10px;
         }
-        .categoryHeader {
-            font-size: 24px;
-            margin: 20px 0 10px;
-            color: #333;
-            // otros estilos que quieras agregar
-          }
+
+        &:hover {
+          background-color: rgb(220, 220, 220);
+        }
+
+        &.active {
+          border: 0.5px solid #44b9cc;
+          background-color: #44b9cc;
+          color: white; /* Esto es opcional, para mejorar la visibilidad del texto */
+        }
+      }
     }
+
+    .faqscontainer {
+      height: auto;
+      width: 70%;
+
+      margin: 0 auto;
+      @media only screen and (max-width: 1000px) {
+        width: 100%;
+      }
+      .categoryHeader {
+        font-size: 24px;
+        margin: 20px 0 10px;
+        color: #333;
+        // otros estilos que quieras agregar
+      }
     }
   }
+}
