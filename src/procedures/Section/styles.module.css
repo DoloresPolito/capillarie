@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .leftSection {
+    width: 50%;
+    position: fixed;
+    height: 100vh;
+    background-color: #f0f0f0; /* Ajusta según necesites */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rightSection {
+    width: 50%;
+    margin-left: 50%;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  .content {
+    padding: 20px;
+  }

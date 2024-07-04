@@ -1,31 +1,31 @@
+
 "use client";
 import { useEffect } from "react";
-import Lenis from "lenis";
-import styles from "./styles.module.scss";
+import styles from "./styles.module.css";
+import Intro from "../../procedures/Intro";
+import Description from "../../procedures/Description";
+import ImagesContainer from "../../procedures/ImagesContainer";
+import Cover from "../../procedures/Cover";
 import Footer from "@/components/Footer2";
-import Cover from "@/procedures/Cover";
-
 
 export default function Index() {
   useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
   }, []);
 
   return (
-    <>
-      <div className={styles.section}>
-        <Cover />
- 
-        <Footer />
-      </div>
-    </>
+    <main className={styles.main}>
+      {/* <Intro /> */}
+      <Cover/>
+      <Description />
+
+      <ImagesContainer />
+
+      <Footer/>
+
+    </main>
   );
 }

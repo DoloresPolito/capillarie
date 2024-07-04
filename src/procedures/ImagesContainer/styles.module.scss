@@ -1,0 +1,71 @@
+
+  
+  .maincontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f8f7;
+  }
+  
+  .box1 {
+    position: relative;
+    height: 75vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+ 
+  
+    image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+
+  .treatcontainer{
+
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    height: 90vh;
+    .treattext{
+      display: flex;
+      width: 70%;
+    }
+  }
+  
+  .imagecontainer {
+    position: relative;
+    width: 50%;
+    height: 300px;
+    // margin: 50px;
+    overflow: hidden;
+  
+    image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    &:nth-child(odd) {
+      margin-left:  random(400) - 100 + px;;
+    }
+  
+    &:nth-child(even) {
+      margin-right:  random(400) - 100 + px;;
+    }
+  
+  }
+  
+  
+  .box2 {
+    height: 100vh;
+    background-color: #999;
+    background-color: blue;
+  }

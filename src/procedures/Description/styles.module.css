@@ -1,0 +1,19 @@
+.description{
+    position: relative;
+    font-size: 3vw;
+    padding-top: 100px;
+    margin-left: 10vw;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.description p{
+    margin: 0px;
+    position: relative;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #44b9cc;
+    letter-spacing: 1px;
+    font-size: 28px;
+    font-weight: 300;
+}

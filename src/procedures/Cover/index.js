@@ -29,11 +29,15 @@ const CoverSection = () => {
         <div className={styles.left}>
           <h6>PROCEDURES WITHOUT SURGERY</h6>
 
-          <h4>Take advantage of the clinic's financing options available for the following treatments.</h4>
+          <h4>
+            Take advantage of the clinic's financing options available for the
+            following treatments.
+          </h4>
+
+          <div className={styles.imagecontainer}>
+
+          </div>
         </div>
-
-
-
 
         <div className={styles.right}>
           <div className={styles.containeritem}>
@@ -52,7 +56,6 @@ const CoverSection = () => {
             <h3>Dutasteride Microinjections</h3>
           </div>
         </div>
- 
       </div>
     </div>
   );

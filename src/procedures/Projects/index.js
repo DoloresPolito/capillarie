@@ -4,33 +4,29 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import image1 from "../../../public/assets/images/t1.png";
-import image2 from "../../../public/assets/images/t2.png";
-import image3 from "../../../public/assets/images/t3.png";
-
 const projects = [
     {
         title: "Salar de Atacama",
-        src: image1
+        src: "salar_de_atacama.jpg"
     },
     {
         title: "Valle de la luna",
-        src: image2
+        src: "valle_de_la_muerte.jpeg"
     },
     {
         title: "Miscanti Lake",
-        src: image3
+        src: "miscani_lake.jpeg"
     },
     {
         title: "Miniques Lagoons",
-        src: image1
+        src: "miniques_lagoon.jpg"
     },
 ]
 
 export default function Index() {
 
     const [selectedProject, setSelectedProject] = useState(0);
-    const container = useRef(null);
+    // const container = useRef(null);
     const imageContainer = useRef(null);
 
     useLayoutEffect( () => {
@@ -38,21 +34,26 @@ export default function Index() {
         ScrollTrigger.create({
             trigger: imageContainer.current,
             pin: true,
-            start: "top-=100px",
-            end: document.body.offsetHeight - window.innerHeight - 50,
+            start: "0px",
+            end: document.body.offsetHeight,
+            //  - window.innerHeight - 50,
+
         })
     }, [])
 
     return (
-        <div ref={container} className={styles.projects}>
+        <div
+        //  ref={container} 
+         className={styles.projects}>
             <div className={styles.projectDescription}>
-                <div ref={imageContainer} className={styles.imageContainer}>
+                <div 
+                ref={imageContainer} 
+                className={styles.imageContainer}>
                     <Image 
-                        // src={`/images/${projects[selectedProject].src}`}
-                        src={image1}
+                        src={`/images/${projects[selectedProject].src}`}
                         fill={true}
                         alt="project image"
-                        priority={true}
+                        // priority={true}
                     />
                 </div>
                 <div className={styles.column}>
