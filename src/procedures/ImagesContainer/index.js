@@ -4,6 +4,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger, Power2 } from "gsap/all";
 import Image from "next/image";
 import image1 from "../../../public/assets/images/t1.png";
+import tic from "../../../public/assets/tic.svg";
+import AnimatedDiv from "../../components/AnimatedDiv";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,8 +19,7 @@ export default function ImagesContainer() {
   itemsRef.current = [];
 
   useEffect(() => {
-
-    itemsRef.current.map((item, index) => {
+    itemsRef.current.map((item) => {
       gsap.fromTo(
         item,
         {
@@ -28,9 +29,9 @@ export default function ImagesContainer() {
           clipPath: "polygon(0 0, 0% 0, 0% 100%, 0 100%)",
         },
         {
-          duration: 1,
+          duration: 1.5,
           autoAlpha: 1,
-          scale: 1,
+          scale: 1.5,
           ease: Power2,
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
           scrollTrigger: {
@@ -51,31 +52,50 @@ export default function ImagesContainer() {
 
   return (
     <div className={styles.maincontainer}>
-
-
       {data.map(({ image }, index) => {
+        const isEven = index % 2 === 0;
         return (
-       
-            <div className={styles.treatcontainer} key={index}>
-              <div className={styles.treattext}>
-                <h2>texto</h2>
-              </div>
-              <div className={styles.imagecontainer} >
-                <Image
-                  src={image}
-                  alt=""
-                  width={500}
-                  height={500}
-                  ref={addToRefs}
-                />
-              </div>
+          <div
+            className={`${styles.treatcontainer} ${
+              isEven ? styles.even : styles.odd
+            }`}
+            key={index}
+          >
+            <div className={styles.treattext}>
+              <h3>
+                Platelet-Rich Plasma (PRP) therapy utilizes patients own blood
+                to silumlate hair growth and improve hair density.
+              </h3>
+
+              <AnimatedDiv>
+                <div className={styles.benefitscontainer}>
+                  {[
+                    "Derived from the patient's own blood, reducing the risk of rejections.",
+                    "Only requires a dermatological evaluation before treatment.",
+                    "Effective in stimulating new hair growth and increasing the thickness of existing hair.",
+                    "Finance it easily, from €60/month. ",
+                  ].map((item, index) => (
+                    <div key={index} className={styles.benefit}>
+                      <Image src={tic} alt="tic" />
+                      <p>{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </AnimatedDiv>
+              <p>
+                Typically involves 4-6 sessions per year, spaced 4-6 weeks
+                apart.
+                <br />
+                Results are often noticeable from the second session onwards.
+              </p>
             </div>
-       
+            <div className={styles.imagecontainer}>
+              <Image src={image} alt="" ref={addToRefs} />
+            </div>
+          </div>
         );
       })}
-      <div className={styles.box2}>
-        <p>hola</p>
-      </div>
+      <div className={styles.box2}></div>
     </div>
   );
 }

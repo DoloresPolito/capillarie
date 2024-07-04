@@ -28,14 +28,14 @@ const CoverSection = () => {
         <div className={styles.left}>
           <h6>PROCEDURES WITHOUT SURGERY</h6>
 
-          <h4>
+          {/* <h4>
             Take advantage of the clinics financing options available for the
             following treatments.
           </h4>
 
           <div className={styles.imagecontainer}>
 
-          </div>
+          </div> */}
         </div>
 
         <div className={styles.right}>
