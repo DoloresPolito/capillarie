@@ -1,12 +1,11 @@
 "use client";
 import styles from "./styles.module.scss";
 import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import AnimatedDiv from "@/components/AnimatedDiv";
+
+
 
 const CoverSection = () => {
-  const { t, i18n } = useTranslation("");
-  const locale = i18n.language;
+
 
   const [width, setWidth] = useState(null);
 
