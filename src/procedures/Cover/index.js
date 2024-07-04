@@ -29,7 +29,7 @@ const CoverSection = () => {
           <h6>PROCEDURES WITHOUT SURGERY</h6>
 
           <h4>
-            Take advantage of the clinic's financing options available for the
+            Take advantage of the clinics financing options available for the
             following treatments.
           </h4>
 
