@@ -4,16 +4,15 @@
   align-items: center;
   width: 100%;
   height: auto;
-  background-color: white;
-  background-image: url("/assets/backgrounds/backcover.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  // background-color: white;
+  // background-image: url("/assets/backgrounds/backcover.png");
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
   width: 100%;
   z-index: 700;
   border-radius: 30px;
   margin-bottom: 30px;
-  margin-top: 70px;
   @media only screen and (max-width: 600px) {
     margin-bottom: 0px;
   }

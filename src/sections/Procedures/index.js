@@ -1,11 +1,9 @@
-
 "use client";
 import { useEffect } from "react";
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 import Intro from "../../procedures/Intro";
 import Description from "../../procedures/Description";
 import ImagesContainer from "../../procedures/ImagesContainer";
-import Cover from "../../procedures/Cover";
 import Footer from "@/components/Footer2";
 
 export default function Index() {
@@ -17,15 +15,13 @@ export default function Index() {
   }, []);
 
   return (
-    <main className={styles.main}>
-      {/* <Intro /> */}
-      <Cover/>
+    <div className={styles.section}>
+      <Intro />
       <Description />
 
       <ImagesContainer />
 
-      <Footer/>
-
-    </main>
+      <Footer />
+    </div>
   );
 }

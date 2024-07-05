@@ -6,7 +6,7 @@ import Image from "next/image";
 import arrow from "../../../public/assets/arrowwhite.svg";
 import Link from "next/link";
 
-
+import AnimatedDiv from "../AnimatedDiv";
 export default function Footer() {
   const { t, i18n } = useTranslation("");
   const locale = i18n.language;
@@ -15,12 +15,17 @@ export default function Footer() {
       <div className={styles.footercontainer}>
         <div className={styles.infocontainer}>
           <div className={styles.left}>
+
             <div className={styles.top}>
+              <AnimatedDiv>
+
+       
               <h3>
                 {locale === "en"
                   ? "Schedule your free consultation with Capillarie today and begin your path to exceptional hair re storation!"
                   : "¡Programe su consulta gratuita con Capillarie hoy y comience su camino hacia una restauración capilar excepcional!"}
               </h3>
+              </AnimatedDiv>
               <div className={styles.buttoncontainer}>
                 <Rounded border="1px solid white" background="white"  hoverColor = "#493E36" footer={true}>  {locale === "en" ? "Book an appoiment " : "Reserva tu cita"}</Rounded>
               </div>

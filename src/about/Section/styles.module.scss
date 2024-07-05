@@ -1,0 +1,52 @@
+.section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  overflow: hidden;
+  width: 100%;
+  // clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+  clip-path: inset(0 0 0 0 round 30px);
+}
+
+.textContainer {
+  position: relative;
+  z-index: 10;
+  padding: 20px;
+  mix-blend-mode: difference;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.smallText {
+  width: 50vw;
+  font-size: 2vw;
+  align-self: flex-end;
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+}
+
+.largeText {
+  font-size: 5vw;
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+}
+
+.backgroundContainer {
+  position: fixed;
+  top: -10vh;
+  left: 0;
+  height: 120vh;
+  width: 100%;
+}
+
+.motionDiv {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

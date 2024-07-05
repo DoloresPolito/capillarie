@@ -1,0 +1,17 @@
+.intro {
+  height: 100vh;
+  overflow: hidden;
+  border-radius: 30px;
+  z-index: 500;
+}
+
+.motionDiv {
+  position: relative;
+  height: 100%;
+}
+
+.textcontainer {
+  position: relative;
+  display: flex;
+  align-self: center;
+}

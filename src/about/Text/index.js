@@ -9,7 +9,7 @@ import AnimatedDiv from "@/components/AnimatedDiv";
 
 import { useInView } from "react-intersection-observer";
 
-const AboutSection = ({ texttranslations }) => {
+const Text = ({ texttranslations }) => {
   const { t, i18n } = useTranslation("");
   const locale = i18n.language;
 
@@ -47,4 +47,4 @@ const AboutSection = ({ texttranslations }) => {
   );
 };
 
-export default AboutSection;
+export default Text;

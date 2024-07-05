@@ -2,7 +2,6 @@
 import styles from "./styles.module.scss";
 import { useEffect } from "react";
 import Lenis from "lenis";
-// import { motion } from "framer-motion";
 import ReviewsSection from "@/home/ReviewsSection";
 import FaqsSection from "@/home/FaqsSection";
 import CoverSection from "@/home/CoverSection";
@@ -11,6 +10,7 @@ import HairSurgerySection from "@/home/HairSurgerySection";
 import TreatmentsSection from "@/home/TreatmentsSection";
 import ResultsSection from "@/home/ResultsSection";
 import Footer from "@/components/Footer2";
+import Description from "@/procedures/Description";
 
 export default function Index({ translations }) {
   useEffect(() => {
@@ -100,24 +100,14 @@ export default function Index({ translations }) {
     review10: translations.review10,
   };
 
-
-
   return (
-    //   <div className={styles.container}>
-    //   <motion.div
-    //       className={styles.box}
-    //       animate={{ x: 100 }}
-    //       transition={{ duration: 1 }}
-    //     />
-    //     <p className={styles.montserratbold}>{translations.text1}</p>
-    //     <Contact/>
-    //   </div>
+
 
     <>
       <div className={styles.section}>
         <CoverSection covertranslations={covertranslations} />
         <AboutSection abouttranslations={abouttranslations} />
-
+        <Description />
         <HairSurgerySection hairtranslations={hairtranslations} />
         <TreatmentsSection treatmentstranslations={treatmentstranslations} />
         {/* <Projects/> */}
@@ -125,8 +115,6 @@ export default function Index({ translations }) {
         <FaqsSection faqstranslations={faqstranslations} />
         <ResultsSection faqstranslations={faqstranslations} />
         <ReviewsSection reviewstranslations={reviewstranslations} />
-
-        {/* <BlurryCursor/> */}
       </div>
       <Footer />
     </>

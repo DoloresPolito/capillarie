@@ -93,8 +93,8 @@ const CoverSection = ({ covertranslations }) => {
             )}
           </div>
         </div>
-
-        <h3>{covertranslations.subtitle2}</h3>
+{width > 1000 ? <>  <h3>{covertranslations.subtitle2}</h3></> : <></>}
+      
       </div>
     </div>
   );
