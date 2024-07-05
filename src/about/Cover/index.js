@@ -66,7 +66,8 @@ const CoverSection = ({ covertranslations }) => {
             </h2>
           )}
         </AnimatedDiv>
-        <div className={styles.numberscontainer}>
+
+        {width > 700 ? <> <div className={styles.numberscontainer}>
           <div className={styles.item}>
             <h4>{locale === "en" ? "Hair implants" : "Implantes capilares" }</h4>
             {isLoading ? (
@@ -92,9 +93,10 @@ const CoverSection = ({ covertranslations }) => {
               <p>{item3[item3.length - 1]}</p>
             )}
           </div>
-        </div>
-{width > 1000 ? <>  <h3>{covertranslations.subtitle2}</h3></> : <></>}
-      
+        </div> </> : <></>}
+       
+
+<h3>{covertranslations.subtitle2}</h3>
       </div>
     </div>
   );
