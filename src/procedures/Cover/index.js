@@ -33,12 +33,11 @@ const CoverSection = () => {
       <h6>PROCEDURES WITHOUT SURGERY</h6>
       <div className={styles.container}>
         <div className={styles.right}>
-          {data.map(({ title, id }) => (      <Link to={id} spy={true} smooth={true} offset={80} duration={800}>
-            <div className={styles.containeritem} key={id}>
-        
+          {data.map(({ title, id }) => (
+            <Link to={id} spy={true} smooth={true} offset={80} duration={800} key={id}>
+              <div className={styles.containeritem} >
                 <h3 className="treatment-link">{title}</h3>
-       
-            </div>
+              </div>
             </Link>
           ))}
         </div>
@@ -49,8 +48,6 @@ const CoverSection = () => {
             following treatments.
           </h4> */}
         </div>
-
-       
       </div>
     </div>
   );
