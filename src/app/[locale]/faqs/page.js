@@ -54,11 +54,17 @@ export default async function Faqs({ params: { locale } }) {
       locale={locale}
       namespaces={i18nNamespaces}
     >
-      <AnimatedHeader />
-  
-      <Faqss translations={translations}/>
-   
 
+
+  
+   
+  
+      <div className={styles.main}>
+      <AnimatedHeader />
+      <Faqss translations={translations}/>
+
+ 
+      </div>
 
     </TranslationsProvider>
   );

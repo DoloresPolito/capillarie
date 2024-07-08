@@ -43,11 +43,11 @@ const HairSurgerySection = ({ hairtranslations }) => {
             >
               {hairtranslations.hairsectiontitle}
             </motion.h6>
-
             <Paragraph
               paragraph={hairtranslations.hairsubtitle}
               className="subhair"
             />
+   
             {/* <h3>{hairtranslations.hairsubtitle}</h3> */}
             <motion.div
               className={styles.benefitscontainer}
@@ -84,20 +84,14 @@ const HairSurgerySection = ({ hairtranslations }) => {
             </div>
           </div>
 
-          {/* Aquí empieza la parte derecha */}
-          <div className={styles.right}>
-            {/* <motion.div
-              className={styles.imageContainer}
-              style={{ originY: 0 }}
-              initial={{ scaleY: 0, opacity: 0 }}
-              animate={inView ? { scaleY: 1, opacity: 1 } : { scaleY: 0, opacity: 0 }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
-            > */}
 
+          <div className={styles.right}>
+ 
+  
             <AnimatedDiv>
               <div className={styles.imageContainer}>
                 <Image
-                  src="/assets/images/hair2.png" // Aquí reemplaza con la ruta correcta de tu imagen
+                  src="/images/hair.png" 
                   alt="Descripción de la imagen"
                   objectFit="cover"
                   quality={100}
@@ -106,9 +100,9 @@ const HairSurgerySection = ({ hairtranslations }) => {
                 />
               </div>
             </AnimatedDiv>
-            {/* </motion.div> */}
+   
           </div>
-          {/* Fin de la parte derecha */}
+
         </div>
       </div>
     </>

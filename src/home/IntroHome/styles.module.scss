@@ -1,0 +1,23 @@
+.intro {
+  // height: 100vh;
+  overflow: hidden;
+  border-radius: 30px;
+  // margin-top: -10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.motionDiv {
+  position: relative;
+  height: 100%;
+  max-width: 1600px;
+  width: 100%;
+  height: 100vh;
+}
+
+.textcontainer {
+  position: relative;
+  display: flex;
+  align-self: center;
+}

@@ -1,13 +1,13 @@
 .section {
   display: flex;
   flex-direction: column;
-
-  height: auto;
+  height: 80vh;
   width: 100%;
   align-items: center;
   z-index: 10;
   background-color: white;
-  padding:50px 0px;
+  padding-bottom:50px;
+
 
 
   .container {

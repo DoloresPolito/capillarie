@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import AnimatedDiv from "@/components/AnimatedDiv";
-import {useTransform, useViewportScroll } from "framer-motion";
+import { useTransform, useViewportScroll } from "framer-motion";
 import Preloader from "@/components/Preloader";
 
 const CoverSection = ({ covertranslations }) => {
@@ -42,7 +42,7 @@ const CoverSection = ({ covertranslations }) => {
     })();
   }, []);
 
-  const item1 = ["10+", "20+", "30+", "50+", "70+", "90+", "100+",];
+  const item1 = ["10+", "20+", "30+", "50+", "70+", "90+", "100+"];
   const item2 = ["5+", "20+", "60+", "110+", "250+", "365+", "500+"];
   const item3 = ["500", "1000+", "1500+", "2000+", "3000+", "3500+", "4000+"];
 
@@ -67,36 +67,50 @@ const CoverSection = ({ covertranslations }) => {
           )}
         </AnimatedDiv>
 
-        {width > 700 ? <> <div className={styles.numberscontainer}>
-          <div className={styles.item}>
-            <h4>{locale === "en" ? "Hair implants" : "Implantes capilares" }</h4>
-            {isLoading ? (
-              <Preloader item={item1} />
-            ) : (
-              <p>{item1[item1.length - 1]}</p>
-            )}
-          </div>
+        {width > 700 ? (
+          <>
+            {" "}
+            <div className={styles.numberscontainer}>
+              <div className={styles.item}>
+                <h4>
+                  {locale === "en" ? "Hair implants" : "Implantes capilares"}
+                </h4>
+                {isLoading ? (
+                  <Preloader item={item1} />
+                ) : (
+                  <p>{item1[item1.length - 1]}</p>
+                )}
+              </div>
 
-          <div className={styles.item}>
-            <h4> {locale === "en" ? "Procedures/month" : "Procedimientos/mes" }</h4>
-            {isLoading ? (
-              <Preloader item={item2} />
-            ) : (
-              <p>{item2[item2.length - 1]}</p>
-            )}
-          </div>
-          <div className={styles.item}>
-            <h4> {locale === "en" ? "Happy pacients" : "Pacientes felices" }</h4>
-            {isLoading ? (
-              <Preloader item={item3} />
-            ) : (
-              <p>{item3[item3.length - 1]}</p>
-            )}
-          </div>
-        </div> </> : <></>}
-       
+              <div className={styles.item}>
+                <h4>
+                  {" "}
+                  {locale === "en" ? "Procedures/month" : "Procedimientos/mes"}
+                </h4>
+                {isLoading ? (
+                  <Preloader item={item2} />
+                ) : (
+                  <p>{item2[item2.length - 1]}</p>
+                )}
+              </div>
+              <div className={styles.item}>
+                <h4>
+                  {" "}
+                  {locale === "en" ? "Happy pacients" : "Pacientes felices"}
+                </h4>
+                {isLoading ? (
+                  <Preloader item={item3} />
+                ) : (
+                  <p>{item3[item3.length - 1]}</p>
+                )}
+              </div>
+            </div>{" "}
+          </>
+        ) : (
+          <></>
+        )}
 
-<h3>{covertranslations.subtitle2}</h3>
+        <h3>{covertranslations.subtitle2}</h3>
       </div>
     </div>
   );

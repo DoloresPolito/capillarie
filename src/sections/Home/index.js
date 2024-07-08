@@ -11,7 +11,9 @@ import TreatmentsSection from "@/home/TreatmentsSection";
 import ResultsSection from "@/home/ResultsSection";
 import Footer from "@/components/Footer2";
 import Description from "@/procedures/Description";
-
+import Procedures from "../../sections/Procedures"
+import Intro from "@/home/IntroHome";
+import DescriptionIntro from "@/home/DescriptionIntro";
 export default function Index({ translations }) {
   useEffect(() => {
     const lenis = new Lenis();
@@ -106,9 +108,13 @@ export default function Index({ translations }) {
     <>
       <div className={styles.section}>
         <CoverSection covertranslations={covertranslations} />
-        <AboutSection abouttranslations={abouttranslations} />
-        <Description />
+        <Intro/>
+        <DescriptionIntro abouttranslations={abouttranslations} />
+        {/* <AboutSection abouttranslations={abouttranslations} /> */}
+      
+        {/* <Description /> */}
         <HairSurgerySection hairtranslations={hairtranslations} />
+
         <TreatmentsSection treatmentstranslations={treatmentstranslations} />
         {/* <Projects/> */}
 

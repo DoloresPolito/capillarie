@@ -69,9 +69,9 @@ const CoverSection = ({ covertranslations }) => {
         </div>
 
         {/* Utilizamos motion.div para aplicar el efecto de zoom a la imagen */}
-        <motion.div className={styles.imagecontainer} style={{ scale }}>
+        {/* <motion.div className={styles.imagecontainer} style={{ scale }}>
           <Image src={width > 600 ? image : imagemobile} alt="coverimage" />
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
