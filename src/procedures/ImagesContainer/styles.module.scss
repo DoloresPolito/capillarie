@@ -3,9 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f9f8f7;
-  margin-top: -40px;
   background-color: white;
+  margin-bottom: 50px;
 }
 
 .treatcontainer {
@@ -17,7 +16,6 @@
   margin-bottom: 20px;
   padding: 30px;
   max-width: 1600px;
-
 
   h3 {
     font-family: "Plus Jakarta Sans", sans-serif;
@@ -35,17 +33,22 @@
     height: auto;
   }
 
-  .extratext{
-
+  .extratext {
     font-family: "Plus Jakarta Sans", sans-serif;
     color: #493e36;
     margin-left: 30px;
-    margin-top: 15px;
+    margin-top: 45px;
     margin-bottom: 15px;
     text-align: start;
     font-weight: 300;
-    font-size: 15px !important;
+    font-size: 17px !important;
     max-width: 500px;
+
+    @media only screen and (max-width: 500px) {
+      margin-left: 0px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
   }
 
   .treattext {
@@ -58,6 +61,12 @@
     @media only screen and (max-width: 1000px) {
       width: 100%;
       padding: 0px;
+      height: auto;
+    }
+
+    @media only screen and (max-width: 500px) {
+      margin-bottom: 20px;
+      margin-top: 20px;
     }
 
     .benefitscontainer {
@@ -86,8 +95,6 @@
         font-size: 15px !important;
       }
 
- 
-
       img {
         margin-top: 10px;
       }
@@ -102,13 +109,14 @@
     justify-content: center;
     margin: 0 auto;
 
-
     @media only screen and (max-width: 1000px) {
-     
-      background-color: violet;
+      margin-top: 40px;
       width: auto;
     }
 
+    @media only screen and (max-width: 500px) {
+      margin-top: 20px;
+    }
   }
 
   .imagecontainer {
@@ -125,15 +133,12 @@
       height: 60%;
       object-fit: cover;
       margin-top: 50px;
-
-  
     }
   }
 }
 
 .even {
   flex-direction: row-reverse;
-
 }
 
 .odd {
@@ -141,5 +146,5 @@
 }
 
 .box2 {
-  height: 100vh
+  height: 100vh;
 }

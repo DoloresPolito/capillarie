@@ -190,7 +190,11 @@ export default function ImagesContainer() {
                     ))}
                   </div>
                 </AnimatedDiv>
+          
+
+           
                 <p className={styles.extratext}>{additionalText}</p>
+             
               </div>
 
               {/* {width > medium ? (<></>) : (<></>)} */}
