@@ -179,7 +179,7 @@ export default function ImagesContainer() {
             >
               <div className={styles.treattext}>
                 <h3>{title}</h3>
-           
+                <h6>BENEFITS</h6>
                 <AnimatedDiv>
                   <div className={styles.benefitscontainer}>
                     {benefits.map((benefit, idx) => (
@@ -192,7 +192,7 @@ export default function ImagesContainer() {
                 </AnimatedDiv>
           
 
-           
+           <h6>TREATMENTS PLAN</h6>
                 <p className={styles.extratext}>{additionalText}</p>
              
               </div>
