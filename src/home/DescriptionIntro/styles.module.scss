@@ -1,8 +1,9 @@
 .container {
     display: flex;
     justify-content: center;
-    z-index: 3000;
+    z-index: 1000 !important;
 margin-top: -40vh;
+
 
 @media only screen and (max-width: 1000px) {
    height: 100vh;

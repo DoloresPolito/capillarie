@@ -62,7 +62,7 @@ export default function Navbar3() {
     },
     {
       active: "procedures",
-      link: "/",
+      link: "/procedures",
       spanish: "Tratamientos",
       english: "Procedures",
     },
@@ -103,17 +103,19 @@ export default function Navbar3() {
                 <div className={styles.rightside}>
                   <div className={styles.nav}>
 
-                  <div
-                       
+
+                  {links.map((link) => (
+                      <div
+                        key={link.active}
                         className={`${styles.el} ${
-                          activeNavItem === "about" ? styles.active : ""
+                          activeNavItem === link.active ? styles.active : ""
                         }`}
                       >
                         <Magnetic>
-                          <div className={styles.el}>
-                            <StyledLink link="/about">
+                          <div key={link.link} className={styles.el}>
+                            <StyledLink link={link.link}>
                               <p className={styles.text}>
-                                {locale === "es" ? "Nosotros" : "About"}
+                                {locale === "es" ? link.spanish : link.english}
                               </p>
                             </StyledLink>
                             <div
@@ -123,97 +125,108 @@ export default function Navbar3() {
                           </div>
                         </Magnetic>
                       </div>
+                    ))}
 
+{/* 
+                    <div
+                      className={`${styles.el} ${
+                        activeNavItem === "about" ? styles.active : ""
+                      }`}
+                    >
+                      <Magnetic>
+                        <div className={styles.el}>
+                          <StyledLink link="/about">
+                            <p className={styles.text}>
+                              {locale === "es" ? "Nosotros" : "About"}
+                            </p>
+                          </StyledLink>
+                          <div
+                            className={styles.indicator}
+                            ref={handleRef}
+                          ></div>
+                        </div>
+                      </Magnetic>
+                    </div>
 
-                      <div
-                       
-                       className={`${styles.el} ${
-                         activeNavItem === "procedures" ? styles.active : ""
-                       }`}
-                     >
-                       <Magnetic>
-                         <div className={styles.el}>
-                           <StyledLink link="/procedures">
-                             <p className={styles.text}>
-                               {locale === "es" ? "Tratamientos" : "Procedures"}
-                             </p>
-                           </StyledLink>
-                           <div
-                             className={styles.indicator}
-                             ref={handleRef}
-                           ></div>
-                         </div>
-                       </Magnetic>
-                     </div>
+                    <div
+                      className={`${styles.el} ${
+                        activeNavItem === "procedures" ? styles.active : ""
+                      }`}
+                    >
+                      <Magnetic>
+                        <div className={styles.el}>
+                          <StyledLink link="/procedures">
+                            <p className={styles.text}>
+                              {locale === "es" ? "Tratamientos" : "Procedures"}
+                            </p>
+                          </StyledLink>
+                          <div
+                            className={styles.indicator}
+                            ref={handleRef}
+                          ></div>
+                        </div>
+                      </Magnetic>
+                    </div>
 
-                     <div
-                       
-                       className={`${styles.el} ${
-                         activeNavItem === "hairimplant" ? styles.active : ""
-                       }`}
-                     >
-                       <Magnetic>
-                         <div className={styles.el}>
-                           <StyledLink link="/">
-                             <p className={styles.text}>
-                               {locale === "es" ? "Implante capilar" : "Hair implant"}
-                             </p>
-                           </StyledLink>
-                           <div
-                             className={styles.indicator}
-                             ref={handleRef}
-                           ></div>
-                         </div>
-                       </Magnetic>
-                     </div>
+                    <div
+                      className={`${styles.el} ${
+                        activeNavItem === "hairimplant" ? styles.active : ""
+                      }`}
+                    >
+                      <Magnetic>
+                        <div className={styles.el}>
+                          <StyledLink link="/">
+                            <p className={styles.text}>
+                              {locale === "es"
+                                ? "Implante capilar"
+                                : "Hair implant"}
+                            </p>
+                          </StyledLink>
+                          <div
+                            className={styles.indicator}
+                            ref={handleRef}
+                          ></div>
+                        </div>
+                      </Magnetic>
+                    </div>
 
+                    <div
+                      className={`${styles.el} ${
+                        activeNavItem === "faqs" ? styles.active : ""
+                      }`}
+                    >
+                      <Magnetic>
+                        <div className={styles.el}>
+                          <StyledLink link="/faqs">
+                            <p className={styles.text}>FAQs</p>
+                          </StyledLink>
+                          <div
+                            className={styles.indicator}
+                            ref={handleRef}
+                          ></div>
+                        </div>
+                      </Magnetic>
+                    </div>
 
-                     <div
-                       
-                       className={`${styles.el} ${
-                         activeNavItem === "faqs" ? styles.active : ""
-                       }`}
-                     >
-                       <Magnetic>
-                         <div className={styles.el}>
-                           <StyledLink link="/faqs">
-                             <p className={styles.text}>
-                              FAQs
-                             </p>
-                           </StyledLink>
-                           <div
-                             className={styles.indicator}
-                             ref={handleRef}
-                           ></div>
-                         </div>
-                       </Magnetic>
-                     </div>
-
-
-                     <div
-                       
-                       className={`${styles.el} ${
-                         activeNavItem === "contact" ? styles.active : ""
-                       }`}
-                     >
-                       <Magnetic>
-                         <div className={styles.el}>
-                           <StyledLink link="/contact">
-                             <p className={styles.text}>
-                               {locale === "es" ? "Contacto" : "Contact"}
-                             </p>
-                           </StyledLink>
-                           <div
-                             className={styles.indicator}
-                             ref={handleRef}
-                           ></div>
-                         </div>
-                       </Magnetic>
-                     </div>
-
-
-                     
-
+                    <div
+                      className={`${styles.el} ${
+                        activeNavItem === "contact" ? styles.active : ""
+                      }`}
+                    >
+                      <Magnetic>
+                        <div className={styles.el}>
+                          <StyledLink link="/contact">
+                            <p className={styles.text}>
+                              {locale === "es" ? "Contacto" : "Contact"}
+                            </p>
+                          </StyledLink>
+                          <div
+                            className={styles.indicator}
+                            ref={handleRef}
+                          ></div>
+                        </div>
+                      </Magnetic>
+                    </div> */}
                   </div>
                   <LanguageChanger />
                 </div>
@@ -246,8 +259,8 @@ export default function Navbar3() {
   );
 }
 
-
-                    {/* {links.map((link) => (
+{
+  /* {links.map((link) => (
                       <div
                         key={link.active}
                         className={`${styles.el} ${
@@ -268,4 +281,5 @@ export default function Navbar3() {
                           </div>
                         </Magnetic>
                       </div>
-                    ))} */}
+                    ))} */
+}

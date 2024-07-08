@@ -8,8 +8,12 @@
 
 
 
+
   @media only screen and (max-width: 1000px) {
     width: 100%;
+    height: auto;
+
+margin: 10px 0px;
   }
 
   &:last-child {
@@ -43,6 +47,11 @@
     line-height: 130%;
 
     @media only screen and (max-width: 600px) {
+      height: auto;
+      margin: 10px 0px;
+    }
+
+    @media only screen and (max-width: 600px) {
       width: 100%;
       font-size: 16px;
     }
@@ -64,5 +73,6 @@
     background-color: rgba(211, 231, 237, 0.5);
     border-radius: 30px;
     margin-bottom: 20px;
+    margin-top: 20px;
   }
 }

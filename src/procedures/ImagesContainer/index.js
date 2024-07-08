@@ -13,6 +13,9 @@ import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 
 
 import image5 from "../../../public/assets/images/t1.png"
+import image6 from "../../../public/assets/images/t2.png"
+import image7 from "../../../public/assets/images/t3.png"
+
 
 
 
@@ -27,6 +30,7 @@ const data = [
     ],
     additionalText: "Typically involves 4-6 sessions per year, spaced 4-6 weeks apart. Results are often noticeable from the second session onwards.",
     image: image1,
+    mobileimage: image5,
   },
   {
     id:"2",
@@ -39,6 +43,7 @@ const data = [
     ],
     additionalText: "Treatment frequency varies based on the severity of the condition. Useful for individuals post-hair transplantation to maintain hair health.",
     image: image2,
+    mobileimage: image6,
   },
   {
     id:"3",
@@ -51,6 +56,7 @@ const data = [
     ],
     additionalText: "Administration can be oral, via microinjections, or as topical treatments. Treatment plans are tailored to individual requirements. May be used in conjunction with other treatments for optimal results.",
     image: image3,
+    mobileimage: image7,
   },
   {
     id:"4",
@@ -63,6 +69,7 @@ const data = [
     ],
     additionalText: "Application frequency and concentration vary based on individual needs.",
     image: image4,
+    mobileimage: image6,
   },
   {
     id:"5",
@@ -75,6 +82,7 @@ const data = [
     ],
     additionalText: "Administration can be oral, via microinjections, or as topical treatments. Treatment plans are tailored to individual requirements. May be used in conjunction with other treatments for optimal results.",
     image: image2,
+    mobileimage: image5,
   },
 ];
 
@@ -89,6 +97,7 @@ const dataespañol = [
     ],
     additionalText: "Por lo general, implica 4-6 sesiones por año, espaciadas de 4 a 6 semanas. Los resultados suelen ser notables desde la segunda sesión en adelante.",
     image: image1,
+    mobileimage: image5,
   },
   {
     id: "2",
@@ -101,6 +110,7 @@ const dataespañol = [
     ],
     additionalText: "La frecuencia del tratamiento varía según la gravedad de la condición. Útil para individuos post-trasplante de cabello para mantener la salud del cabello.",
     image: image2,
+    mobileimage: image6,
   },
   {
     id: "3",
@@ -113,6 +123,7 @@ const dataespañol = [
     ],
     additionalText: "La administración puede ser oral, mediante microinyecciones o tratamientos tópicos. Los planes de tratamiento se adaptan a los requisitos individuales. Puede usarse en combinación con otros tratamientos para obtener resultados óptimos.",
     image: image3,
+    mobileimage: image7,
   },
   {
     id: "4",
@@ -125,6 +136,7 @@ const dataespañol = [
     ],
     additionalText: "La frecuencia de aplicación y la concentración varían según las necesidades individuales.",
     image: image4,
+    mobileimage: image6,
   },
   {
     id: "5",
@@ -137,6 +149,7 @@ const dataespañol = [
     ],
     additionalText: "La administración puede ser oral, mediante microinyecciones o tratamientos tópicos. Los planes de tratamiento se adaptan a los requisitos individuales. Puede usarse en combinación con otros tratamientos para obtener resultados óptimos.",
     image: image2,
+    mobileimage: image5,
   },
 ];
 
@@ -169,7 +182,7 @@ export default function ImagesContainer() {
   return (
     <ParallaxProvider>
       <div className={styles.maincontainer}>
-        {currentData.map(({ title, benefits, additionalText, image, id }, index) => {
+        {currentData.map(({ title, benefits, additionalText, image, id, mobileimage }, index) => {
           const isEven = index % 2 === 0;
           return (
             <div
@@ -203,7 +216,7 @@ export default function ImagesContainer() {
                 <div className={styles.imagecontent}
                  >
                   {/* <div className={styles.imagecontainer}> */}
-                    <Image src={ width > medium ? image : image5} alt="procedure picture" style={{width:"auto"}} />
+                    <Image src={ width > medium ? image : mobileimage} alt="procedure picture" style={{width:"auto"}} />
                   {/* </div> */}
                 </div>
                 </AnimatedDiv>

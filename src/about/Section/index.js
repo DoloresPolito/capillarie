@@ -4,6 +4,7 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 import styles from "./styles.module.scss";
 import Text from "@/about/Text";
+import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 export default function Section({texttranslations} ) {
   const container = useRef();
   const { scrollYProgress } = useScroll({
@@ -13,6 +14,7 @@ export default function Section({texttranslations} ) {
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
   return (
+    <ParallaxProvider>
     <div
       ref={container}
       className={styles.section}
@@ -36,5 +38,6 @@ export default function Section({texttranslations} ) {
         </motion.div>
       </div>
     </div>
+    </ParallaxProvider>
   );
 }
