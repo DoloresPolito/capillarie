@@ -28,7 +28,7 @@ export default function Navbar3() {
   useEffect(() => {
     const currentPathname = pathname.replace("/", "");
     setActiveNavItem(currentPathname);
-  }, [pathname]);
+  }, [pathname, activeNavItem]);
 
   const [width, setWidth] = useState(null);
 
@@ -102,13 +102,32 @@ export default function Navbar3() {
               <>
                 <div className={styles.rightside}>
                   <div className={styles.nav}>
+                    {links.map((link) => (
+                      // <div
+                      //   key={link.active}
+                      //   className={`${styles.el} ${
+                      //     activeNavItem === link.active ? styles.active : ""
+                      //   }`}
+                      // >
 
+                      // <div
+                      //   key={link.active}
+                      //   className={`${styles.el} ${
+                      //     activeNavItem === link.active ||
+                      //     (locale === "es" && activeNavItem === link.active)
+                      //       ? styles.active
+                      //       : ""
+                      //   }`}
+                      // >
 
-                  {links.map((link) => (
                       <div
                         key={link.active}
                         className={`${styles.el} ${
-                          activeNavItem === link.active ? styles.active : ""
+                          activeNavItem === link.active ||
+                          activeNavItem === `es/${link.active}` ||
+                          (locale === "es" && activeNavItem === link.active)
+                            ? styles.active
+                            : ""
                         }`}
                       >
                         <Magnetic>
@@ -126,8 +145,6 @@ export default function Navbar3() {
                         </Magnetic>
                       </div>
                     ))}
-
-
                   </div>
                   <LanguageChanger />
                 </div>
@@ -159,4 +176,3 @@ export default function Navbar3() {
     </>
   );
 }
-

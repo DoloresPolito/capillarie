@@ -15,7 +15,6 @@
   padding-top: 5px;
   border-radius: 70px;
 
-
   .headercontainer {
     display: flex;
     justify-content: space-between;
@@ -25,12 +24,17 @@
 
     padding-top: 10px;
     padding-bottom: 10px;
-  
+
     border-radius: 30px;
     height: 70px;
-    background-color: rgba(255, 255, 255, 0.6); /* Color blanco con 80% de opacidad */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.6
+    ); /* Color blanco con 80% de opacidad */
     backdrop-filter: blur(10px); /* Aplica un desenfoque de fondo */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     .leftside {
       display: flex;
@@ -69,7 +73,6 @@
       font-family: "Plus Jakarta Sans", sans-serif;
       font-size: 13px;
 
-
       font-family: "Plus Jakarta Sans", sans-serif;
       color: #493e36;
       letter-spacing: 1px;
@@ -82,9 +85,8 @@
       flex-direction: column;
       position: relative;
       z-index: 1;
-  
+
       cursor: pointer;
-   
 
       &:hover {
         .indicator {
@@ -105,25 +107,17 @@
     }
 
     .active {
-      .el {
-        padding: 5px 10px;
 
-        p{
-          color:#44b9cc;
-          font-weight: 400;
-        }
 
+      .indicator {
+        background-color: #44b9cc; /* Color celeste */
+        transform: scale(1) translateX(0%);
+        width: 5px;
+        height: 5px;
+        margin-top: 5px;
       }
     }
   }
-
-
-
-
-
-
-
-
 
   .bookbutton {
     background-color: #44b9cc;
@@ -148,8 +142,6 @@
   }
 }
 
-
-
 .headerButtonContainerMobile {
   // transform: scale(0);
 
@@ -159,8 +151,8 @@
   z-index: 2000;
   height: 70px;
   display: flex;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
   .button {
     position: relative;
     margin: 20px;
@@ -215,5 +207,4 @@ align-items: center;
 .active {
   // background-color: rgb(247, 247, 247);
   border-radius: 8px;
-
 }
