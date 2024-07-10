@@ -10,6 +10,7 @@
   border-radius: 30px;
   margin-bottom: 30px;
 
+
   h6 {
     font-family: "Plus Jakarta Sans", sans-serif;
     color: #44b9cc;
@@ -34,6 +35,12 @@
     max-width: 1600px;
     justify-content: space-between;
     align-items: center;
+    margin-top: 50px;
+
+    @media only screen and (max-width: 1000px) {
+      flex-direction: column;
+      margin-top: 10px;
+    }
 
     .containeritem {
       display: flex;
@@ -42,11 +49,16 @@
       width: 80%;
       height: auto;
       align-items: center;
+  
 
       cursor: pointer;
       padding: 15px 20px;
       border-radius: 2px;
       width: 500px;
+
+      @media only screen and (max-width: 1000px) {
+        width: 320px;
+      }
 
       &:hover {
         background-color: #44b9cc;
@@ -62,53 +74,67 @@
         letter-spacing: 1px;
         font-size: 20px;
         font-weight: 300;
+        @media only screen and (max-width: 1000px) {
+        text-align: center;
+        }
       }
 
-      // .imagecontainer {
-      //   height: 400px;
-      //   width: 500px;
-      //   background-color: rgb(226, 225, 225);
-      //   top: 100px;
-      //   position: relative;
-      //   border-radius: 30px;
-      // }
     }
 
     .right {
       display: flex;
       flex-direction: column;
-
       width: 50%;
       height: 100%;
-      padding: 100px 0px;
+      @media only screen and (max-width: 1000px) {
+        text-align: center;
+        width: 100%;
+     
+        }
 
-      // .containeritem {
-      //   display: flex;
-      //   border: none;
-      //   border-bottom: 1px solid #44b9cc;
-      //   width: 80%;
-      //   height: auto;
-      //   align-items: center;
-      //   cursor: pointer;
-      //   padding: 15px 20px;
-      //   border-radius: 2px;
+      h2 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color: #493e36;
+        letter-spacing: 1px;
+        font-size: 40px;
+        font-weight: 300;
 
-      //   &:hover {
-      //     background-color: #44b9cc;
+        margin-bottom: 20px;
+        max-width: 800px;
 
-      //     h3 {
-      //       color: white;
-      //     }
-      //   }
+        span {
+          color: #44b9cc;
+          font-weight: 400;
+        }
+      }
 
-      //   h3 {
-      //     font-family: "Plus Jakarta Sans", sans-serif;
-      //     color: #44b9cc;
-      //     letter-spacing: 1px;
-      //     font-size: 30px;
-      //     font-weight: 300;
-      //   }
-      // }
+      h3 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color: #493e36;
+        letter-spacing: 1px;
+        font-size: 30px;
+        font-weight: 300;
+
+        margin-bottom: 20px;
+        max-width: 800px;
+
+        span {
+          color: #44b9cc;
+          font-weight: 400;
+        }
+      }
+
+      h5 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color: #44b9cc;
+        letter-spacing: 1px;
+        font-size: 30px;
+        font-weight: 300;
+        margin-top: 50px;
+        max-width: 800px;
+      }
+
+     
     }
 
     .left {
@@ -117,6 +143,14 @@
       width: 50%;
       height: 100%;
       margin-top: 30px;
+      padding: 50px 50px;
+
+      @media only screen and (max-width: 1000px) {
+       padding:0px;
+       margin-bottom: 50px;
+       width: 100%;
+      align-items: center;
+        }
 
       .imagecontainer {
         height: 400px;

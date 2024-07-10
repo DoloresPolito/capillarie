@@ -67,7 +67,7 @@ const CoverSection = ({ covertranslations }) => {
           )}
         </AnimatedDiv>
 
-        {width > 700 ? (
+   
           <>
             {" "}
             <div className={styles.numberscontainer}>
@@ -106,11 +106,7 @@ const CoverSection = ({ covertranslations }) => {
               </div>
             </div>{" "}
           </>
-        ) : (
-          <></>
-        )}
-
-        <h3>{covertranslations.subtitle2}</h3>
+      
       </div>
     </div>
   );

@@ -33,20 +33,32 @@ const CoverSection = () => {
       <h6>PROCEDURES WITHOUT SURGERY</h6>
       <div className={styles.container}>
         <div className={styles.right}>
+          <h2>
+            <span> Soluciones personalizadas </span>para cada paciente.
+          </h2>
+
+          <h3>
+            Trataremos tu caso capilar con los métodos que sean más{" "}
+            <span> efectivos </span>para tí.
+          </h3>
+          <h5>Financiado 60 €/mes</h5>
+        </div>
+
+        <div className={styles.left}>
           {data.map(({ title, id }) => (
-            <Link to={id} spy={true} smooth={true} offset={80} duration={800} key={id}>
-              <div className={styles.containeritem} >
+            <Link
+              to={id}
+              spy={true}
+              smooth={true}
+              offset={80}
+              duration={800}
+              key={id}
+            >
+              <div className={styles.containeritem}>
                 <h3 className="treatment-link">{title}</h3>
               </div>
             </Link>
           ))}
-        </div>
-
-        <div className={styles.left}>
-          {/* <h4>
-            Take advantage of the clinics financing options available for the
-            following treatments.
-          </h4> */}
         </div>
       </div>
     </div>

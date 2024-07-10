@@ -8,7 +8,8 @@
   width: 100%;
   // clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
   clip-path: inset(0 0 0 0 round 30px);
-
+  // background-color: #44B9CC;
+  
 }
 
 .textContainer {
@@ -22,11 +23,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-height: 100vh;
-
-@media only screen and (max-width: 1000px) {
   height: auto;
-}
 }
 
 .smallText {
@@ -35,7 +32,6 @@ height: 100vh;
   align-self: flex-end;
   text-transform: uppercase;
   mix-blend-mode: difference;
-
 }
 
 .largeText {
@@ -50,10 +46,18 @@ height: 100vh;
   left: 0;
   height: 120vh;
   width: 100%;
+  // background-color: #f9f8f7;
+  
 }
 
 .motionDiv {
   position: relative;
   width: 100%;
   height: 100%;
+  z-index: 10 !important;
+  // background-image: url('/assets/backgrounds/treatmentsback.png');
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+
 }

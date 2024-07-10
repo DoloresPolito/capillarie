@@ -1,17 +1,16 @@
 .section {
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: auto;
   width: 100%;
   align-items: center;
   z-index: 10;
   background-color: white;
-  padding-bottom:50px;
+  padding-bottom: 50px;
 
-  @media only screen and (max-width: 1000px) {
-    height: 100vh;
-
-   }
+  // @media only screen and (max-width: 1000px) {
+  //   height: 100vh;
+  // }
 
   .container {
     width: 90%;
@@ -40,7 +39,6 @@
     @media only screen and (max-width: 1000px) {
       width: 100%;
       padding: 20px 0px;
-
     }
   }
 
@@ -54,8 +52,6 @@
     @media only screen and (max-width: 1000px) {
       width: 100%;
       padding: 0px 0px;
-
-   
     }
   }
 
@@ -70,10 +66,8 @@
     @media only screen and (max-width: 1000px) {
       font-size: 13px;
     }
-
   }
 
-    
   .miClasePersonalizada {
     font-family: "Plus Jakarta Sans", sans-serif;
     color: #493e36;
@@ -100,28 +94,21 @@
     font-size: 38px;
     font-weight: 300;
     max-width: 600px;
-
   }
 
   p {
-    // font-family: "Plus Jakarta Sans", sans-serif;
-    // color: #493e36;
-    // font-size: 15px;
-    // font-weight: 300;
-
     font-family: "Plus Jakarta Sans", sans-serif;
     color: #493e36;
     letter-spacing: 0.2px;
     font-size: 15px;
     font-weight: 300;
     line-height: 130%;
- 
   }
 
   .p1 {
     color: #44b9cc;
     font-weight: 400;
-        margin-top: 30px;
+    margin-top: 30px;
     margin-bottom: 20px;
   }
   .p3 {
@@ -138,8 +125,7 @@
       // width: 150px;
     }
     @media only screen and (max-width: 600px) {
-      width: 13
-      0px;
+      width: 13 0px;
     }
   }
 }

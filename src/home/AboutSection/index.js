@@ -1,17 +1,16 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 // import Image from "next/image";
 import Rounded from "../../common/Rounded";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
-import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import Paragraph from "@/components/Paragraph";
-import AnimatedHeading from "@/components/HorizontalTitles";
 import { motion, useAnimation } from "framer-motion";
 import AnimatedDiv from "@/components/AnimatedDiv";
 
 import { useInView } from "react-intersection-observer";
+import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 
 const AboutSection = ({ abouttranslations }) => {
   const { t, i18n } = useTranslation("");
@@ -29,8 +28,26 @@ const AboutSection = ({ abouttranslations }) => {
       });
     }
   }, [controls, inView]);
+
+  const [width, setWidth] = useState(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [setWidth]);
+
+  const medium = 1000;
   return (
     <>
+        <ParallaxProvider>
       <div className={styles.section} ref={ref}>
         <div className={styles.container}>
           <div className={styles.left}>
@@ -49,13 +66,17 @@ const AboutSection = ({ abouttranslations }) => {
 
             {/* <h3>{abouttranslations.aboutsubtitle}</h3> */}
           </div>
+
+       
           <div className={styles.right}>
+          <Parallax speed={width > medium ? -4 : 0}>
             <AnimatedDiv>
               <p className={styles.p1}>{abouttranslations.abouttext1}</p>
               <p className={styles.p2}>{abouttranslations.abouttext2}</p>
               {/* <p className={styles.p3}>{abouttranslations.abouttext3}</p> */}
             </AnimatedDiv>
-
+            </Parallax>
+            <Parallax speed={width > medium ? -4 : 0}>
             <div className={styles.buttoncontainer}>
               <Link
                 href="/about"
@@ -64,9 +85,12 @@ const AboutSection = ({ abouttranslations }) => {
                 <Rounded background="#44b9cc"> {abouttranslations.aboutbutton}</Rounded>
               </Link>
             </div>
+            </Parallax>
           </div>
+
         </div>
       </div>
+      </ParallaxProvider>
     </>
   );
 };

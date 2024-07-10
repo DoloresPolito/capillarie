@@ -3,7 +3,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 70vh;
+  // height: 70vh;
+  height: auto;
   margin-top: 70px;
   background-color: white;
   background-image: url("/assets/backgrounds/backcover.png");
@@ -15,12 +16,13 @@
   z-index: 10;
   border-radius: 30px;
   margin-bottom: 30px;
-  @media only screen and (max-width: 1200px) {
-    height: 100vh;
-  }
+  // @media only screen and (max-width: 1200px) {
+  //   height: 100vh;
+  // }
 
   @media only screen and (max-width: 600px) {
-    margin-bottom: 0px;
+    margin-bottom: 30px;
+    margin-top: 80px;
     height: auto;
   }
 

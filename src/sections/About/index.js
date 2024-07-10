@@ -10,6 +10,7 @@ import Description from "@/procedures/Description";
 import Intro from "@/about/Intro";
 import DescriptionParallax from "@/about/DescriptionParallax";
 import Section from "@/about/Section";
+import Section2 from "@/about/Section2";
 
 export default function Index({ translations }) {
   useEffect(() => {
@@ -27,7 +28,7 @@ export default function Index({ translations }) {
   const covertranslations = {
     title: translations.title,
     subtitle: translations.subtitle,
-    subtitle2: translations.subtitle2,
+ 
   };
 
   const texttranslations = {
@@ -36,22 +37,18 @@ export default function Index({ translations }) {
     text3: translations.text3,
   };
 
+  const teamtranslations = {
+    subtitle2: translations.subtitle2,
+  }
+
   return (
     <>
-      {/* <div className={styles.section}> */}
-      {/* <Cover covertranslations={covertranslations} />
-        <Team />
-        <Description />
-        <Text texttranslations={texttranslations} /> */}
-      {/* <Intro />
-
-   
-      </div> */}
-
       <div className={styles.section}>
         <Intro covertranslations={covertranslations} />
-        <DescriptionParallax />
+     
+        <DescriptionParallax teamtranslations={teamtranslations}/>
         <Section texttranslations={texttranslations} />
+        <Section2 texttranslations={texttranslations} />
 
         <div className={styles.lastsection}></div>
         {/* <div className="h-screen"></div> */}

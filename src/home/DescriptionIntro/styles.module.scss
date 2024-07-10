@@ -1,11 +1,10 @@
 .container {
     display: flex;
     justify-content: center;
-    z-index: 1000 !important;
+    // z-index: 1000 !important;
 margin-top: -40vh;
-
-
-@media only screen and (max-width: 1000px) {
-   height: 100vh;
-  }
+z-index: 10;
+// @media only screen and (max-width: 1000px) {
+//    height: 100vh;
+//   }
 }

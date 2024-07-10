@@ -28,6 +28,18 @@ max-width: 1400px;
       }
     }
 
+    h3 {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: #44b9cc;
+      letter-spacing: 1px;
+      font-size: 30px;
+      font-weight: 300;
+      margin-top: 10px;
+      // text-align: center;
+      margin-bottom: 50px;
+      max-width: 1000px;
+    }
+
     .teamcontainer {
       display: flex;
       flex-direction: row;

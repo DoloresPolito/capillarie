@@ -1,0 +1,64 @@
+.section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+    // clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+    clip-path: inset(0 0 0 0 round 30px);
+    // background-color: #44B9CC;
+    
+  }
+  
+  .textContainer {
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+    mix-blend-mode: difference;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+  }
+  
+  .smallText {
+    width: 50vw;
+    font-size: 2vw;
+    align-self: flex-end;
+    text-transform: uppercase;
+    mix-blend-mode: difference;
+  }
+  
+  .largeText {
+    font-size: 5vw;
+    text-transform: uppercase;
+    mix-blend-mode: difference;
+  }
+  
+  .backgroundContainer {
+    position: fixed;
+    top: -10vh;
+    left: 0;
+    height: 120vh;
+    width: 100%;
+    // background-color: #f9f8f7;
+    
+  }
+  
+  .motionDiv {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 10 !important;
+    // background-image: url('/assets/backgrounds/treatmentsback.png');
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
+  
+  }
+  

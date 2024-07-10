@@ -6,13 +6,14 @@ import { useTranslation } from "react-i18next";
 import tic from "../../../public/assets/tic.svg";
 import Link from "next/link";
 import Paragraph from "@/components/Paragraph";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { motion, useAnimation } from "framer-motion";
 
 import { useInView } from "react-intersection-observer";
 import { slide, hairSlide } from "@/components/AnimatedHeader/animation";
 import AnimatedDiv from "@/components/AnimatedDiv";
+import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 
 const HairSurgerySection = ({ hairtranslations }) => {
   const { t, i18n } = useTranslation("");
@@ -31,8 +32,26 @@ const HairSurgerySection = ({ hairtranslations }) => {
     }
   }, [controls, inView]);
 
+  const [width, setWidth] = useState(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [setWidth]);
+
+  const medium = 1000;
+
   return (
     <>
+    <ParallaxProvider>
       <div className={styles.section} ref={ref}>
         <div className={styles.container}>
           <div className={styles.left}>
@@ -84,11 +103,12 @@ const HairSurgerySection = ({ hairtranslations }) => {
             </div>
           </div>
 
-
+     
           <div className={styles.right}>
  
   
             <AnimatedDiv>
+            <Parallax speed={width > medium ? -8 : 0}>
               <div className={styles.imageContainer}>
                 <Image
                   src="/images/hair.png" 
@@ -99,12 +119,15 @@ const HairSurgerySection = ({ hairtranslations }) => {
                   width={600}
                 />
               </div>
+              </Parallax>
             </AnimatedDiv>
    
           </div>
+ 
 
         </div>
       </div>
+      </ParallaxProvider>
     </>
   );
 };

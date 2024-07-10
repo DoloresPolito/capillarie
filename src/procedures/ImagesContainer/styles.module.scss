@@ -37,10 +37,18 @@
     font-family: "Plus Jakarta Sans", sans-serif;
     color: #493e36;
     letter-spacing: 1px;
-    font-size: 38px;
+    font-size: 35px;
     font-weight: 300;
     max-width: 600px;
     align-self: flex-start;
+
+    @media only screen and (max-width: 1000px) {
+      margin-top: 70px;
+      font-size: 30px;
+    }
+    @media only screen and (max-width: 600px) {
+      font-size: 25px;
+    }
   }
 
   @media only screen and (max-width: 1000px) {
@@ -155,10 +163,12 @@
 
 .even {
   flex-direction: row-reverse;
+  background-color: white;
 }
 
 .odd {
   flex-direction: row;
+  background-color: #f9f8f7;
 }
 
 .box2 {
