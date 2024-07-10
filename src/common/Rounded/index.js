@@ -51,7 +51,7 @@ export default function Index({
       className={styles.roundedButton}
       style={{
         overflow: "hidden",
-        border: border ? "1px solid white" : "0.5px solid #3a4749",
+        border: border ? "1px solid white" : "1px solid #3a4749",
         color: hover ? hoverColor : footer ? "white" : "#493E36", // Cambiar color de texto en hover
       }}
       onMouseEnter={manageMouseEnter}

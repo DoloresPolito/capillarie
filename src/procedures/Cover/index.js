@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import { useState, useEffect } from "react";
 // import Link from "next/link";
 import { Link } from "react-scroll";
+import AnimatedDiv from "@/components/AnimatedDiv";
 
 const data = [
   { title: "Platelet-Rich Plasma (PRP)", id: 1 },
@@ -33,16 +34,27 @@ const CoverSection = () => {
       <h6>PROCEDURES WITHOUT SURGERY</h6>
       <div className={styles.container}>
         <div className={styles.right}>
+          <AnimatedDiv>
+
+
           <h2>
             <span> Soluciones personalizadas </span>para cada paciente.
           </h2>
+          </AnimatedDiv>
+          <AnimatedDiv>
+
 
           <h3>
             Trataremos tu caso capilar con los métodos que sean más{" "}
             <span> efectivos </span>para tí.
           </h3>
+          </AnimatedDiv>
           <h5>Financiado 60 €/mes</h5>
+  
         </div>
+
+
+
 
         <div className={styles.left}>
           {data.map(({ title, id }) => (
@@ -60,6 +72,7 @@ const CoverSection = () => {
             </Link>
           ))}
         </div>
+
       </div>
     </div>
   );

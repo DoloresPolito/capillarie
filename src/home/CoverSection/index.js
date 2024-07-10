@@ -45,11 +45,13 @@ const CoverSection = ({ covertranslations }) => {
             </h2>
           </AnimatedDiv>
         ) : (
+          <AnimatedDiv>
           <h2>
             Experimenta el <span>poder transformador</span> de nuestros{" "}
             <span>tratamientos capilares</span> especializados y
             rejuvenecedores.
           </h2>
+          </AnimatedDiv>
         )}
 
         <div className={styles.buttonscontainer}>

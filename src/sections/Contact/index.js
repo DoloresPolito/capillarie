@@ -8,7 +8,7 @@ import Image from "next/image";
 import arrow from "../../../public/assets/arrow45.svg"
 import arrowwhite from "../../../public/assets/arrow45white.svg"
 import Link from "next/link";
-
+import AnimatedDiv from "@/components/AnimatedDiv";
 
 export default function Index({ translations }) {
   useEffect(() => {
@@ -51,9 +51,11 @@ export default function Index({ translations }) {
         <div className={styles.container}>
           <div className={styles.left}>
             <h6>CONTACT US</h6>
+            <AnimatedDiv>
             <h3>
             Our dedicated team is here to provide the care and support you need.
             </h3>
+            </AnimatedDiv>
             {contactlinks.map((contactlink) => {
               return (
                 <ContactLink key={contactlink.name} contactlink={contactlink} />
