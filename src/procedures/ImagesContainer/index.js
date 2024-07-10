@@ -210,7 +210,9 @@ export default function ImagesContainer() {
                 id={id}
               >
                 <div className={styles.treattext}>
+           
                   <h3>{title}</h3>
+          
                   <h6>BENEFITS</h6>
                   <AnimatedDiv>
                     <div className={styles.benefitscontainer}>
