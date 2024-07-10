@@ -43,6 +43,7 @@ export default function Mask({ links }) {
         initial="initial"
         animate="enter"
         exit="exit"
+ 
         className={styles.menu}
       >
         <div className={styles.body}>
