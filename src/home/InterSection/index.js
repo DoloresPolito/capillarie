@@ -17,7 +17,7 @@ const TreatmentsSection = () => {
             <span> We provide</span> exclusive solutions
             <span>
               {" "}
-              you won't find anywhere else! Offering advanced hair treatments
+              you won&apos;t find anywhere else! Offering advanced hair treatments
               and{" "}
             </span>
             flexible financing options{" "}
