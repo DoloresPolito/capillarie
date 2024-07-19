@@ -169,11 +169,13 @@
 .even {
   flex-direction: row-reverse;
   background-color: #f9f8f7;
+  border-radius: 30px;
 }
 
 .odd {
   flex-direction: row;
   background-color: white;
+  border-radius: 30px;
 
 }
 

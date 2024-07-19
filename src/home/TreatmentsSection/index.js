@@ -62,6 +62,7 @@ const TreatmentsSection = ({ treatmentstranslations }) => {
           className="subtreatments"
         />
 
+<h2>Finance it easily, <span> from 60 €/week</span></h2>
         {width > medium ? (
           <>
             <HorizontalScrollSection />

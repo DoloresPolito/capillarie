@@ -14,6 +14,7 @@ import Description from "@/procedures/Description";
 import Procedures from "../../sections/Procedures"
 import Intro from "@/home/IntroHome";
 import DescriptionIntro from "@/home/DescriptionIntro";
+import InterSection from "@/home/InterSection"
 export default function Index({ translations }) {
   useEffect(() => {
     const lenis = new Lenis();
@@ -113,6 +114,7 @@ export default function Index({ translations }) {
         {/* <AboutSection abouttranslations={abouttranslations} /> */}
       
         {/* <Description /> */}
+        <InterSection/>
         <HairSurgerySection hairtranslations={hairtranslations} />
 
         <TreatmentsSection treatmentstranslations={treatmentstranslations} />

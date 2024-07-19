@@ -230,19 +230,19 @@ export default function ImagesContainer() {
                 </div>
 
                 {/* {width > medium ? (<></>) : (<></>)} */}
-                <Parallax speed={width > medium ? -14 : 0}>
+                {/* <Parallax speed={width > medium ? -14 : 0}>
                   <AnimatedDiv>
                     <div className={styles.imagecontent}>
-                      {/* <div className={styles.imagecontainer}> */}
+                    
                       <Image
                         src={width > medium ? image : mobileimage}
                         alt="procedure picture"
                         style={{ width: "auto" }}
                       />
-                      {/* </div> */}
+             
                     </div>
                   </AnimatedDiv>
-                </Parallax>
+                </Parallax> */}
               </div>
             );
           }

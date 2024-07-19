@@ -78,6 +78,38 @@
         margin-top: 10px;
       }
     }
+
+    h2 {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: #493e36;
+      letter-spacing: 1px;
+      font-size: 25px;
+      font-weight: 300;
+      margin-top: 30px;
+
+      max-width: 800px;
+
+      @media only screen and (max-width: 1000px) {
+        font-size: 20px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        font-size: 18px;
+      }
+
+      span {
+        color: #44b9cc;
+        font-weight: 300;
+
+        @media only screen and (max-width: 1000px) {
+          font-size: 20px;
+        }
+
+        @media only screen and (max-width: 600px) {
+          font-size: 18px;
+        }
+      }
+    }
   }
 
   .right {

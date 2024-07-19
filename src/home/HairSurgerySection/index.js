@@ -93,6 +93,7 @@ const HairSurgerySection = ({ hairtranslations }) => {
                 </motion.div>
               ))}
             </motion.div>
+            <h2>Finance it easily, <span> from 60 €/week</span></h2>
             <div className={styles.buttoncontainer}>
               <Link
                 href="/hairimplant"

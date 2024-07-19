@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 25vh;
-    color: white;
+    color: black;
     padding: 10%;
 }
 
@@ -52,7 +52,7 @@
 
 .projectEl{
     width: 100%;
-    color: white;
+    color: black;
     text-transform: uppercase;
     font-size: 3vw;
     border-bottom: 1px solid white;

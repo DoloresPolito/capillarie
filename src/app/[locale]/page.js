@@ -12,73 +12,65 @@ export default async function Home({ params: { locale } }) {
   const translations = {
     title: t("title"),
     subtitle: t("subtitle"),
-    sectiontitle:t("sectiontitle"),
+    sectiontitle: t("sectiontitle"),
     financingbutton: t("financingbutton"),
     bookbutton: t("bookbutton"),
-   
 
-    faq1:t("faq1"),
-    ans1:t("ans1"),
-    faq2:t("faq2"),
-    ans2:t("ans2"),
-    faq3:t("faq3"),
-    ans3:t("ans3"),
-    faq4:t("faq4"),
-    ans4:t("ans4"),
-    faqstitle:t("faqstitle"),
-    resultstitle:t("resultstitle"),
+    faq1: t("faq1"),
+    ans1: t("ans1"),
+    faq2: t("faq2"),
+    ans2: t("ans2"),
+    faq3: t("faq3"),
+    ans3: t("ans3"),
+    faq4: t("faq4"),
+    ans4: t("ans4"),
+    faqstitle: t("faqstitle"),
+    resultstitle: t("resultstitle"),
 
+    aboutsectiontitle: t("aboutsectiontitle"),
+    aboutsubtitle: t("aboutsubtitle"),
+    abouttext1: t("abouttext1"),
+    abouttext2: t("abouttext2"),
+    abouttext3: t("abouttext3"),
+    aboutbutton: t("aboutbutton"),
 
-    aboutsectiontitle:t("aboutsectiontitle"),
-    aboutsubtitle:t("aboutsubtitle"),
-    abouttext1:t("abouttext1"),
-    abouttext2:t("abouttext2"),
-    abouttext3:t("abouttext3"),
-    aboutbutton:t("aboutbutton"),
+    hairsectiontitle: t("hairsectiontitle"),
+    hairsubtitle: t("hairsubtitle"),
+    hairitem1: t("hairitem1"),
+    hairitem2: t("hairitem2"),
+    hairitem3: t("hairitem3"),
+    hairitem4: t("hairitem4"),
+    hairbutton: t("hairbutton"),
 
+    treatmentssectiontitle: t("treatmentssectiontitle"),
+    treatmentssubtitle: t("treatmentssubtitle"),
+    treatmentsbutton: t("treatmentsbutton"),
 
-    hairsectiontitle:t("hairsectiontitle"),
-    hairsubtitle:t("hairsubtitle"),
-    hairitem1:t("hairitem1"),
-    hairitem2:t("hairitem2"),
-    hairitem3:t("hairitem3"),
-    hairitem4:t("hairitem4"),
-    hairbutton:t("hairbutton"),
+    contactsectiontitle: t("contactsectiontitle"),
+    contacttext1: t("contacttext1"),
+    contacttext2: t("contacttext2"),
+    contactaddress: t("contactaddress"),
+    contactbutton: t("contactbutton"),
+    form1: t("form1"),
+    form2: t("form2"),
+    form3: t("form3"),
+    form4: t("form4"),
+    formbutton: t("formbutton"),
 
-    treatmentssectiontitle:t("treatmentssectiontitle"),
-    treatmentssubtitle:t("treatmentssubtitle"),
-    treatmentsbutton:t("treatmentsbutton"),
+    reviewssectiontitle: t("reviewssectiontitle"),
+    reviewstitle: t("reviewstitle"),
+    reviewstext: t("reviewstext"),
 
-
-    contactsectiontitle:t("contactsectiontitle"),
-    contacttext1:t("contacttext1"),
-    contacttext2:t("contacttext2"),
-    contactaddress:t("contactaddress"),
-    contactbutton:t("contactbutton"),
-    form1:t("form1"),
-    form2:t("form2"),
-    form3:t("form3"),
-    form4:t("form4"),
-    formbutton:t("formbutton"),
-  
-    reviewssectiontitle:t("reviewssectiontitle"),
-    reviewstitle:t("reviewstitle"),
-    reviewstext:t("reviewstext"),
-   
-    review1:t("review1"),
-    review2:t("review2"),
-    review3:t("review3"),
-    review4:t("review4"),
-    review5:t("review5"),
-    review6:t("review6"),
-    review7:t("review7"),
-    review8:t("review8"),
-    review9:t("review9"),
-    review10:t("review10"),
-
-
-
- 
+    review1: t("review1"),
+    review2: t("review2"),
+    review3: t("review3"),
+    review4: t("review4"),
+    review5: t("review5"),
+    review6: t("review6"),
+    review7: t("review7"),
+    review8: t("review8"),
+    review9: t("review9"),
+    review10: t("review10"),
   };
 
   return (
@@ -89,7 +81,6 @@ export default async function Home({ params: { locale } }) {
     >
       <div className={styles.main}>
         <AnimatedHeader />
-
         <HomeSection translations={translations} />
       </div>
     </TranslationsProvider>

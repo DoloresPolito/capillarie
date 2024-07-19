@@ -5,8 +5,16 @@ import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import arrow from "../../../public/assets/arrowwhite.svg";
 import Link from "next/link";
-
 import AnimatedDiv from "../AnimatedDiv";
+
+
+import whwhite from "../../../public/assets/icons/wh-white.png"
+import igwhite from "../../../public/assets/icons/ig-white.png"
+import lkwhite from "../../../public/assets/icons/lk-white.png"
+import mailwhite from "../../../public/assets/icons/mail-white.png"
+import locwhite from "../../../public/assets/icons/loc-white.png"
+
+
 export default function Footer() {
   const { t, i18n } = useTranslation("");
   const locale = i18n.language;
@@ -46,6 +54,7 @@ export default function Footer() {
                 style={{ textDecoration: "none" }}
               >
                 <div className={styles.contactlinkcontainer}>
+                  <Image src={mailwhite} alt="mail" className={styles.logo}/>
                   <p>capillariedublin@gmail.com</p>
                   <Image src={arrow} alt="arrow" />
                 </div>
@@ -57,6 +66,7 @@ export default function Footer() {
                 style={{ textDecoration: "none" }}
               >
                 <div className={styles.contactlinkcontainer}>
+                <Image src={whwhite} alt="whatsapp" className={styles.logo}/>
                   <p>+54 11 57392254</p>
                   <Image src={arrow} alt="arrow" />
                 </div>
@@ -68,6 +78,7 @@ export default function Footer() {
                 style={{ textDecoration: "none" }}
               >
                 <div className={styles.contactlinkcontainer}>
+                <Image src={igwhite} alt="instagram" className={styles.logo}/>
                   <p>@capillariedublin</p>
                   <Image src={arrow} alt="arrow" />
                 </div>
@@ -75,6 +86,7 @@ export default function Footer() {
 
               <Link href="/" style={{ textDecoration: "none" }}>
                 <div className={styles.contactlinkcontainer}>
+                <Image src={lkwhite} alt="linkedin" className={styles.logo}/>
                   <p>/capillarieclinic</p>
                   <Image src={arrow} alt="arrow" />
                 </div>
@@ -86,6 +98,7 @@ export default function Footer() {
                 style={{ textDecoration: "none" }}
               >
                 <div className={styles.contactlinkcontainer}>
+                <Image src={locwhite} alt="location" className={styles.logo}/>
                   <p>31-32 Wellington Quay 1st floor, D02KP11</p>
                   <Image src={arrow} alt="arrow" />
                 </div>
