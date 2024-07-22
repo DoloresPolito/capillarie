@@ -17,9 +17,18 @@ export default function Section2({ texttranslations }) {
     <ParallaxProvider>
       <div ref={container} className={styles.section}>
         <div className={styles.textContainer}>
+
+          <h2>
+          Leave our clinic with a <span>smile,</span> knowing your hair is in the<span> best hands.</span>
+          </h2>
+          <h5>
+          Schedule your free consultation with Capillarie today and begin your path to exceptional hair re storation!
+          </h5>
+
+          <button>BOOK AN APPOIMENT</button>
         
         </div>
-        <div className={styles.backgroundContainer}>
+        {/* <div className={styles.backgroundContainer}>
           <motion.div style={{ y }} className={styles.motionDiv}>
             <Image
               src={Background}
@@ -28,7 +37,7 @@ export default function Section2({ texttranslations }) {
               style={{ objectFit: "cover", zIndex:"10" }}
             />
           </motion.div>
-        </div>
+        </div> */}
       </div>
     </ParallaxProvider>
   );

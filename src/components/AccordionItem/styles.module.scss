@@ -6,14 +6,11 @@
   z-index: 10000;
   padding: 0px 20px;
 
-
-
-
   @media only screen and (max-width: 1000px) {
     width: 100%;
     height: auto;
 
-margin: 10px 0px;
+    margin: 10px 0px;
   }
 
   &:last-child {
@@ -36,9 +33,7 @@ margin: 10px 0px;
     justify-content: space-between;
     transition: 0.3s;
     height: 60px;
-
     z-index: 1000;
-
     font-family: "Plus Jakarta Sans", sans-serif;
     color: #493e36;
     letter-spacing: 0.2px;

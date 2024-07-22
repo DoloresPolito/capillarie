@@ -5,16 +5,14 @@ import Lenis from "lenis";
 import ReviewsSection from "@/home/ReviewsSection";
 import FaqsSection from "@/home/FaqsSection";
 import CoverSection from "@/home/CoverSection";
-import AboutSection from "@/home/AboutSection";
 import HairSurgerySection from "@/home/HairSurgerySection";
 import TreatmentsSection from "@/home/TreatmentsSection";
 import ResultsSection from "@/home/ResultsSection";
 import Footer from "@/components/Footer2";
-import Description from "@/procedures/Description";
-import Procedures from "../../sections/Procedures"
 import Intro from "@/home/IntroHome";
 import DescriptionIntro from "@/home/DescriptionIntro";
 import InterSection from "@/home/InterSection"
+
 export default function Index({ translations }) {
   useEffect(() => {
     const lenis = new Lenis();
@@ -111,18 +109,13 @@ export default function Index({ translations }) {
         <CoverSection covertranslations={covertranslations} />
         <Intro/>
         <DescriptionIntro abouttranslations={abouttranslations} />
-        {/* <AboutSection abouttranslations={abouttranslations} /> */}
-      
-        {/* <Description /> */}
         <InterSection/>
         <HairSurgerySection hairtranslations={hairtranslations} />
-
         <TreatmentsSection treatmentstranslations={treatmentstranslations} />
-        {/* <Projects/> */}
-
         <FaqsSection faqstranslations={faqstranslations} />
         <ResultsSection faqstranslations={faqstranslations} />
         <ReviewsSection reviewstranslations={reviewstranslations} />
+
       </div>
       <Footer />
     </>

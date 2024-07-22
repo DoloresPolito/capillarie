@@ -18,6 +18,7 @@ export default function Section({ texttranslations }) {
       <div ref={container} className={styles.section}>
         <div className={styles.textContainer}>
           <Text texttranslations={texttranslations} />
+     
         </div>
         <div className={styles.backgroundContainer}>
           {/* <motion.div style={{ y }} className={styles.motionDiv}>

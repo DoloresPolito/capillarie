@@ -3,14 +3,10 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 import styles from "./styles.module.scss";
 import Footer from "@/components/Footer2";
-import Team from "@/about/Team";
-import Cover from "@/about/Cover";
-import Text from "@/about/Text";
-import Description from "@/procedures/Description";
 import Intro from "@/about/Intro";
 import DescriptionParallax from "@/about/DescriptionParallax";
 import Section from "@/about/Section";
-import Section2 from "@/about/Section2";
+import GeneralSection from "@/components/GeneralSetion";
 
 export default function Index({ translations }) {
   useEffect(() => {
@@ -28,7 +24,6 @@ export default function Index({ translations }) {
   const covertranslations = {
     title: translations.title,
     subtitle: translations.subtitle,
- 
   };
 
   const texttranslations = {
@@ -39,21 +34,20 @@ export default function Index({ translations }) {
 
   const teamtranslations = {
     subtitle2: translations.subtitle2,
-  }
+  };
 
   return (
     <>
       <div className={styles.section}>
         <Intro covertranslations={covertranslations} />
-     
-        <DescriptionParallax teamtranslations={teamtranslations}/>
-        <Section texttranslations={texttranslations} />
-        <Section2 texttranslations={texttranslations} />
 
+        <DescriptionParallax teamtranslations={teamtranslations} />
+        <Section texttranslations={texttranslations} />
+        <GeneralSection />
         <div className={styles.lastsection}></div>
-        {/* <div className="h-screen"></div> */}
-        <Footer />
+
       </div>
+      <Footer />
     </>
   );
 }

@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import AccordionItem from "@/components/AccordionItem";
 import styles from "./styles.module.scss";
 import Rounded from "../../common/Rounded";
-import SlidingImages from "../../components/SlidingImages";
 import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
 

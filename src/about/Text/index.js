@@ -11,6 +11,7 @@ import { useInView } from "react-intersection-observer";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import Image from "next/image";
 import about from "../../../public/images/about2.png";
+import abouth2 from "../../../public/images/abouth2.png";
 
 const Text = ({ texttranslations }) => {
   const { t, i18n } = useTranslation("");
@@ -48,6 +49,7 @@ const Text = ({ texttranslations }) => {
                 className="subtitle"
               />
               <p className={styles.p1}>{texttranslations.text3}</p>
+              <Image src={abouth2} alt="abouth2" />
             </Parallax>
           </div>
         </div>

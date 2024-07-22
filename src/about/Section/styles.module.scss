@@ -9,6 +9,7 @@
   // clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
   clip-path: inset(0 0 0 0 round 30px);
   // background-color: #44B9CC;
+
   
 }
 
@@ -24,11 +25,12 @@
   flex-direction: column;
   justify-content: space-between;
   height: auto;
+
 }
 
 .smallText {
   width: 50vw;
-  font-size: 2vw;
+  font-size: 1vw;
   align-self: flex-end;
   text-transform: uppercase;
   mix-blend-mode: difference;

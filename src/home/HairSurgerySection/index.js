@@ -7,9 +7,7 @@ import tic from "../../../public/assets/tic.svg";
 import Link from "next/link";
 import Paragraph from "@/components/Paragraph";
 import { useEffect, useState } from "react";
-
 import { motion, useAnimation } from "framer-motion";
-
 import { useInView } from "react-intersection-observer";
 import { slide, hairSlide } from "@/components/AnimatedHeader/animation";
 import AnimatedDiv from "@/components/AnimatedDiv";

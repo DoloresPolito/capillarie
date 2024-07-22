@@ -31,8 +31,6 @@ export const AccordionItem = ({
       >
         <div className={styles.content}>{content}</div>
       </motion.div>
-
-      {/* <div className={`${styles.content} ${active === id ? styles.show : ""}`}>{content}</div> */}
     </div>
   );
 };

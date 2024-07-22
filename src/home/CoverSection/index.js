@@ -1,14 +1,11 @@
 "use client";
 import styles from "./styles.module.scss";
-import Image from "next/image";
 import Rounded from "../../common/Rounded";
-import image from "../../../public/assets/images/cover2.png";
 import { useState, useEffect } from "react";
-import imagemobile from "../../../public/assets/images/covermobile.png";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import AnimatedDiv from "@/components/AnimatedDiv";
-import { motion, useTransform, useScroll } from "framer-motion";
+import { useTransform, useScroll } from "framer-motion";
 
 const CoverSection = ({ covertranslations }) => {
   const { t, i18n } = useTranslation("");
@@ -70,10 +67,6 @@ const CoverSection = ({ covertranslations }) => {
           </button>
         </div>
 
-        {/* Utilizamos motion.div para aplicar el efecto de zoom a la imagen */}
-        {/* <motion.div className={styles.imagecontainer} style={{ scale }}>
-          <Image src={width > 600 ? image : imagemobile} alt="coverimage" />
-        </motion.div> */}
       </div>
     </div>
   );

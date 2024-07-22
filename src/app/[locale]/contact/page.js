@@ -29,8 +29,6 @@ export default async function Procedures({ params: { locale } }) {
       <div className={styles.main}>
       <AnimatedHeader />
         <Contact translations={translations} />
-
-        {/* <p>locale: {locale}</p> */}
       </div>
     </TranslationsProvider>
   );

@@ -16,11 +16,7 @@ export default async function HairImplant({ params: { locale } }) {
     >
       <AnimatedHeader />
       <div className={styles.main}>
-        <p>
-          {locale === "es" ? "TEXTO EN PROCEDIMIENTOS" : "TEXT IN PROCEDURES"}
-        </p>
 
-        <p>locale: {locale}</p>
       </div>
     </TranslationsProvider>
   );

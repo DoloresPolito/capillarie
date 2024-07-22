@@ -30,11 +30,10 @@ const data = [
     ],
     additionalText1:
       "Typically involves 4-6 sessions per year, spaced 4-6 weeks apart.",
-      additionalText2:
+    additionalText2:
       "Results are often noticeable from the second session onwards.",
-    
-    
-      image: image1,
+
+    image: image1,
     mobileimage: image1h,
   },
   {
@@ -50,11 +49,10 @@ const data = [
     ],
     additionalText1:
       "Treatment frequency varies based on the severity of the condition.",
-      additionalText2:
+    additionalText2:
       "Useful for individuals post-hair transplantation to maintain hair health.",
-    
-    
-      image: image2,
+
+    image: image2,
     mobileimage: image2h,
   },
   {
@@ -70,29 +68,29 @@ const data = [
     ],
     additionalText1:
       "Administration can be oral, via microinjections, or as topical treatments.",
-    
-      additionalText2:
+
+    additionalText2:
       "Treatment plans are tailored to individual requirements. May be used in conjunction with other treatments for optimal results.",
-    
-      image: image3,
+
+    image: image3,
     mobileimage: image3h,
   },
-  // {
-  //   id: "4",
-  //   title: "Minoxidil",
-  //   subtitle:
-  //     " is a topical treatment used to stimulate hair thickening, available in liquid or foam forms.",
-  //   benefits: [
-  //     "Effectively promotes hair growth.",
-  //     "Suitable for long-term use.",
-  //     "Initial results may vary, with sustained effects requiring long-term use.",
-  //     "Can be used alone or in combination with other therapies for enhanced efficacy.",
-  //   ],
-  //   additionalText:
-  //     "Application frequency and concentration vary based on individual needs.",
-  //   image: image4,
-  //   mobileimage: image4h,
-  // },
+  {
+    id: "4",
+    title: "Minoxidil",
+    subtitle:
+      " is a topical treatment used to stimulate hair thickening, available in liquid or foam forms.",
+    benefits: [
+      "Effectively promotes hair growth.",
+      "Suitable for long-term use.",
+      "Initial results may vary, with sustained effects requiring long-term use.",
+      "Can be used alone or in combination with other therapies for enhanced efficacy.",
+    ],
+    additionalText1:
+      "Application frequency and concentration vary based on individual needs.",
+    image: image4,
+    mobileimage: image4h,
+  },
   {
     id: "5",
     title: "Antiandrogen drugs",
@@ -106,11 +104,11 @@ const data = [
     ],
     additionalText1:
       "Administration can be oral, via microinjections, or as topical treatments.",
-   
-      additionalText2:
+
+    additionalText2:
       "Treatment plans are tailored to individual requirements. May be used in conjunction with other treatments for optimal results.",
-   
-      image: image5,
+
+    image: image5,
     mobileimage: image5h,
   },
 ];
@@ -128,10 +126,10 @@ const dataespañol = [
     ],
     additionalText1:
       "Por lo general, implica 4-6 sesiones por año, espaciadas de 4 a 6 semanas.",
-      additionalText2:
+    additionalText2:
       "Los resultados suelen ser notables desde la segunda sesión en adelante.",
-  
-      image: image1,
+
+    image: image1,
     mobileimage: image1h,
   },
   {
@@ -148,7 +146,7 @@ const dataespañol = [
     additionalText1:
       "La frecuencia del tratamiento varía según la gravedad de la condición.",
 
-      additionalText2:
+    additionalText2:
       "Útil para individuos post-trasplante de cabello para mantener la salud del cabello.",
     image: image2,
     mobileimage: image2h,
@@ -166,27 +164,27 @@ const dataespañol = [
     ],
     additionalText1:
       "La administración puede ser oral, mediante microinyecciones o tratamientos tópicos.",
-      additionalText2:
+    additionalText2:
       "Los planes de tratamiento se adaptan a los requisitos individuales. Puede usarse en combinación con otros tratamientos para obtener resultados óptimos.",
-      image: image3,
+    image: image3,
     mobileimage: image3h,
   },
-  // {
-  //   id: "4",
-  //   title: "Minoxidil",
-  //   subtitle:
-  //     " es un tratamiento tópico utilizado para estimular el engrosamiento del cabello, disponible en forma líquida o en espuma.",
-  //   benefits: [
-  //     "Promueve eficazmente el crecimiento del cabello.",
-  //     "Adecuado para uso a largo plazo.",
-  //     "Los resultados iniciales pueden variar, y los efectos sostenidos requieren un uso a largo plazo.",
-  //     "Puede usarse solo o en combinación con otras terapias para una mayor eficacia.",
-  //   ],
-  //   additionalText:
-  //     "La frecuencia de aplicación y la concentración varían según las necesidades individuales.",
-  //   image: image4,
-  //   mobileimage: image4h,
-  // },
+  {
+    id: "4",
+    title: "Minoxidil",
+    subtitle:
+      " es un tratamiento tópico utilizado para estimular el engrosamiento del cabello, disponible en forma líquida o en espuma.",
+    benefits: [
+      "Promueve eficazmente el crecimiento del cabello.",
+      "Adecuado para uso a largo plazo.",
+      "Los resultados iniciales pueden variar, y los efectos sostenidos requieren un uso a largo plazo.",
+      "Puede usarse solo o en combinación con otras terapias para una mayor eficacia.",
+    ],
+    additionalText1:
+      "La frecuencia de aplicación y la concentración varían según las necesidades individuales.",
+    image: image4,
+    mobileimage: image4h,
+  },
   {
     id: "5",
     title: "Los medicamentos antiandrógenos",
@@ -200,9 +198,9 @@ const dataespañol = [
     ],
     additionalText1:
       "La administración puede ser oral, mediante microinyecciones o tratamientos tópicos.",
-      additionalText2:
+    additionalText2:
       "Los planes de tratamiento se adaptan a los requisitos individuales. Puede usarse en combinación con otros tratamientos para obtener resultados óptimos.",
-      image: image5,
+    image: image5,
     mobileimage: image5h,
   },
 ];
@@ -277,7 +275,7 @@ export default function ImagesContainer() {
                     <h6>TREATMENTS PLAN</h6>
                     <div className={styles.extratext}>
                       <h5>{additionalText1}</h5>
-                      <h5>{additionalText2}</h5>
+                      {additionalText2 ? <h5>{additionalText2}</h5> : <h5></h5>}
                     </div>
                   </div>
                   <div className={styles.imagecontainer}>

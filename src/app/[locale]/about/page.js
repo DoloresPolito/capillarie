@@ -1,4 +1,4 @@
-import styles from "./style.module.css";
+import styles from "./styles.module.scss";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import AnimatedHeader from "../../../components/AnimatedHeader";
