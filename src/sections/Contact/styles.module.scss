@@ -21,7 +21,7 @@
 
 .container {
   height: auto;
-  width: 95%;
+  width: 90%;
   display: flex;
   margin-bottom: 200px;
   max-width: 1600px;
@@ -53,6 +53,7 @@
       width: 90%;
       justify-content: center;
       align-items: center;
+  
     }
 
     h6 {
@@ -104,6 +105,7 @@
       align-items: center;
       justify-content: space-between;
       transition: background-color 0.4s, color 0.4s; /* Añade la transición aquí */
+
     
       p {
         font-family: "Plus Jakarta Sans", sans-serif;

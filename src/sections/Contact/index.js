@@ -16,8 +16,8 @@ import whblack from "../../../public/assets/icons/wh-black.png";
 import igwhite from "../../../public/assets/icons/ig-white.png";
 import igblack from "../../../public/assets/icons/ig-black.png";
 
-import lkwhite from "../../../public/assets/icons/lk-white.png";
-import lkblack from "../../../public/assets/icons/lk-black.png";
+import lkwhite from "../../../public/assets/icons/lk2-white.png";
+import lkblack from "../../../public/assets/icons/lk2-black.png";
 
 import mailwhite from "../../../public/assets/icons/mail-white.png";
 import mailblack from "../../../public/assets/icons/mail-black.png";
@@ -94,11 +94,15 @@ export default function Index({ translations }) {
                 need.
               </h3>
             </AnimatedDiv>
+            <div>
+
+      
             {contactlinks.map((contactlink) => {
               return (
                 <ContactLink key={contactlink.name} contactlink={contactlink} />
               );
             })}
+          </div>
           </div>
           <div className={styles.right}>
             <ContactForm contacttranslations={contacttranslations} />

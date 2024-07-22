@@ -1,7 +1,6 @@
 "use client";
 import styles from "./styles.module.scss";
 import { useState, useEffect } from "react";
-// import Link from "next/link";
 import { Link } from "react-scroll";
 import AnimatedDiv from "@/components/AnimatedDiv";
 
@@ -32,37 +31,19 @@ const CoverSection = () => {
   return (
     <div className={styles.section}>
       <h6>PROCEDURES WITHOUT SURGERY</h6>
+      <AnimatedDiv>
+        <h2>
+          Custom solutions<span> for each patient.</span>
+        </h2>
+      </AnimatedDiv>
       <div className={styles.container}>
-        <div className={styles.right}>
-          <AnimatedDiv>
-
-
-          <h2>
-            <span> Soluciones personalizadas </span>para cada paciente.
-          </h2>
-          </AnimatedDiv>
-          <AnimatedDiv>
-
-
-          <h3>
-            Trataremos tu caso capilar con los métodos que sean más{" "}
-            <span> efectivos </span>para tí.
-          </h3>
-          </AnimatedDiv>
-          <h5>Financiado 60 €/mes</h5>
-  
-        </div>
-
-
-
-
         <div className={styles.left}>
           {data.map(({ title, id }) => (
             <Link
               to={id}
               spy={true}
               smooth={true}
-              offset={80}
+              offset={-50}
               duration={800}
               key={id}
             >
@@ -72,7 +53,6 @@ const CoverSection = () => {
             </Link>
           ))}
         </div>
-
       </div>
     </div>
   );

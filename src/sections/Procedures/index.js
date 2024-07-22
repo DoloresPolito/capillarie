@@ -5,7 +5,6 @@ import styles from "./styles.module.scss";
 import Intro from "../../procedures/Intro";
 import ImagesContainer from "../../procedures/ImagesContainer";
 import Footer from "@/components/Footer2";
-import Projects from "@/procedures/Projects"
 
 export default function Index() {
   useEffect(() => {
@@ -24,7 +23,6 @@ export default function Index() {
     <div className={styles.section}>
       <Intro />
       <ImagesContainer />
-      <Projects/>
       <Footer />
     </div>
   );
