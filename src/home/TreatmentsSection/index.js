@@ -9,9 +9,9 @@ import HorizontalScrollSection from "@/components/HorizontalScroll";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import image1 from "../../../public/assets/images/t1.png";
-import image2 from "../../../public/assets/images/t2.png";
-import image3 from "../../../public/assets/images/t3.png";
+import image1 from "../../../public/assets/images/th1.png";
+import image2 from "../../../public/assets/images/th2.png";
+import image3 from "../../../public/assets/images/th3.png";
 
 const TreatmentsSection = ({ treatmentstranslations }) => {
   const { t, i18n } = useTranslation("");

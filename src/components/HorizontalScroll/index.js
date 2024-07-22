@@ -3,9 +3,9 @@ import styles from "./styles.module.scss";
 
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import Image from "next/image";
-import image1 from "../../../public/assets/images/t1.png";
-import image2 from "../../../public/assets/images/t2.png";
-import image3 from "../../../public/assets/images/t3.png";
+import image1 from "../../../public/assets/images/th1.png";
+import image2 from "../../../public/assets/images/th2.png";
+import image3 from "../../../public/assets/images/th3.png";
 
 import Link from "next/link";
 const HorizontalScrollSection = () => {
