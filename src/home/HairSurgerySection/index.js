@@ -65,7 +65,6 @@ const HairSurgerySection = ({ hairtranslations }) => {
               className="subhair"
             />
    
-            {/* <h3>{hairtranslations.hairsubtitle}</h3> */}
             <motion.div
               className={styles.benefitscontainer}
               variants={hairSlide}
@@ -82,7 +81,7 @@ const HairSurgerySection = ({ hairtranslations }) => {
                   key={index}
                   className={styles.benefit}
                   variants={slide}
-                  custom={index} // Custom prop to control the delay
+                  custom={index} 
                   initial="initial"
                   animate={inView ? "enter" : "exit"}
                 >
@@ -91,7 +90,8 @@ const HairSurgerySection = ({ hairtranslations }) => {
                 </motion.div>
               ))}
             </motion.div>
-            <h2>Finance it easily, <span> from 60 €/week</span></h2>
+            {locale === 'es' ?  <h2>Financialo facilmente, <span> desde 60 €/semana</span></h2> :  <h2>Finance it easily, <span> from 60 €/week</span></h2>}
+        
             <div className={styles.buttoncontainer}>
               <Link
                 href="/hairimplant"

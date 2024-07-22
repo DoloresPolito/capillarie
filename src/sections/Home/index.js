@@ -45,6 +45,7 @@ export default function Index({ translations }) {
     faq4: translations.faq4,
     ans4: translations.ans4,
     resultstitle: translations.resultstitle,
+    treatmentsbutton: translations.treatmentsbutton,
   };
 
   const abouttranslations = {
@@ -70,6 +71,10 @@ export default function Index({ translations }) {
     treatmentssectiontitle: translations.treatmentssectiontitle,
     treatmentssubtitle: translations.treatmentssubtitle,
     treatmentsbutton: translations.treatmentsbutton,
+    treathome1:translations.treathome1,
+    treathome2:translations.treathome2,
+    treathome3:translations.treathome3,
+
   };
 
   const contacttranslations = {

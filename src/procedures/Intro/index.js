@@ -6,7 +6,7 @@ import { useRef } from 'react';
 import styles from './styles.module.scss';
 import Cover from "@/procedures/Cover"
 
-export default function Intro({covertranslations}) {
+export default function Intro({translations}) {
     const container = useRef();
     const { scrollYProgress } = useScroll({
         target: container,
@@ -21,7 +21,7 @@ export default function Intro({covertranslations}) {
             <motion.div style={{ y }} className={styles.motionDiv}>
                 <Image src={Background} fill alt="image" style={{ objectFit: "cover" }} />
                 <div className={styles.textcontainer}>
-                <Cover  />
+                <Cover  translations={translations}/>
                 </div>
          
             </motion.div>

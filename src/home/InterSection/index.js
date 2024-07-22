@@ -13,7 +13,14 @@ const TreatmentsSection = () => {
     <div className={styles.section} >
       <div className={styles.container}>
         <AnimatedDiv>
-          <h2>
+          {locale === 'es' ? <h2>Ofrecemos soluciones exclusivas que
+            <span>
+              {" "}
+              no encontrarás en ningún otro lugar. Ofreciendo tratamientos capilares avanzados
+              y{" "}
+            </span>
+            opciones de financiación flexibles{" "}
+            <span>para que acceder a la atención que necesita sea más fácil que nunca.</span></h2> :   <h2>
             <span> We provide</span> exclusive solutions
             <span>
               {" "}
@@ -22,7 +29,8 @@ const TreatmentsSection = () => {
             </span>
             flexible financing options{" "}
             <span>to make accessing the care you need easier than ever.</span>
-          </h2>
+          </h2>}
+        
         </AnimatedDiv>
       </div>
     </div>

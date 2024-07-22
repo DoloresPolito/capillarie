@@ -62,14 +62,25 @@ const TreatmentsSection = ({ treatmentstranslations }) => {
           className="subtreatments"
         />
 
-<h2>Finance it easily, <span> from 60 €/week</span></h2>
+        {locale === "es" ? (
+          <h2>
+            Financialo facilmente, <span> desde 60 €/semana</span>
+          </h2>
+        ) : (
+          <h2>
+            Finance it easily, <span> from 60 €/week</span>
+          </h2>
+        )}
+
         {width > medium ? (
           <>
-            <HorizontalScrollSection />
+            <HorizontalScrollSection     treatmentstranslations={treatmentstranslations}/>
           </>
         ) : (
           <>
-            <VerticalTreatments treatmentstranslations={treatmentstranslations}/>
+            <VerticalTreatments
+              treatmentstranslations={treatmentstranslations}
+            />
           </>
         )}
 
@@ -78,7 +89,9 @@ const TreatmentsSection = ({ treatmentstranslations }) => {
             href="/procedures"
             style={{ textDecoration: "none", color: "#493e36" }}
           >
-            <Rounded background="#44b9cc">{treatmentstranslations.treatmentsbutton}</Rounded>
+            <Rounded background="#44b9cc">
+              {treatmentstranslations.treatmentsbutton}
+            </Rounded>
           </Link>
         </div>
       </div>
@@ -94,15 +107,16 @@ const VerticalTreatments = ({ treatmentstranslations }) => {
       <div className={styles.verticalcontainer}>
         <div className={styles.square}>
           <Image src={image1} alt="Mesotherapy" />
-          <h4>Antiandrogen Drugs</h4>
+          
+          <h4>{treatmentstranslations.treathome1}</h4>
         </div>
         <div className={styles.square}>
           <Image src={image2} alt="Plasma" />
-          <h4>Platelet-Rich Plasma Therapy</h4>
+          <h4>{treatmentstranslations.treathome2}</h4>
         </div>
         <div className={styles.square}>
           <Image src={image3} alt="Antiandrogen" />
-          <h4>Hair Mesotherapy</h4>
+          <h4>{treatmentstranslations.treathome3}</h4>
         </div>
       </div>
     </>

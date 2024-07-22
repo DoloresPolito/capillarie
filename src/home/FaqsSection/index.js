@@ -26,6 +26,7 @@ export default function FaqsSection({ faqstranslations }) {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   useEffect(() => {
+   
     if (inView) {
       controls.start({
         x: 0,
@@ -34,7 +35,6 @@ export default function FaqsSection({ faqstranslations }) {
       });
     }
   }, [controls, inView]);
-
   return (
     <>
 
@@ -65,7 +65,7 @@ export default function FaqsSection({ faqstranslations }) {
               href="/faqs"
               style={{ textDecoration: "none", color: "#493e36" }}
             >
-              <Rounded background="#44b9cc">See all</Rounded>
+              <Rounded background="#44b9cc">{faqstranslations.treatmentsbutton}</Rounded>
             </Link>
           </div>
         </div>

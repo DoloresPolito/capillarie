@@ -45,6 +45,9 @@ export default async function Home({ params: { locale } }) {
     treatmentssectiontitle: t("treatmentssectiontitle"),
     treatmentssubtitle: t("treatmentssubtitle"),
     treatmentsbutton: t("treatmentsbutton"),
+    treathome1: t("treathome1"),
+    treathome2: t("treathome2"),
+    treathome3: t("treathome3"),
 
     contactsectiontitle: t("contactsectiontitle"),
     contacttext1: t("contacttext1"),

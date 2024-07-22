@@ -8,7 +8,7 @@ import image2 from "../../../public/assets/images/th2.png";
 import image3 from "../../../public/assets/images/th3.png";
 
 import Link from "next/link";
-const HorizontalScrollSection = () => {
+const HorizontalScrollSection = ({treatmentstranslations}) => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useViewportScroll();
 
@@ -25,20 +25,20 @@ const HorizontalScrollSection = () => {
       <motion.div className={styles.square}>
         <Link href="/procedures">
           <Image src={image1} alt="Mesotherapy" />
-          <h4>Antiandrogen Drugs</h4>
+          <h4>{treatmentstranslations.treathome1}</h4>
         </Link>
       </motion.div>
 
       <motion.div className={styles.square}>
         <Link href="/procedures">
           <Image src={image2} alt="Plasma" />
-          <h4>Platelet-Rich Plasma Therapy</h4>{" "}
+          <h4>{treatmentstranslations.treathome2}</h4>
         </Link>
       </motion.div>
       <motion.div className={styles.square}>
         <Link href="/procedures">
           <Image src={image3} alt="Antiandrogen" />
-          <h4>Hair Mesotherapy</h4>
+          <h4>{treatmentstranslations.treathome3}</h4>
         </Link>
       </motion.div>
     </motion.div>

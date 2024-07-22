@@ -18,12 +18,7 @@ export default function Intro() {
         <div className={styles.intro}>
 
             <motion.div style={{ y }} className={styles.motionDiv}>
-                <Image src={Background} fill alt="image" style={{ objectFit: "cover" }} />
-                {/* <div className={styles.textcontainer}>
-       
-                </div> */}
-
-         
+                <Image src={Background} fill alt="image" style={{ objectFit: "cover" }} />     
             </motion.div>
         </div>
     );

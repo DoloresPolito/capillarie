@@ -8,6 +8,11 @@ const i18nNamespaces = ["procedures", "common"];
 export default async function Procedures({ params: { locale } }) {
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
 
+
+  const translations = {
+    sectiontitle: t("sectiontitle"),
+  }
+
   return (
     <TranslationsProvider
       resources={resources}
@@ -16,7 +21,7 @@ export default async function Procedures({ params: { locale } }) {
     >
       <div className={styles.main}>
         <AnimatedHeader />
-        <ProceduresSection />
+        <ProceduresSection translations={translations} />
       </div>
     </TranslationsProvider>
   );

@@ -7,7 +7,7 @@ import ImagesContainer from "../../procedures/ImagesContainer";
 import Footer from "@/components/Footer2";
 import GeneralSection from "@/components/GeneralSetion";
 
-export default function Index() {
+export default function Index({translations}) {
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -20,10 +20,12 @@ export default function Index() {
     requestAnimationFrame(raf);
   }, []);
 
+  
+
   return (
     <>
       <div className={styles.section}>
-        <Intro />
+        <Intro translations={translations}/>
         <ImagesContainer />
         <GeneralSection />
       </div>
