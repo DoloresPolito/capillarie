@@ -34,6 +34,7 @@ export default function Index({ translations }) {
 
   const teamtranslations = {
     subtitle2: translations.subtitle2,
+    teamtitle:translations.teamtitle
   };
 
   return (
@@ -44,7 +45,7 @@ export default function Index({ translations }) {
         <DescriptionParallax teamtranslations={teamtranslations} />
         <Section texttranslations={texttranslations} />
         <GeneralSection />
-        <div className={styles.lastsection}></div>
+
 
       </div>
       <Footer />

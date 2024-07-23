@@ -4,17 +4,33 @@ import Image from "next/image";
 import image1 from "../../../public/assets/images/person1.png";
 import image2 from "../../../public/assets/images/person2.png";
 import image3 from "../../../public/assets/images/person3.png";
+import { useTranslation } from "react-i18next";
 
-export default function Team({teamtranslations}) {
+export default function Team({ teamtranslations }) {
   const team = [
-    { name: "Pablo Maradey", image: image1 },
-    { name: "Maria Garcia", image: image2 },
-    { name: "Gustavo Fernandez", image: image3 },
+    {
+      name: "Pablo Maradey",
+      image: image1,
+      profession: "General surgeon",
+      profesion: "Cirujano General",
+    },
+    {
+      name: "Maria Garcia",
+      image: image2,
+      profession: "Dermatologist",
+      profesion: "Dermatologa",
+    },
+    {
+      name: "Gustavo Fernandez",
+      image: image3,
+      profession: "General surgeon",
+      profesion: "Cirujano General",
+    },
   ];
   return (
     <div className={styles.section}>
       <div className={styles.container}>
-        <h6>THE TEAM</h6>
+        <h6>{teamtranslations.teamtitle}</h6>
         <h3>{teamtranslations.subtitle2}</h3>
         <div className={styles.teamcontainer}>
           {team.map((person, index) => (
@@ -26,16 +42,19 @@ export default function Team({teamtranslations}) {
   );
 }
 
-const TeamMember = ({ person }) => (
-  <div className={styles.membercontainer}>
-      
+const TeamMember = ({ person }) => {
+  const { t, i18n } = useTranslation("");
+  const locale = i18n.language;
 
-
-    <Image src={person.image} alt="member image" />
-    <div className={styles.textcontainer}>
-      <p>{person.name}</p>
-      <p className={styles.profesion}>Cirujano Plástico</p>
+  return (
+    <div className={styles.membercontainer}>
+      <Image src={person.image} alt="member image" />
+      <div className={styles.textcontainer}>
+        <p>{person.name}</p>
+        <p className={styles.profesion}>
+          {locale === "es" ? person.profesion : person.profession}
+        </p>
+      </div>
     </div>
-  
-   </div>
-);
+  );
+};

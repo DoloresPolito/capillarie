@@ -14,6 +14,7 @@ export default async function Index({ params: { locale } }) {
     text1: t("text1"),
     text2: t("text2"),
     text3: t("text3"),
+    teamtitle:t("teamtitle")
   };
 
   return (

@@ -1,88 +1,80 @@
 .section {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    overflow: hidden;
-    width: 100%;
-    // clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
-    clip-path: inset(0 0 0 0 round 30px);
-    // background-color: #44B9CC;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+  // clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+  clip-path: inset(0 0 0 0 round 30px);
+  // background-color: #44B9CC;
 
+  background-image: url("/assets/backgrounds/backcover.png");
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  width: 100%; /* Ensure the section takes up the full width */
+  // margin-bottom: 100px;
+}
 
-    background-image: url("/assets/backgrounds/backcover.png");
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    width: 100%; /* Ensure the section takes up the full width */
+.textContainer {
+  position: relative;
+  z-index: 100;
+  padding: 20px;
+  // mix-blend-mode: difference;
 
-    
-  }
-  
-  .textContainer {
-    position: relative;
-    z-index: 100;
-    padding: 20px;
-    // mix-blend-mode: difference;
+  h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #493e36;
+    letter-spacing: 1px;
+    font-size: 40px;
+    font-weight: 300;
+    margin-top: 10px;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 20px;
 
-    h2 {
-      font-family: "Plus Jakarta Sans", sans-serif;
-      color: #493e36;
-      letter-spacing: 1px;
-      font-size: 40px;
-      font-weight: 300;
-      margin-top: 10px;
-      text-align: center;
-      max-width: 800px;
-      margin-bottom: 20px;
-  
+    @media only screen and (max-width: 1000px) {
+      font-size: 30px;
+    }
+
+    span {
+      color: #44b9cc;
+      font-weight: 400;
+
       @media only screen and (max-width: 1000px) {
         font-size: 30px;
       }
-  
-  
-  
-      span {
-        color: #44b9cc;
-        font-weight: 400;
-  
-        @media only screen and (max-width: 1000px) {
-          font-size: 30px;
-        }
-  
-   
-      }
-    }
-
-
-    h5{
-      color: #493e36;
-      font-family: "Plus Jakarta Sans", sans-serif;
-      letter-spacing: 1px;
-      font-size: 20px;
-      font-weight: 300;
-      margin-top: 10px;
-      text-align: center;
-      max-width: 800px;
-      margin-bottom: 50px;
-    }
-
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-
-
-    .buttoncontainer{
-        width: auto;
     }
   }
-  
 
-  
+  h5 {
+    color: #493e36;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 10px;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 50px;
 
-  
+  }
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+
+  .buttoncontainer {
+    width: auto;
+
+    @media only screen and (max-width: 600px) {
+      margin-bottom: 100px;
+    }
+  }
+}

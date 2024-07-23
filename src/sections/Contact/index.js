@@ -46,8 +46,8 @@ export default function Index({ translations }) {
     form3: translations.form3,
     form4: translations.form4,
     formbutton: translations.formbutton,
-    message:translations.message,
-    sectiontitle:translations.sectiontitle
+    message: translations.message,
+    sectiontitle: translations.sectiontitle,
   };
 
   const contactlinks = [
@@ -87,25 +87,29 @@ export default function Index({ translations }) {
     <>
       <div className={styles.section}>
         <div className={styles.container}>
-          <div className={styles.left}>
-            <h6>{contacttranslations.sectiontitle}</h6>
+        <h6>{contacttranslations.sectiontitle}</h6>
             <AnimatedDiv>
-              <h3>
-                {contacttranslations.contacttext2}
-              </h3>
+              <h3>{contacttranslations.contacttext2}</h3>
             </AnimatedDiv>
-            <div>
+            <div className={styles.content}>
 
-      
-            {contactlinks.map((contactlink) => {
-              return (
-                <ContactLink key={contactlink.name} contactlink={contactlink} />
-              );
-            })}
-          </div>
+         
+          <div className={styles.left}>
+       
+            <div>
+              {contactlinks.map((contactlink) => {
+                return (
+                  <ContactLink
+                    key={contactlink.name}
+                    contactlink={contactlink}
+                  />
+                );
+              })}
+            </div>
           </div>
           <div className={styles.right}>
             <ContactForm contacttranslations={contacttranslations} />
+          </div>
           </div>
         </div>
         <Footer />
