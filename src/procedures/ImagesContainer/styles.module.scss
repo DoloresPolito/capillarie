@@ -164,6 +164,12 @@
     }
   }
 
+
+
+  .h3odd{
+    align-self: flex-end;
+  }
+
   @media only screen and (max-width: 1000px) {
     flex-direction: column !important;
     padding: 10px;

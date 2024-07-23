@@ -254,7 +254,7 @@ export default function ImagesContainer() {
                 key={index}
                 id={id}
               >
-                <h3>
+                <h3 className={isEven ? styles.h3even : styles.h3odd}>
                   {" "}
                   <span>{title}</span>
                   {subtitle}
