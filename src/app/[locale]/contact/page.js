@@ -17,6 +17,8 @@ export default async function Procedures({ params: { locale } }) {
     form3: t("form3"),
     form4: t("form4"),
     formbutton: t("formbutton"),
+    message:t("message"),
+    sectiontitle:t("sectiontitle")
   };
 
   return (

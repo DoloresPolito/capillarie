@@ -1,9 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/utils/send-email";
 import styles from "./styles.module.scss";
-// import Button from "../Button";
 
 const Contact = ({ contacttranslations }) => {
   const { register, handleSubmit } = useForm();
@@ -28,7 +27,7 @@ const Contact = ({ contacttranslations }) => {
 
       </div>
       </>) : <>
-      <h3>Leave us a message</h3>
+      <h3>{contacttranslations.message}</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.inputcontainer}>
           <input

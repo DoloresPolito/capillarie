@@ -88,6 +88,7 @@ export default function Index({ translations }) {
     form3: translations.form3,
     form4: translations.form4,
     formbutton: translations.formbutton,
+
   };
 
   const reviewstranslations = {

@@ -41,12 +41,13 @@ export default function Index({ translations }) {
   const contacttranslations = {
     contacttext1: translations.contacttext1,
     contacttext2: translations.contacttext2,
-
     form1: translations.form1,
     form2: translations.form2,
     form3: translations.form3,
     form4: translations.form4,
     formbutton: translations.formbutton,
+    message:translations.message,
+    sectiontitle:translations.sectiontitle
   };
 
   const contactlinks = [
@@ -87,11 +88,10 @@ export default function Index({ translations }) {
       <div className={styles.section}>
         <div className={styles.container}>
           <div className={styles.left}>
-            <h6>CONTACT US</h6>
+            <h6>{contacttranslations.sectiontitle}</h6>
             <AnimatedDiv>
               <h3>
-                Our dedicated team is here to provide the care and support you
-                need.
+                {contacttranslations.contacttext2}
               </h3>
             </AnimatedDiv>
             <div>
