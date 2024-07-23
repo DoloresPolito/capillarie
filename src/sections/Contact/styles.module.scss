@@ -27,6 +27,7 @@
   margin-bottom: 200px;
   max-width: 1600px;
 
+
   @media only screen and (max-width: 1000px) {
     flex-direction: column;
     justify-content: center;
@@ -63,13 +64,19 @@
   .content{
     display: flex;
 
-
+@media only screen and (max-width: 1000px) {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
     .right {
       display: flex;
       width: 40%;
       margin-top: -60px;
       @media only screen and (max-width: 1000px) {
         width: 90%;
+        margin-top: 0px;
       }
     }
   
