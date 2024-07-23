@@ -27,7 +27,7 @@ const Contact = ({ contacttranslations }) => {
 
       </div>
       </>) : <>
-      <h3>{contacttranslations.message}</h3>
+      <h4>{contacttranslations.message}</h4>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.inputcontainer}>
           <input
