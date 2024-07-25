@@ -18,32 +18,13 @@ body {
     margin: -5px !important;
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
 
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
 
 /* globals.css */
-
-/* Define las variables para las familias de fuentes */
-:root {
-  --font-montserrat: 'Montserrat', sans-serif;
-  --font-inter: 'Inter', sans-serif;
-}
-
-/* Aplica Inter a todo el cuerpo por defecto */
-body {
-  font-family: var(--font-inter);
-}
-
-/* Clases específicas para diferentes grosores de Montserrat */
-.montserratnormal {
-  font-family: var(--font-montserrat);
-  font-weight: 400;
-}
-
-.montserratbold {
-  font-family: var(--font-montserrat);
-  font-weight: 700;
-}
-
 
 
 body::-webkit-scrollbar {

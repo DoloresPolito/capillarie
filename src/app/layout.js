@@ -1,6 +1,6 @@
 import { Inter, Montserrat, Plus_Jakarta_Sans } from "next/font/google";
 import Head from "next/head";
-import "./globals.css";
+import "./[locale]/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

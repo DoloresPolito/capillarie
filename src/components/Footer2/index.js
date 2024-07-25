@@ -9,6 +9,7 @@ import AnimatedDiv from "../AnimatedDiv";
 
 
 import whwhite from "../../../public/assets/icons/wh-white.png"
+import phonewhite from "../../../public/assets/icons/phone-white.png"
 import igwhite from "../../../public/assets/icons/ig-white.png"
 import lkwhite from "../../../public/assets/icons/lk-white.png"
 import mailwhite from "../../../public/assets/icons/mail-white.png"
@@ -66,7 +67,7 @@ export default function Footer() {
                 style={{ textDecoration: "none" }}
               >
                 <div className={styles.contactlinkcontainer}>
-                <Image src={whwhite} alt="whatsapp" className={styles.logo}/>
+                <Image src={phonewhite} alt="whatsapp" className={styles.logo}/>
                   <p>+54 11 57392254</p>
                   {/* <Image src={arrow} alt="arrow" /> */}
                 </div>

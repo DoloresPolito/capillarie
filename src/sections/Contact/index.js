@@ -12,6 +12,8 @@ import AnimatedDiv from "@/components/AnimatedDiv";
 
 import whwhite from "../../../public/assets/icons/wh-white.png";
 import whblack from "../../../public/assets/icons/wh-black.png";
+import phonewhite from "../../../public/assets/icons/phone-white.png";
+import phoneblack from "../../../public/assets/icons/phone-black.png";
 
 import igwhite from "../../../public/assets/icons/ig-white.png";
 import igblack from "../../../public/assets/icons/ig-black.png";
@@ -54,8 +56,8 @@ export default function Index({ translations }) {
     {
       name: "+54 3446 584076",
       url: "/",
-      logowhite: whwhite,
-      logoblack: whblack,
+      logowhite: phonewhite,
+      logoblack: phoneblack,
     },
     {
       name: "@capillarieclinicdublin",
