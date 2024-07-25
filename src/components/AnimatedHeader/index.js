@@ -68,7 +68,7 @@ export default function Navbar3() {
     },
     {
       active: "hairimplant",
-      link: "/",
+      link: "/hairimplant",
       spanish: "Implante capilar",
       english: "Hair implant",
     },

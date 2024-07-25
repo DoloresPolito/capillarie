@@ -25,7 +25,6 @@ export default async function Home({ params: { locale } }) {
     faq4: t("faq4"),
     ans4: t("ans4"),
     faqstitle: t("faqstitle"),
-    resultstitle: t("resultstitle"),
 
     aboutsectiontitle: t("aboutsectiontitle"),
     aboutsubtitle: t("aboutsubtitle"),

@@ -1,0 +1,117 @@
+.generalcontainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: -40vh;
+  z-index: 10;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  align-items: center;
+  z-index: 10;
+  background-color: white;
+  padding-bottom: 50px;
+
+  .container {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    max-width: 1600px;
+
+    @media only screen and (max-width: 1000px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 95%;
+    }
+  }
+
+  .left {
+    display: flex;
+    width: 55%;
+    height: 100%;
+    flex-direction: column;
+    padding: 20px 20px;
+    @media only screen and (max-width: 1000px) {
+      width: 100%;
+      padding: 20px 0px;
+    }
+  }
+
+  .right {
+    display: flex;
+    width: 45%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 50px 80px;
+    @media only screen and (max-width: 1000px) {
+      width: 100%;
+      padding: 0px 0px;
+      align-items: center;
+    }
+
+
+    img{
+      height: 500px;
+      width: auto;
+
+
+    }
+  }
+
+  h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #493e36;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    @media only screen and (max-width: 1000px) {
+      font-size: 13px;
+    }
+  }
+
+  h5 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #493e36;
+    font-size: 23px;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    @media only screen and (max-width: 1000px) {
+        font-size: 20px;
+      }
+  }
+
+  h4 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #44b9cc;
+
+    font-size: 23px;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    @media only screen and (max-width: 1000px) {
+        font-size: 20px;
+      }
+
+      span{
+        color: #493e36;
+     
+      }
+  }
+  
+
+  
+}

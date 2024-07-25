@@ -6,6 +6,7 @@ import AnimatedDiv from "@/components/AnimatedDiv";
 import { useTransform, useViewportScroll } from "framer-motion";
 import Preloader from "@/components/Preloader";
 
+
 const CoverSection = ({ covertranslations }) => {
   const { t, i18n } = useTranslation("");
   const locale = i18n.language;

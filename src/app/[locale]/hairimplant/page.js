@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 import AnimatedHeader from "../../../components/AnimatedHeader";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
-
+import HairImplantSection from "@/sections/HairImplant"
 const i18nNamespaces = ["procedures", "common"];
 
 export default async function HairImplant({ params: { locale } }) {
@@ -14,9 +14,9 @@ export default async function HairImplant({ params: { locale } }) {
       locale={locale}
       namespaces={i18nNamespaces}
     >
-      <AnimatedHeader />
       <div className={styles.main}>
-
+        <AnimatedHeader />
+        <HairImplantSection />
       </div>
     </TranslationsProvider>
   );

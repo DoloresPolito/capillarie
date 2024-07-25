@@ -44,7 +44,6 @@ export default function Index({ translations }) {
     ans3: translations.ans3,
     faq4: translations.faq4,
     ans4: translations.ans4,
-    resultstitle: translations.resultstitle,
     treatmentsbutton: translations.treatmentsbutton,
   };
 
@@ -119,7 +118,7 @@ export default function Index({ translations }) {
         <HairSurgerySection hairtranslations={hairtranslations} />
         <TreatmentsSection treatmentstranslations={treatmentstranslations} />
         <FaqsSection faqstranslations={faqstranslations} />
-        <ResultsSection faqstranslations={faqstranslations} />
+        <ResultsSection />
         <ReviewsSection reviewstranslations={reviewstranslations} />
 
       </div>

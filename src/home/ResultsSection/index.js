@@ -4,8 +4,12 @@ import styles from "./styles.module.scss";
 import SlidingImages from "../../components/SlidingImages";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useTranslation } from "react-i18next";
+export default function ResultsSection() {
 
-export default function ResultsSection({ faqstranslations }) {
+
+const { t, i18n } = useTranslation("");
+const locale = i18n.language;
   const controls = useAnimation();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
@@ -28,7 +32,8 @@ export default function ResultsSection({ faqstranslations }) {
             animate={controls}
             className={`${styles.heading} `}
           >
-            {faqstranslations.resultstitle}
+       
+            {locale === "es" ? "RESULTADOS" : "RESULTS"}
           </motion.h6>
         </div>
       </div>
