@@ -133,6 +133,13 @@
           width: 150px;
           margin-left: 50px;
 
+          p{
+            &:hover {
+              scale: 1.05;
+            }
+          }
+   
+
           @media only screen and (max-width: 1000px) {
             display: none;
           }

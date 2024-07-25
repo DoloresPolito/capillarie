@@ -52,32 +52,32 @@ export default function Index({ translations }) {
 
   const contactlinks = [
     {
-      name: "Whatsapp: +54 3446 584076",
+      name: "+54 3446 584076",
       url: "/",
       logowhite: whwhite,
       logoblack: whblack,
     },
     {
-      name: "Instagram: @capillarieclinicdublin",
-      url: "/",
+      name: "@capillarieclinicdublin",
+      url: "https://www.instagram.com/capillarie/",
       logowhite: igwhite,
       logoblack: igblack,
     },
     {
-      name: "Linkedin: /capillarieclinic",
-      url: "/",
+      name: "/capillarieclinic",
+      url: "https://www.linkedin.com/company/capillarie-clinic" ,
       logowhite: lkwhite,
       logoblack: lkblack,
     },
     {
-      name: "E-mail: capillarieclinic@gmail.com",
-      url: "/",
+      name: "capillarieclinic@gmail.com",
+      url: "mailto:capillarieclinic@gmail.com",
       logowhite: mailwhite,
       logoblack: mailblack,
     },
     {
-      name: "Location: 31-32 Wellington Quay",
-      url: "/",
+      name: "31-32 Wellington Quay",
+      url: "https://www.google.com/maps/place/31%2F32+Wellington+Quay,+Temple+Bar,+Dublin+2,+D02+RX80,+Irlanda/@53.3457871,-6.266768,17z/data=!3m1!4b1!4m6!3m5!1s0x48670e832e53244f:0x182fb7c8a115ab7a!8m2!3d53.3457871!4d-6.2641931!16s%2Fg%2F11pkjs6j_2?entry=ttu",
       logowhite: locwhite,
       logoblack: locblack,
     },
@@ -132,6 +132,7 @@ const ContactLink = ({ contactlink }) => {
     <Link
       href={contactlink.url}
       style={{ textDecoration: "none", width: "300px" }}
+      target="_blank"
     >
       <div
         className={styles.contactlinkcontainer}
@@ -144,7 +145,7 @@ const ContactLink = ({ contactlink }) => {
           className={styles.logo}
         />
         <p>{contactlink.name}</p>
-        <Image src={isHovered ? arrowwhite : arrow} alt="arrow" />
+        {/* <Image src={isHovered ? arrowwhite : arrow} alt="arrow" /> */}
       </div>
     </Link>
   );

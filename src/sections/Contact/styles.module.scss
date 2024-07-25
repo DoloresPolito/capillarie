@@ -80,8 +80,9 @@
     .left {
       display: flex;
       flex-direction: column;
-      width: 60%;
+      width: 50%;
       justify-content: space-between;
+
 
       @media only screen and (max-width: 1000px) {
         width: 90%;
@@ -103,13 +104,14 @@
       .contactlinkcontainer {
         background-color: rgba(255, 255, 255, 0.3);
         border-radius: 30px;
-        padding: 15px 20px;
-        width: 400px;
+        padding: 10px 20px;
+        width: 300px;
         margin-bottom: 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         transition: background-color 0.4s, color 0.4s; /* Añade la transición aquí */
+
 
         @media only screen and (max-width: 600px) {
           width: 300px;
@@ -120,13 +122,15 @@
           color: #493e36;
           font-size: 15px;
           font-weight: 300;
+          text-align: start;
+      
           @media only screen and (max-width: 600px) {
-            font-size: 13px;
+            // font-size: 13px;
           }
         }
 
         img {
-          margin-left: 20px;
+          margin-left: 5px;
           @media only screen and (max-width: 600px) {
             margin-left: 10px;
           }

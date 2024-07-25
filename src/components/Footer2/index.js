@@ -49,14 +49,14 @@ export default function Footer() {
 
            
               <Link
-                href="mailto:dolores.polito@gmail.com"
+                href="mailto:capillarieclinic@gmail.com"
                 target="_blank"
                 style={{ textDecoration: "none" }}
               >
                 <div className={styles.contactlinkcontainer}>
                   <Image src={mailwhite} alt="mail" className={styles.logo}/>
                   <p>capillariedublin@gmail.com</p>
-                  <Image src={arrow} alt="arrow" />
+                  {/* <Image src={arrow} alt="arrow" /> */}
                 </div>
               </Link>
 
@@ -68,27 +68,30 @@ export default function Footer() {
                 <div className={styles.contactlinkcontainer}>
                 <Image src={whwhite} alt="whatsapp" className={styles.logo}/>
                   <p>+54 11 57392254</p>
-                  <Image src={arrow} alt="arrow" />
+                  {/* <Image src={arrow} alt="arrow" /> */}
                 </div>
               </Link>
 
               <Link
-                href="https://www.instagram.com/dolorespolito/"
+                href="https://www.instagram.com/capillarie/"
+
+              
+
                 target="_blank"
                 style={{ textDecoration: "none" }}
               >
                 <div className={styles.contactlinkcontainer}>
                 <Image src={igwhite} alt="instagram" className={styles.logo}/>
                   <p>@capillariedublin</p>
-                  <Image src={arrow} alt="arrow" />
+                  {/* <Image src={arrow} alt="arrow" /> */}
                 </div>
               </Link>
 
-              <Link href="/" style={{ textDecoration: "none" }}>
+              <Link href="https://www.linkedin.com/company/capillarie-clinic" style={{ textDecoration: "none" }}    target="_blank">
                 <div className={styles.contactlinkcontainer}>
                 <Image src={lkwhite} alt="linkedin" className={styles.logo}/>
                   <p>/capillarieclinic</p>
-                  <Image src={arrow} alt="arrow" />
+                  {/* <Image src={arrow} alt="arrow" /> */}
                 </div>
               </Link>
 
@@ -100,7 +103,7 @@ export default function Footer() {
                 <div className={styles.contactlinkcontainer}>
                 <Image src={locwhite} alt="location" className={styles.logo}/>
                   <p>31-32 Wellington Quay 1st floor, D02KP11</p>
-                  <Image src={arrow} alt="arrow" />
+                  {/* <Image src={arrow} alt="arrow" /> */}
                 </div>
               </Link>
             </div>
@@ -113,7 +116,15 @@ export default function Footer() {
                 <p>{locale === "en" ? "About" : "Nosotros"}</p>
               </Link>
               <p>{locale === "en" ? "Hair implant" : "Implante capilar"}</p>
-              <p>{locale === "en" ? "Procedures" : "Tratamientos"}</p>
+
+              <Link
+                href="/procedures"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+        
+                <p>{locale === "en" ? "Procedures" : "Tratamientos"}</p>
+              </Link>
+          
 
       
               <Link
