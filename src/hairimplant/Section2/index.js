@@ -52,12 +52,6 @@ export default function Section1() {
             </div>
 
             <div className={styles.right}>
-              {/* <h4>
-                Surgical intervention becomes necessary for achieving desired
-                results. One of the most advanced and effective techniques in
-                modern hair restoration is follicular micrograft hair
-                transplantation.
-              </h4> */}
               <h6>INDICATIONS FOR HAIR IMPLANT</h6>
               <div className={styles.benefitscontainer}>
                 {indications.map((benefit, idx) => (

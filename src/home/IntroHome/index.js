@@ -1,11 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import Background from "../../../public/images/backhome.png";
+import backgroundhair from "../../../public/assets/images/back-hair.png";
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRef } from 'react';
 import styles from './styles.module.scss';
 
-export default function Intro() {
+export default function Intro({section}) {
     const container = useRef();
     const { scrollYProgress } = useScroll({
         target: container,
@@ -18,7 +19,7 @@ export default function Intro() {
         <div className={styles.intro}>
 
             <motion.div style={{ y }} className={styles.motionDiv}>
-                <Image src={Background} fill alt="image" style={{ objectFit: "cover" }} />     
+                <Image src={section === "hair" ? backgroundhair : Background} fill alt="image" style={{ objectFit: "cover" }} />     
             </motion.div>
         </div>
     );

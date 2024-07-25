@@ -1,9 +1,7 @@
 "use client";
 import styles from "./styles.module.scss";
-import Rounded from "../../common/Rounded";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import Link from "next/link";
 import AnimatedDiv from "@/components/AnimatedDiv";
 import { useTransform, useScroll } from "framer-motion";
 
@@ -32,16 +30,16 @@ const CoverSection = ({ covertranslations }) => {
     <div className={styles.section}>
       <div className={styles.container}>
         <h6>HAIR IMPLANT</h6>
-        <h4>
-          Follicular micrograft hair transplantation, effective technique in
-          modern hair restoration .{" "}
-        </h4>
+        <h4>Effective technique in modern hair restoration . </h4>
 
         {locale === "en" ? (
           <AnimatedDiv>
             <h2>
-              Enhance your hairline and <span>confidence </span> with our
-              precision <span>hair implant treatments.</span>
+              Hair Implant
+              <br />
+              Follicular Unit Extraction <br /> <span>(F.U.E) </span>
+              {/* Enhance your hairline and confidence with our
+              precision <span>hair implant treatments.</span> */}
             </h2>
           </AnimatedDiv>
         ) : (

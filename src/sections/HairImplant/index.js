@@ -43,7 +43,7 @@ export default function HairImplantSection() {
     <>
       <div className={styles.section}>
         <CoverSection />
-        <Intro />
+        <Intro section="hair"/>
         <Section1 />
         <Section2 />
         {/*  <DescriptionIntro />
