@@ -4,6 +4,9 @@ import Image from "next/image";
 import image1 from "../../../public/assets/images/person1.png";
 import image2 from "../../../public/assets/images/person2.png";
 import image3 from "../../../public/assets/images/person3.png";
+
+import image4 from "../../../public/assets/docs/fotodoc.jpeg";
+
 import { useTranslation } from "react-i18next";
 
 export default function Team({ teamtranslations }) {
@@ -11,20 +14,20 @@ export default function Team({ teamtranslations }) {
     {
       name: "Pablo Maradey",
       image: image1,
-      profession: "General surgeon",
-      profesion: "Cirujano General",
+      profession: "Aesthetic Dermatology",
+      profesion: "Dermatología Estética",
     },
     {
-      name: "Maria Garcia",
-      image: image2,
+      name: "Joviany",
+      image: image4,
       profession: "Dermatologist",
       profesion: "Dermatologa",
     },
     {
-      name: "Gustavo Fernandez",
+      name: "Gustavo Schmitt",
       image: image3,
-      profession: "General surgeon",
-      profesion: "Cirujano General",
+      profession: "Aesthetic Dermatology",
+      profesion: "Dermatología Estética",
     },
   ];
   return (
