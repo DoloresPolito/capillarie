@@ -43,11 +43,6 @@ export default function Index({ translations }) {
   const contacttranslations = {
     contacttext1: translations.contacttext1,
     contacttext2: translations.contacttext2,
-    form1: translations.form1,
-    form2: translations.form2,
-    form3: translations.form3,
-    form4: translations.form4,
-    formbutton: translations.formbutton,
     message: translations.message,
     sectiontitle: translations.sectiontitle,
   };

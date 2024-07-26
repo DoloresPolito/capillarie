@@ -11,14 +11,8 @@ export default async function Procedures({ params: { locale } }) {
   const translations = {
     contacttext1: t("contacttext1"),
     contacttext2: t("contacttext2"),
-
-    form1: t("form1"),
-    form2: t("form2"),
-    form3: t("form3"),
-    form4: t("form4"),
-    formbutton: t("formbutton"),
-    message:t("message"),
-    sectiontitle:t("sectiontitle")
+    message: t("message"),
+    sectiontitle: t("sectiontitle"),
   };
 
   return (
@@ -27,9 +21,8 @@ export default async function Procedures({ params: { locale } }) {
       locale={locale}
       namespaces={i18nNamespaces}
     >
-    
       <div className={styles.main}>
-      <AnimatedHeader />
+        <AnimatedHeader />
         <Contact translations={translations} />
       </div>
     </TranslationsProvider>

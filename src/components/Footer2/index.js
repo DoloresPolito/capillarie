@@ -116,8 +116,13 @@ export default function Footer() {
               >
                 <p>{locale === "en" ? "About" : "Nosotros"}</p>
               </Link>
-              <p>{locale === "en" ? "Hair implant" : "Implante capilar"}</p>
 
+              <Link
+                href="/hairimplant"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+              <p>{locale === "en" ? "Hair implant" : "Implante capilar"}</p>
+              </Link>
               <Link
                 href="/procedures"
                 style={{ textDecoration: "none", color: "white" }}

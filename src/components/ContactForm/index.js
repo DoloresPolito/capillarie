@@ -3,8 +3,11 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/utils/send-email";
 import styles from "./styles.module.scss";
-
+import { useTranslation } from "react-i18next";
 const Contact = ({ contacttranslations }) => {
+
+  const { t, i18n } = useTranslation("");
+  const locale = i18n.language;
   const { register, handleSubmit } = useForm();
   const [messageSent, setMessageSent] = useState(false);
 
@@ -32,7 +35,8 @@ const Contact = ({ contacttranslations }) => {
         <div className={styles.inputcontainer}>
           <input
             type="text"
-            placeholder={contacttranslations.form1}
+     
+            placeholder={locale === "es" ? "Nombre Completo" : "Full Name"}
             className={styles.input}
             {...register("name", { required: true })}
           />
@@ -40,7 +44,8 @@ const Contact = ({ contacttranslations }) => {
         <div className={styles.inputcontainer}>
           <input
             type="email"
-            placeholder={contacttranslations.form2}
+ 
+            placeholder="E-mail"
             className={styles.input}
             {...register("email", { required: true })}
           />
@@ -48,14 +53,16 @@ const Contact = ({ contacttranslations }) => {
         <div className={styles.inputcontainer}>
           <input
             type="tel"
-            placeholder={contacttranslations.form3}
+          
+            placeholder={locale === "es" ? "Número de teléfono" : "Phone number"}
             className={styles.input}
             {...register("phone", { required: true })}
           />
         </div>
         <div className={styles.inputcontainertextarea}>
           <textarea
-            placeholder={contacttranslations.form4}
+        
+            placeholder={locale === "es" ? "Mensaje" : "Message"}
             className={`${styles.input} ${styles.textarea}`}
             {...register("message", { required: true })}
           ></textarea>
@@ -64,7 +71,8 @@ const Contact = ({ contacttranslations }) => {
           {/* <Button text="Send" color="#AAA9A9"/> */}
           <button className={styles.button}>
             {" "}
-            {contacttranslations.formbutton}
+
+            {locale === "es" ? "Enviar" : "Send"}
           </button>
         </div>
       </form>

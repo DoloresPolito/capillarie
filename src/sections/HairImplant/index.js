@@ -8,7 +8,8 @@ import Footer from "@/components/Footer2";
 import Intro from "@/home/IntroHome";
 import Section1 from "@/hairimplant/Section1";
 import Section2 from "@/hairimplant/Section2";
-export default function HairImplantSection() {
+
+export default function HairImplantSection({ translations }) {
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -21,39 +22,29 @@ export default function HairImplantSection() {
     requestAnimationFrame(raf);
   }, []);
 
-  //   const covertranslations = {
-  //     title: translations.title,
-  //     subtitle: translations.subtitle,
-  //     sectiontitle: translations.sectiontitle,
-  //     financingbutton: translations.financingbutton,
-  //     bookbutton: translations.bookbutton,
-  //   };
+  const haircovertranslations = {
+    hairsmalltitle: translations.hairsmalltitle,
+  };
 
-  //   const hairtranslations = {
-  //     hairsectiontitle: translations.hairsectiontitle,
-  //     hairsubtitle: translations.hairsubtitle,
-  //     hairitem1: translations.hairitem1,
-  //     hairitem2: translations.hairitem2,
-  //     hairitem3: translations.hairitem3,
-  //     hairitem4: translations.hairitem4,
-  //     hairbutton: translations.hairbutton,
-  //   };
+  const hairsection1translations = {
+    section1text1: translations.section1text1,
+  };
+
+  const hairsection2translations = {
+    section2item1: translations.section2item1,
+    section2item2: translations.section2item2,
+    section2item3: translations.section2item3,
+    section2item4: translations.section2item4,
+    section2item5: translations.section2item5,
+  };
 
   return (
     <>
       <div className={styles.section}>
-        <CoverSection />
-        <Intro section="hair"/>
-        <Section1 />
-        <Section2 />
-        {/*  <DescriptionIntro />
-        <InterSection/>
-        <HairSurgerySection hairtranslations={hairtranslations} />
-
-
- 
-   */}
-
+        <CoverSection haircovertranslations={haircovertranslations} />
+        <Intro section="hair" />
+        <Section1 hairsection1translations={hairsection1translations} />
+        <Section2 hairsection2translations={hairsection2translations} />
         <ResultsSection />
       </div>
       <Footer />

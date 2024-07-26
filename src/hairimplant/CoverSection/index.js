@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import AnimatedDiv from "@/components/AnimatedDiv";
 import { useTransform, useScroll } from "framer-motion";
 
-const CoverSection = ({ covertranslations }) => {
+const CoverSection = ({ haircovertranslations }) => {
   const { t, i18n } = useTranslation("");
   const locale = i18n.language;
 
@@ -29,8 +29,8 @@ const CoverSection = ({ covertranslations }) => {
   return (
     <div className={styles.section}>
       <div className={styles.container}>
-        <h6>HAIR IMPLANT</h6>
-        <h4>Effective technique in modern hair restoration . </h4>
+        <h6> {locale === "en" ? "HAIR IMPLANT" : "IMPLANTE CAPILAR"}</h6>
+        <h4>{haircovertranslations.hairsmalltitle}</h4>
 
         {locale === "en" ? (
           <AnimatedDiv>
@@ -38,16 +38,17 @@ const CoverSection = ({ covertranslations }) => {
               Hair Implant
               <br />
               Follicular Unit Extraction <br /> <span>(F.U.E) </span>
-              {/* Enhance your hairline and confidence with our
-              precision <span>hair implant treatments.</span> */}
             </h2>
           </AnimatedDiv>
         ) : (
           <AnimatedDiv>
+
+
+
             <h2>
-              Experimenta el <span>poder transformador</span> de nuestros{" "}
-              <span>tratamientos capilares</span> especializados y
-              rejuvenecedores.
+              Implante Capilar
+              <br />
+              Extracción de unidades foliculares <br /> <span>(F.U.E) </span>
             </h2>
           </AnimatedDiv>
         )}
