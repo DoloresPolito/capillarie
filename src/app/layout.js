@@ -14,9 +14,17 @@ const plus = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  title: "Capillarie",
-  description: ".",
+  title: "Capillarie Clinic Dublin",
+  description: "Recover your hair",
+  icons:{
+    icon:['/favicon.ico?v=4'],
+    apple:['/apple-touch-icon.png?v=4'],
+    shortcut:['/apple-touch-icon.png']
+  },
+  manifest:'/site.webmanifest'
 };
+
+
 
 export default function RootLayout({ children }) {
   return (
@@ -58,3 +66,8 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+
+
+
+

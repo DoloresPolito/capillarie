@@ -38,7 +38,7 @@ export default function Footer() {
               <div className={styles.buttoncontainer}>
               <Link
               href="https://wa.me/353830220395"
-              whatsapp
+              // whatsapp
               target="_blank"
               style={{ textDecoration: "none", color: "#493e36" }}
             >
