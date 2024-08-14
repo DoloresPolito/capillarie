@@ -32,6 +32,12 @@ export default function RootLayout({ children }) {
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+
+     
+        <meta
+          name="keywords"
+          content="Capillarie, Clinic, Dublin, Hair implant, Implant, Hair, Recove, Hair surgery, Clinica, Medicine, Medicina capilar, Capilar"
+        />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"

@@ -35,11 +35,11 @@ export default function Team({ teamtranslations }) {
       <div className={styles.container}>
         <h6>{teamtranslations.teamtitle}</h6>
         <h3>{teamtranslations.subtitle2}</h3>
-        <div className={styles.teamcontainer}>
+        {/* <div className={styles.teamcontainer}>
           {team.map((person, index) => (
             <TeamMember key={index} person={person} />
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
