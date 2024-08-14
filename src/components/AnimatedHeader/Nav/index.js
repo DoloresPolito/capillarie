@@ -53,6 +53,9 @@ export default function Mask({ links }) {
             }}
             className={styles.nav}
           >
+            <div className={styles.langcontainer}>
+            <LanguageChanger />
+            </div>
             <div className={styles.header}>
               <p>Navigation</p>
             </div>
@@ -81,9 +84,7 @@ export default function Mask({ links }) {
                 target={true}              />
             ))} */}
 
-            <div className={styles.langcontainer}>
-            <LanguageChanger />
-            </div>
+  
     
           </div>
         </div>
