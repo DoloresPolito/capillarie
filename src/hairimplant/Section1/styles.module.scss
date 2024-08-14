@@ -4,6 +4,7 @@
   width: 100%;
   margin-top: -40vh;
   z-index: 10;
+
 }
 
 .section {
@@ -15,6 +16,7 @@
   z-index: 10;
   background-color: white;
   padding-bottom: 50px;
+  padding-top: 80px;
 
   .container {
     width: 90%;
@@ -40,6 +42,7 @@
     height: 100%;
     flex-direction: column;
     padding: 20px 20px;
+    margin-top: 50px;
     @media only screen and (max-width: 1000px) {
       width: 100%;
       padding: 20px 0px;
@@ -54,6 +57,7 @@
     justify-content: center;
     align-items: flex-end;
     padding: 50px 80px;
+
     @media only screen and (max-width: 1000px) {
       width: 100%;
       padding: 0px 0px;
@@ -69,23 +73,24 @@
     }
   }
 
-  h6 {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    color: #493e36;
-    letter-spacing: 1px;
-    font-size: 15px;
-    font-weight: 400;
-    margin-top: 30px;
-    margin-bottom: 40px;
-    @media only screen and (max-width: 1000px) {
-      font-size: 13px;
-    }
-  }
+  // h6 {
+  //   font-family: "Plus Jakarta Sans", sans-serif;
+  //   color: #493e36;
+  //   letter-spacing: 1px;
+  //   font-size: 15px;
+  //   font-weight: 400;
+  //   margin-top: 30px;
+  //   margin-bottom: 40px;
+
+  //   @media only screen and (max-width: 1000px) {
+  //     font-size: 13px;
+  //   }
+  // }
 
   h5 {
     font-family: "Plus Jakarta Sans", sans-serif;
     color: #493e36;
-    font-size: 23px;
+    font-size: 18px;
     font-weight: 300;
     margin-top: 30px;
     margin-bottom: 40px;
@@ -98,7 +103,7 @@
     font-family: "Plus Jakarta Sans", sans-serif;
     color: #44b9cc;
 
-    font-size: 23px;
+    font-size: 25px;
     font-weight: 300;
     margin-top: 30px;
     margin-bottom: 40px;

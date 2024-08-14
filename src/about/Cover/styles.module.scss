@@ -57,14 +57,14 @@
       letter-spacing: 1px;
       font-size: 50px;
       font-weight: 300;
-      margin-top: 50px;
+      margin-top: 80px;
       margin-bottom: 20px;
       max-width: 1000px;
       text-align: center;
 
       @media only screen and (max-width: 1000px) {
-        font-size: 60px;
-        margin-top: 10px;
+        font-size: 50px;
+        margin-top: 40px;
       }
 
       @media only screen and (max-width: 600px) {
@@ -76,7 +76,7 @@
         font-weight: 400;
 
         @media only screen and (max-width: 1000px) {
-          font-size: 60px;
+          font-size: 50px;
         }
 
         @media only screen and (max-width: 600px) {

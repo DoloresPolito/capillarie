@@ -54,7 +54,8 @@ const CoverSection = ({ covertranslations }) => {
         <div className={styles.buttonscontainer}>
           <div className={styles.buttoncontainer}>
             <Link
-              href="https://wa.me/3446584076"
+              href="https://wa.me/353830220395"
+              whatsapp
               target="_blank"
               style={{ textDecoration: "none", color: "#493e36" }}
             >

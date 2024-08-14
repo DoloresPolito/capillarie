@@ -8,6 +8,7 @@ import Footer from "@/components/Footer2";
 import Intro from "@/home/IntroHome";
 import Section1 from "@/hairimplant/Section1";
 import Section2 from "@/hairimplant/Section2";
+import GeneralSection from "@/components/GeneralSetion";
 
 export default function HairImplantSection({ translations }) {
   useEffect(() => {
@@ -46,7 +47,9 @@ export default function HairImplantSection({ translations }) {
         <Section1 hairsection1translations={hairsection1translations} />
         <Section2 hairsection2translations={hairsection2translations} />
         <ResultsSection />
+        <GeneralSection/>
       </div>
+ 
       <Footer />
     </>
   );

@@ -21,11 +21,13 @@
     font-size: 20px !important;
     font-weight: 300;
     max-width: 600px;
-    margin-bottom: 20px;
+
  
     align-self: flex-start;
     color: #493e36 !important;
-  
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
     @media only screen and (max-width: 1000px) {
       align-self:center;
       text-align: center;

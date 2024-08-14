@@ -9,6 +9,7 @@ import arrow from "../../../public/assets/arrow45.svg";
 import arrowwhite from "../../../public/assets/arrow45white.svg";
 import Link from "next/link";
 import AnimatedDiv from "@/components/AnimatedDiv";
+import GeneralSection from "@/components/GeneralSetion";
 
 import whwhite from "../../../public/assets/icons/wh-white.png";
 import whblack from "../../../public/assets/icons/wh-black.png";
@@ -49,8 +50,8 @@ export default function Index({ translations }) {
 
   const contactlinks = [
     {
-      name: "+54 3446 584076",
-      url: "/",
+      name: "+35 3830220395",
+      url: "https://api.whatsapp.com/send/?phone=353830220395",
       logowhite: phonewhite,
       logoblack: phoneblack,
     },
@@ -92,8 +93,8 @@ export default function Index({ translations }) {
 
          
           <div className={styles.left}>
-       
-            <div>
+          <ContactForm contacttranslations={contacttranslations} />
+            {/* <div>
               {contactlinks.map((contactlink) => {
                 return (
                   <ContactLink
@@ -102,13 +103,17 @@ export default function Index({ translations }) {
                   />
                 );
               })}
-            </div>
+            </div> */}
           </div>
-          <div className={styles.right}>
-            <ContactForm contacttranslations={contacttranslations} />
-          </div>
+          {/* <div className={styles.right}>
+
+            <p>+35 3830220395</p>
+            <p>capillarieclinic@gmail.com</p>
+ 
+          </div> */}
           </div>
         </div>
+        {/* <GeneralSection/> */}
         <Footer />
       </div>
     </>

@@ -14,7 +14,7 @@ import igwhite from "../../../public/assets/icons/ig-white.png"
 import lkwhite from "../../../public/assets/icons/lk-white.png"
 import mailwhite from "../../../public/assets/icons/mail-white.png"
 import locwhite from "../../../public/assets/icons/loc-white.png"
-
+import lk2white from "../../../public/assets/icons/lk2-white.png"
 
 export default function Footer() {
   const { t, i18n } = useTranslation("");
@@ -31,12 +31,19 @@ export default function Footer() {
        
               <h3>
                 {locale === "en"
-                  ? "Schedule your free consultation with Capillarie today and begin your path to exceptional hair re storation!"
-                  : "¡Programe su consulta gratuita con Capillarie hoy y comience su camino hacia una restauración capilar excepcional!"}
+                  ? "Schedule your consultation with Capillarie today and begin your path to exceptional hair restoration!"
+                  : "¡Programe su consulta con Capillarie hoy y comience su camino hacia una restauración capilar excepcional!"}
               </h3>
               </AnimatedDiv>
               <div className={styles.buttoncontainer}>
+              <Link
+              href="https://wa.me/353830220395"
+              whatsapp
+              target="_blank"
+              style={{ textDecoration: "none", color: "#493e36" }}
+            >
                 <Rounded border="1px solid white" background="white"  hoverColor = "#493E36" footer={true}>  {locale === "en" ? "Book an appoiment " : "Reserva tu cita"}</Rounded>
+             </Link>
               </div>
               <div className={styles.buttoncontainer}>
 
@@ -56,19 +63,19 @@ export default function Footer() {
               >
                 <div className={styles.contactlinkcontainer}>
                   <Image src={mailwhite} alt="mail" className={styles.logo}/>
-                  <p>capillariedublin@gmail.com</p>
+                  <p>capillarieclinic@gmail.com</p>
                   {/* <Image src={arrow} alt="arrow" /> */}
                 </div>
               </Link>
 
               <Link
-                href="https://api.whatsapp.com/send/?phone=543446584076"
+                href="https://api.whatsapp.com/send/?phone=353830220395"
                 target="_blank"
                 style={{ textDecoration: "none" }}
               >
                 <div className={styles.contactlinkcontainer}>
                 <Image src={phonewhite} alt="whatsapp" className={styles.logo}/>
-                  <p>+54 11 57392254</p>
+                  <p>+35 3830220395</p>
                   {/* <Image src={arrow} alt="arrow" /> */}
                 </div>
               </Link>
@@ -83,14 +90,14 @@ export default function Footer() {
               >
                 <div className={styles.contactlinkcontainer}>
                 <Image src={igwhite} alt="instagram" className={styles.logo}/>
-                  <p>@capillariedublin</p>
+                  <p>@capillarie</p>
                   {/* <Image src={arrow} alt="arrow" /> */}
                 </div>
               </Link>
 
               <Link href="https://www.linkedin.com/company/capillarie-clinic" style={{ textDecoration: "none" }}    target="_blank">
                 <div className={styles.contactlinkcontainer}>
-                <Image src={lkwhite} alt="linkedin" className={styles.logo}/>
+                <Image src={lk2white} alt="linkedin" className={styles.logo}/>
                   <p>/capillarieclinic</p>
                   {/* <Image src={arrow} alt="arrow" /> */}
                 </div>

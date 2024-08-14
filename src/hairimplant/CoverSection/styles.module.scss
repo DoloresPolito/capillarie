@@ -16,6 +16,7 @@
     z-index: 10;
     border-radius: 30px;
     margin-bottom: 30px;
+    max-width: 2500px;
     // @media only screen and (max-width: 1200px) {
     //   height: 100vh;
     // }
@@ -69,18 +70,20 @@
         font-family: "Plus Jakarta Sans", sans-serif;
         color: #493e36;
         letter-spacing: 1px;
-        font-size: 70px;
+        font-size: 50px;
         font-weight: 300;
-        margin-top: 30px;
-        margin-bottom: 50px;
+        margin-top: 50px;
+        margin-bottom: 80px;
         text-align: center;
   
         @media only screen and (max-width: 1000px) {
-          font-size: 60px;
+          font-size: 50px;
         }
   
         @media only screen and (max-width: 600px) {
           font-size: 40px;
+          margin-bottom: 20px;
+          margin-top: 30px;
         }
   
         span {
@@ -88,7 +91,7 @@
           font-weight: 400;
   
           @media only screen and (max-width: 1000px) {
-            font-size: 60px;
+            font-size: 50px;
           }
   
           @media only screen and (max-width: 600px) {

@@ -41,7 +41,7 @@ export default function Section1({ hairsection1translations }) {
                 GENERAL
               </motion.h6> */}
 
-              <h5>{hairsection1translations.section1text1}</h5>
+          
 
 
               {locale === "en" ? (
@@ -65,6 +65,8 @@ export default function Section1({ hairsection1translations }) {
                   capacidad para lograr resultados de aspecto natural.
                 </h4>
               )}
+
+<h5>{hairsection1translations.section1text1}</h5>
             </div>
 
             <div className={styles.right}>

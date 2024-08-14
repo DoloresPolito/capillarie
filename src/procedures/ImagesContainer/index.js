@@ -278,8 +278,12 @@ export default function ImagesContainer() {
                       {additionalText2 ? <h5>{additionalText2}</h5> : <h5></h5>}
                     </div>
                   </div>
+                  <Parallax speed={width > 1000 ? -8 : 0}>
+
                   <div className={styles.imagecontainer}>
+                
                     <AnimatedDiv>
+             
                       {width > medium ? (
                         <Image
                           src={image}
@@ -293,8 +297,11 @@ export default function ImagesContainer() {
                           alt={title}
                         />
                       )}
+                  
                     </AnimatedDiv>
+           
                   </div>
+                  </Parallax>
                 </div>
               </div>
             );

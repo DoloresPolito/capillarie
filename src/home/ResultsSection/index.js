@@ -5,6 +5,7 @@ import SlidingImages from "../../components/SlidingImages";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
+
 export default function ResultsSection() {
 
 
@@ -38,6 +39,8 @@ const locale = i18n.language;
         </div>
       </div>
       <SlidingImages />
+      {/* <SlidingImages /> */}
+
     </>
   );
 }
