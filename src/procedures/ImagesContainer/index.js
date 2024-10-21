@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import image1 from "../../../public/assets/images/tv1.png";
-import image2 from "../../../public/assets/images/tv2.png";
+import image2 from "../../../public/assets/images/tv6.png";
 import image3 from "../../../public/assets/images/tv3.png";
-import image4 from "../../../public/assets/images/tv4.png";
+import image4 from "../../../public/assets/images/tv7.png";
 import image5 from "../../../public/assets/images/tv5.png";
 import tic from "../../../public/assets/tic.svg";
 import AnimatedDiv from "../../components/AnimatedDiv";
@@ -13,9 +13,9 @@ import { useTranslation } from "react-i18next";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 
 import image1h from "../../../public/assets/images/th1.png";
-import image2h from "../../../public/assets/images/th2.png";
+import image2h from "../../../public/assets/images/th6.png";
 import image3h from "../../../public/assets/images/th3.png";
-import image4h from "../../../public/assets/images/th4.png";
+import image4h from "../../../public/assets/images/th7.png";
 import image5h from "../../../public/assets/images/th5.png";
 const data = [
   {

@@ -67,13 +67,15 @@ const ReviewsSection = ({ reviewstranslations }) => {
   return (
     <div className={styles.section} ref={ref}>
       <div className={styles.titles}>
-        <motion.h6
-          initial={{ x: "-10vw", opacity: 0 }}
-          animate={controls}
-          className={styles.heading}
-        >
+    
+
+        <AnimatedDiv>
+          <h6 className={`${styles.heading} `}>
+         
           {reviewstranslations.reviewssectiontitle}
-        </motion.h6>
+
+          </h6>
+        </AnimatedDiv>
         <h3 className={styles.reviewstitle}>
           {reviewstranslations.reviewstitle}
         </h3>

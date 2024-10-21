@@ -49,14 +49,14 @@ const AboutSection = ({ abouttranslations }) => {
         <div className={styles.section} ref={ref}>
           <div className={styles.container}>
             <div className={styles.left}>
-              <motion.h6
-                initial={{ x: "-10vw", opacity: 0 }}
-                animate={controls}
-                className={`${styles.heading} `}
-              >
-                {abouttranslations.aboutsectiontitle}
-              </motion.h6>
 
+            <AnimatedDiv>
+          <h6 className={`${styles.heading} `}>
+         
+          {abouttranslations.aboutsectiontitle}
+          </h6>
+        </AnimatedDiv>
+            
               <Paragraph
                 paragraph={abouttranslations.aboutsubtitle}
                 className="subtitle"

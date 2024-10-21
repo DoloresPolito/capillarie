@@ -9,10 +9,10 @@ import HorizontalScrollSection from "@/components/HorizontalScroll";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import image1 from "../../../public/assets/images/th1.png";
-import image2 from "../../../public/assets/images/th2.png";
+import image1 from "../../../public/assets/images/th5.png";
+import image2 from "../../../public/assets/images/th6.png";
 import image3 from "../../../public/assets/images/th3.png";
-
+import AnimatedDiv from "@/components/AnimatedDiv";
 const TreatmentsSection = ({ treatmentstranslations }) => {
   const { t, i18n } = useTranslation("");
   const locale = i18n.language;
@@ -50,13 +50,12 @@ const TreatmentsSection = ({ treatmentstranslations }) => {
   return (
     <div className={styles.section} ref={ref}>
       <div className={styles.container}>
-        <motion.h6
-          initial={{ x: "-10vw", opacity: 0 }}
-          animate={controls}
-          className={`${styles.heading} `}
-        >
-          {treatmentstranslations.treatmentssectiontitle}
-        </motion.h6>
+        <AnimatedDiv>
+          <h6 className={`${styles.heading} `}>
+            {treatmentstranslations.treatmentssectiontitle}
+          </h6>
+        </AnimatedDiv>
+
         <Paragraph
           paragraph={treatmentstranslations.treatmentssubtitle}
           className="subtreatments"
@@ -74,7 +73,9 @@ const TreatmentsSection = ({ treatmentstranslations }) => {
 
         {width > medium ? (
           <>
-            <HorizontalScrollSection     treatmentstranslations={treatmentstranslations}/>
+            <HorizontalScrollSection
+              treatmentstranslations={treatmentstranslations}
+            />
           </>
         ) : (
           <>
@@ -107,7 +108,7 @@ const VerticalTreatments = ({ treatmentstranslations }) => {
       <div className={styles.verticalcontainer}>
         <div className={styles.square}>
           <Image src={image1} alt="Mesotherapy" />
-          
+
           <h4>{treatmentstranslations.treathome1}</h4>
         </div>
         <div className={styles.square}>

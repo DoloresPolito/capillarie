@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const AnimatedDiv = ({ children, delay = 0 }) => {
+const AnimatedDiv = ({ children, delay = 0.8 }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,

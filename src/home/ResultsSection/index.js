@@ -5,7 +5,7 @@ import SlidingImages from "../../components/SlidingImages";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
-
+import AnimatedDiv from "@/components/AnimatedDiv";
 export default function ResultsSection() {
 
 
@@ -28,13 +28,21 @@ const locale = i18n.language;
     <>
       <div className={styles.resultssection} ref={ref}>
         <div className={styles.resultscontainer}>
+
+
+        <AnimatedDiv>
+          <h6 className={`${styles.heading} `}>
+         
+          {locale === "es" ? "RESULTADOS" : "RESULTS"}
+          </h6>
+        </AnimatedDiv>
           <motion.h6
             initial={{ x: "-10vw", opacity: 0 }}
             animate={controls}
             className={`${styles.heading} `}
           >
        
-            {locale === "es" ? "RESULTADOS" : "RESULTS"}
+
           </motion.h6>
         </div>
       </div>

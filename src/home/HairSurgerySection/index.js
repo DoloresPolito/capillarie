@@ -53,13 +53,17 @@ const HairSurgerySection = ({ hairtranslations }) => {
       <div className={styles.section} ref={ref}>
         <div className={styles.container}>
           <div className={styles.left}>
-            <motion.h6
-              initial={{ x: "-10vw", opacity: 0 }}
-              animate={controls}
+          <AnimatedDiv>
+            <h6
               className={`${styles.heading} `}
             >
+          
+
+  
               {hairtranslations.hairsectiontitle}
-            </motion.h6>
+                
+            </h6>
+            </AnimatedDiv>
             <Paragraph
               paragraph={hairtranslations.hairsubtitle}
               className="subhair"

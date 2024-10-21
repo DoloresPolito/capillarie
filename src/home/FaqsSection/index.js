@@ -4,8 +4,8 @@ import AccordionItem from "@/components/AccordionItem";
 import styles from "./styles.module.scss";
 import Rounded from "../../common/Rounded";
 import Link from "next/link";
-import { motion, useAnimation } from "framer-motion";
-
+import {useAnimation } from "framer-motion";
+import AnimatedDiv from "@/components/AnimatedDiv";
 import { useInView } from "react-intersection-observer";
 
 export default function FaqsSection({ faqstranslations }) {
@@ -40,13 +40,13 @@ export default function FaqsSection({ faqstranslations }) {
 
       <div className={styles.faqssection} ref={ref}>
 
-      <motion.h6
-          initial={{ x: "-10vw", opacity: 0 }}
-          animate={controls}
-          className={`${styles.heading} `}
-        >
-       {faqstranslations.faqstitle}
-        </motion.h6>
+
+        <AnimatedDiv >
+          <h6 className={`${styles.heading} `}>
+         
+          {faqstranslations.faqstitle}
+          </h6>
+        </AnimatedDiv>
      
         <div className={styles.faqscontainer}>
           {faqsA.map((question) => (
