@@ -114,7 +114,7 @@ const HairSurgerySection = ({ hairtranslations }) => {
             <Parallax speed={width > medium ? -8 : 0}>
               <div className={styles.imageContainer}>
                 <Image
-                  src="/images/hair.png" 
+                  src="/images/hair2.png" 
                   alt="Descripción de la imagen"
                   objectFit="cover"
                   quality={100}

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import Background from "../../../public/images/backhome.png";
-import backgroundhair from "../../../public/assets/images/back-hair.png";
+import Background from "../../../public/images/backhome7.png";
+import backgroundhair from "../../../public/images/backhome5.png";
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRef } from 'react';
 import styles from './styles.module.scss';
