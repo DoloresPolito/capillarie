@@ -6,7 +6,7 @@ import image1 from "../../../public/assets/images/tv1.png";
 import image2 from "../../../public/assets/images/tv6.png";
 import image3 from "../../../public/assets/images/tv3.png";
 import image4 from "../../../public/assets/images/tv7.png";
-import image5 from "../../../public/assets/images/tv5.png";
+// import image5 from "../../../public/assets/images/tv5.png";
 import tic from "../../../public/assets/tic.svg";
 import AnimatedDiv from "../../components/AnimatedDiv";
 import { useTranslation } from "react-i18next";
@@ -16,7 +16,7 @@ import image1h from "../../../public/assets/images/th1.png";
 import image2h from "../../../public/assets/images/th6.png";
 import image3h from "../../../public/assets/images/th3.png";
 import image4h from "../../../public/assets/images/th7.png";
-import image5h from "../../../public/assets/images/th5.png";
+// import image5h from "../../../public/assets/images/th5.png";
 const data = [
   {
     id: "1",
@@ -63,7 +63,6 @@ const data = [
     benefits: [
       "Well-tolerated with minimal side effects.",
       "Allows patients to maintain a normal lifestyle during treatment.",
-      "Dutasteride is more effective than finasteride, especially for diffuse or frontal hair loss.",
       "Effective in maintaining hair density and quality.",
     ],
     additionalText1:
@@ -91,26 +90,7 @@ const data = [
     image: image4,
     mobileimage: image4h,
   },
-  {
-    id: "5",
-    title: "Antiandrogen drugs",
-    subtitle:
-      " are effective in treating male androgenic alopecia by targeting the hair follicle root.",
-    benefits: [
-      "Well-tolerated with minimal side effects.",
-      "Allows patients to maintain a normal lifestyle during treatment.",
-      "Dutasteride is more effective than finasteride, especially for diffuse or frontal hair loss.",
-      "Effective in maintaining hair density and quality.",
-    ],
-    additionalText1:
-      "Administration can be oral, via microinjections, or as topical treatments.",
-
-    additionalText2:
-      "Treatment plans are tailored to individual requirements. May be used in conjunction with other treatments for optimal results.",
-
-    image: image5,
-    mobileimage: image5h,
-  },
+ 
 ];
 
 const dataespañol = [
@@ -159,7 +139,6 @@ const dataespañol = [
     benefits: [
       "Bien tolerados con efectos secundarios mínimos.",
       "Permite a los pacientes mantener un estilo de vida normal durante el tratamiento.",
-      "Dutasteride es más efectivo que finasteride, especialmente para la pérdida de cabello difusa o frontal.",
       "Efectivo para mantener la densidad y calidad del cabello.",
     ],
     additionalText1:
@@ -185,24 +164,7 @@ const dataespañol = [
     image: image4,
     mobileimage: image4h,
   },
-  {
-    id: "5",
-    title: "Los medicamentos antiandrógenos",
-    subtitle:
-      " son efectivos para tratar la alopecia androgenética masculina al dirigirse a la raíz del folículo piloso.",
-    benefits: [
-      "Bien tolerados con efectos secundarios mínimos.",
-      "Permite a los pacientes mantener un estilo de vida normal durante el tratamiento.",
-      "Dutasteride es más efectivo que finasteride, especialmente para la pérdida de cabello difusa o frontal.",
-      "Efectivo para mantener la densidad y calidad del cabello.",
-    ],
-    additionalText1:
-      "La administración puede ser oral, mediante microinyecciones o tratamientos tópicos.",
-    additionalText2:
-      "Los planes de tratamiento se adaptan a los requisitos individuales. Puede usarse en combinación con otros tratamientos para obtener resultados óptimos.",
-    image: image5,
-    mobileimage: image5h,
-  },
+ 
 ];
 
 export default function ImagesContainer() {

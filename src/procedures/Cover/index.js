@@ -9,7 +9,7 @@ const data = [
   { title: "Hair Mesotherapy", id: 2 },
   { title: "Antiandrogen drugs", id: 3 },
   { title: "Minoxidil", id: 4 },
-  { title: "Dutasteride Microinjections", id: 5 },
+  // { title: "Dutasteride Microinjections", id: 5 },
 ];
 
 const dataesp = [
@@ -17,7 +17,7 @@ const dataesp = [
   { title: "Mesoterapia Capilar", id: 2 },
   { title: "Medicamentos antiandrógenos", id: 3 },
   { title: "Minoxidil", id: 4 },
-  { title: "Microinyecciones de dutasterida", id: 5 },
+  // { title: "Microinyecciones de dutasterida", id: 5 },
 ];
 
 const CoverSection = ({ translations }) => {
