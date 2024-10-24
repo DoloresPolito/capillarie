@@ -16,15 +16,13 @@ const plus = Plus_Jakarta_Sans({
 export const metadata = {
   title: "Capillarie Clinic Dublin",
   description: "Recover your hair",
-  icons:{
-    icon:['/favicon.ico?v=4'],
-    apple:['/apple-touch-icon.png?v=4'],
-    shortcut:['/apple-touch-icon.png']
+  icons: {
+    icon: ["/favicon.ico?v=4"],
+    apple: ["/apple-touch-icon.png?v=4"],
+    shortcut: ["/apple-touch-icon.png"],
   },
-  manifest:'/site.webmanifest'
+  manifest: "/site.webmanifest",
 };
-
-
 
 export default function RootLayout({ children }) {
   return (
@@ -33,7 +31,18 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
 
-     
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-NKPKQCG8');`,
+          }}
+        />
+        {/* End Google Tag Manager */}
+
         <meta
           name="keywords"
           content="Capillarie, Clinic, Dublin, Hair implant, Implant, Hair, Recove, Hair surgery, Clinica, Medicine, Medicina capilar, Capilar"
@@ -65,6 +74,17 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.className} ${montserrat.className} ${plus.className}`}
       >
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NKPKQCG8"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
+
         {children}
 
         {/* <button className="buttoncontact">Contact Us</button> */}
@@ -72,8 +92,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-
-
-
-
