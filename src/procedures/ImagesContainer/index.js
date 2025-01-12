@@ -18,24 +18,24 @@ import image3h from "../../../public/assets/images/th3.png";
 import image4h from "../../../public/assets/images/th7.png";
 // import image5h from "../../../public/assets/images/th5.png";
 const data = [
-  {
-    id: "1",
-    title: "Platelet-Rich Plasma",
-    subtitle:
-      " therapy utilizes patient's own blood to stimulate hair growth and improve hair density.",
-    benefits: [
-      "Derived from the patient's own blood, reducing the risk of rejections.",
-      "Only requires a dermatological evaluation before treatment.",
-      "Effective in stimulating new hair growth and increasing the thickness of existing hair.",
-    ],
-    additionalText1:
-      "Typically involves 4-6 sessions per year, spaced 4-6 weeks apart.",
-    additionalText2:
-      "Results are often noticeable from the second session onwards.",
+  // {
+  //   id: "1",
+  //   title: "Platelet-Rich Plasma",
+  //   subtitle:
+  //     " therapy utilizes patient's own blood to stimulate hair growth and improve hair density.",
+  //   benefits: [
+  //     "Derived from the patient's own blood, reducing the risk of rejections.",
+  //     "Only requires a dermatological evaluation before treatment.",
+  //     "Effective in stimulating new hair growth and increasing the thickness of existing hair.",
+  //   ],
+  //   additionalText1:
+  //     "Typically involves 4-6 sessions per year, spaced 4-6 weeks apart.",
+  //   additionalText2:
+  //     "Results are often noticeable from the second session onwards.",
 
-    image: image1,
-    mobileimage: image1h,
-  },
+  //   image: image1,
+  //   mobileimage: image1h,
+  // },
   {
     id: "2",
     title: "Hair mesotherapy",
@@ -94,24 +94,24 @@ const data = [
 ];
 
 const dataespañol = [
-  {
-    id: "1",
-    title: "La terapia con Plasma Rico en Plaquetas",
-    subtitle:
-      " utiliza la propia sangre del paciente para estimular el crecimiento del cabello y mejorar la densidad del cabello.",
-    benefits: [
-      "Derivado de la propia sangre del paciente, reduciendo el riesgo de rechazo.",
-      "Solo requiere una evaluación dermatológica antes del tratamiento.",
-      "Efectivo para estimular el nuevo crecimiento del cabello y aumentar el grosor del cabello existente.",
-    ],
-    additionalText1:
-      "Por lo general, implica 4-6 sesiones por año, espaciadas de 4 a 6 semanas.",
-    additionalText2:
-      "Los resultados suelen ser notables desde la segunda sesión en adelante.",
+  // {
+  //   id: "1",
+  //   title: "La terapia con Plasma Rico en Plaquetas",
+  //   subtitle:
+  //     " utiliza la propia sangre del paciente para estimular el crecimiento del cabello y mejorar la densidad del cabello.",
+  //   benefits: [
+  //     "Derivado de la propia sangre del paciente, reduciendo el riesgo de rechazo.",
+  //     "Solo requiere una evaluación dermatológica antes del tratamiento.",
+  //     "Efectivo para estimular el nuevo crecimiento del cabello y aumentar el grosor del cabello existente.",
+  //   ],
+  //   additionalText1:
+  //     "Por lo general, implica 4-6 sesiones por año, espaciadas de 4 a 6 semanas.",
+  //   additionalText2:
+  //     "Los resultados suelen ser notables desde la segunda sesión en adelante.",
 
-    image: image1,
-    mobileimage: image1h,
-  },
+  //   image: image1,
+  //   mobileimage: image1h,
+  // },
   {
     id: "2",
     title: "La mesoterapia capilar",

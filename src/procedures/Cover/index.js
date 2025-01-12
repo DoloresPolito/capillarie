@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 import AnimatedDiv from "@/components/AnimatedDiv";
 import { useTranslation } from "react-i18next";
 const data = [
-  { title: "Platelet-Rich Plasma", id: 1 },
+  // { title: "Platelet-Rich Plasma", id: 1 },
   { title: "Hair Mesotherapy", id: 2 },
   { title: "Antiandrogen drugs", id: 3 },
   { title: "Minoxidil", id: 4 },
@@ -13,7 +13,7 @@ const data = [
 ];
 
 const dataesp = [
-  { title: "Plasma rico en plaquetas", id: 1 },
+  // { title: "Plasma rico en plaquetas", id: 1 },
   { title: "Mesoterapia Capilar", id: 2 },
   { title: "Medicamentos antiandrógenos", id: 3 },
   { title: "Minoxidil", id: 4 },
