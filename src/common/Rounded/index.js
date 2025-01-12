@@ -18,7 +18,6 @@ export default function Index({
   let timeoutId = null;
 
   useEffect(() => {
-    console.log("BORDER EN ROUNDED", border);
     timeline.current = gsap.timeline({ paused: true });
     timeline.current
       .to(

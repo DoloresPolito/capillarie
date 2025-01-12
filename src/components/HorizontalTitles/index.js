@@ -11,7 +11,6 @@ const AnimatedHeading = ({ children, className }) => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   useEffect(() => {
-    console.log('In view:', inView);
     if (inView) {
       controls.start({
         x: 0,

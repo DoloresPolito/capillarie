@@ -20,7 +20,7 @@ import image4h from "../../../public/assets/images/th7.png";
 const data = [
   {
     id: "1",
-    title: "Platelet-Rich Plasma (PRP)",
+    title: "Platelet-Rich Plasma",
     subtitle:
       " therapy utilizes patient's own blood to stimulate hair growth and improve hair density.",
     benefits: [
@@ -96,7 +96,7 @@ const data = [
 const dataespañol = [
   {
     id: "1",
-    title: "La terapia con Plasma Rico en Plaquetas (PRP)",
+    title: "La terapia con Plasma Rico en Plaquetas",
     subtitle:
       " utiliza la propia sangre del paciente para estimular el crecimiento del cabello y mejorar la densidad del cabello.",
     benefits: [
