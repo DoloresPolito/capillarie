@@ -31,7 +31,7 @@ const HorizontalScrollSection = ({treatmentstranslations}) => {
 
       <motion.div className={styles.square}>
         <Link href="/procedures">
-          <Image src={image2} alt="Plasma" />
+          <Image src={image2} alt="Minoxidil" />
           <h4>{treatmentstranslations.treathome2}</h4>
         </Link>
       </motion.div>

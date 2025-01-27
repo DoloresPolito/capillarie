@@ -112,7 +112,7 @@ const VerticalTreatments = ({ treatmentstranslations }) => {
           <h4>{treatmentstranslations.treathome1}</h4>
         </div>
         <div className={styles.square}>
-          <Image src={image2} alt="Plasma" />
+          <Image src={image2} alt="Minoxidil" />
           <h4>{treatmentstranslations.treathome2}</h4>
         </div>
         <div className={styles.square}>
